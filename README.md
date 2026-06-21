@@ -128,14 +128,28 @@ Para cambiar el número, reemplazá `541166034047` en `index.html` (y en `whatsa
 
 ---
 
-## 🌐 Deploy en GitHub Pages
+## 🌐 Publicar / previsualizar
 
-1. *Settings → Pages → Build and deployment → Source: Deploy from a branch.*
-2. Elegí la rama y carpeta `/ (root)`.
-3. El archivo **`CNAME`** ya apunta a `www.casasilviaweb.com.ar`. En tu proveedor de
-   dominio, creá un `CNAME` de `www` hacia `<usuario>.github.io` (y los `A` del apex si
-   querés `casasilviaweb.com.ar` sin `www`).
-4. Si hosteás en otro lado (Netlify, Vercel, hosting propio), podés borrar `CNAME`.
+### Vista previa ahora (sin dominio) — GitHub Pages
+1. *Settings → Pages → Source: **Deploy from a branch**.*
+2. Branch: `claude/sweet-knuth-lxcsii` · carpeta `/ (root)` → **Save**.
+3. En ~1 minuto queda online en: `https://ianpolettilucero.github.io/casas-elle/`
+
+> No incluimos el archivo `CNAME` todavía, así la vista previa funciona en la URL de
+> github.io. Las etiquetas `canonical` / Open Graph siguen apuntando al dominio final
+> (`www.casasilviaweb.com.ar`), que es lo correcto para SEO.
+
+### Cuando tengas acceso al dominio casasilviaweb.com.ar
+1. Creá en la raíz un archivo llamado **`CNAME`** con una sola línea: `www.casasilviaweb.com.ar`
+2. En tu proveedor de DNS: registro `CNAME` de `www` → `ianpolettilucero.github.io`
+   (y registros `A` del apex hacia las IPs de GitHub Pages si lo querés sin `www`).
+3. En *Settings → Pages → Custom domain* confirmá el dominio y activá **Enforce HTTPS**.
+
+> Nada de esto afecta al sitio actual hasta que cambies el DNS: el original sigue
+> funcionando en el dominio hasta el momento exacto del switch.
+
+### Otras opciones
+**Netlify** o **Vercel**: importás el repo y te dan una URL al instante, sin tocar DNS.
 
 ---
 
