@@ -106,6 +106,9 @@ p { color: var(--ink-800); }
 .section-head.center { margin-inline: auto; text-align: center; }
 .section-head.center .eyebrow::before { display: none; }
 .section-head p { margin-top: 14px; font-size: 1.08rem; color: var(--muted); }
+.bestsellers { display: inline-block; max-width: 100%; margin-top: 18px; background: var(--red-tint); color: var(--ink-900); border: 1px solid #f1c4c8; border-radius: 16px; padding: 10px 17px; font-size: .96rem; font-weight: 500; line-height: 1.45; }
+.bestsellers svg { width: 18px; height: 18px; color: var(--red); vertical-align: -3px; margin-right: 7px; }
+.bestsellers strong { font-weight: 700; }
 
 /* --------------------------------------------------------------- Botones */
 .btn {
