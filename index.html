@@ -6,7 +6,7 @@
   <script>document.documentElement.classList.add('js')</script>
 
   <!-- ============================ SEO ============================ -->
-  <title>CASASILVIAWEB · Tornillos, Clavos, Tirafondos y Aceros — Mayorista</title>
+  <title>Tornillos, clavos y aceros al por mayor | CASASILVIAWEB</title>
   <meta name="description" content="Mayorista de fijaciones y aceros con respaldo Gerdau: tornillos, clavos, alambres, tirafondos, hierros y mallas. Entrega en CABA y GBA y abonás al recibir. Pedí la lista por WhatsApp.">
   <meta name="keywords" content="tornillos autoperforantes mayorista, clavos y alambres mayorista, tirafondos, hierros y mallas, mallas electrosoldadas, alambre galvanizado, ferretería mayorista, fijaciones, Tapiales, Buenos Aires, casasilviaweb">
   <meta name="author" content="CASASILVIAWEB">
@@ -49,7 +49,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- ===================== Estilos + preload hero ================ -->
-  <link rel="preload" as="image" href="assets/img/hero-deposito.jpg">
+  <link rel="preload" as="image" href="assets/img/hero-deposito.webp">
   <link rel="stylesheet" href="assets/css/styles.css">
 
   <!-- ===================== Datos estructurados =================== -->
@@ -62,6 +62,8 @@
         "@id": "https://www.casasilviaweb.com.ar/#business",
         "name": "CASASILVIAWEB",
         "alternateName": "Casa Silvia Web",
+        "slogan": "Mayorista de fijaciones y aceros. Abonás al recibir.",
+        "knowsAbout": ["Tornillos autoperforantes", "Clavos", "Alambres", "Tirafondos", "Hierros", "Mallas electrosoldadas", "Fijaciones", "Acero Gerdau", "Venta mayorista"],
         "description": "Mayorista de tornillos autoperforantes, clavos, alambres, tirafondos, hierros y mallas en Tapiales, Buenos Aires.",
         "url": "https://www.casasilviaweb.com.ar/",
         "logo": "https://www.casasilviaweb.com.ar/assets/img/logo.png",
@@ -96,10 +98,10 @@
           "@type": "OfferCatalog",
           "name": "Catálogo mayorista",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tornillos Autoperforantes", "category": "Fijaciones", "description": "Tornillos autoperforantes para chapa, madera, metal, hormigón y durlock: T1/T2, T25 Deck, T30 Hormigón, ensambladores, KREG, drywall, mechas FIX, mecha con alas y tarugos." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Clavos y Alambres", "category": "Clavos y alambres", "description": "Clavos punta París, espiralados, cabeza chata, perdida y de plomo; alambre galvanizado, de fardo, púas/concertina y alambre MIG." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tirafondos", "category": "Fijaciones", "description": "Tirafondos de alta resistencia para madera y mampostería, cabeza hexagonal, con tarugo y galvanizados, en todas las medidas." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Hierros y Mallas", "category": "Aceros para construcción", "description": "Hierro aletado y liso, mallas electrosoldadas, estribos y línea Gerdau para losas, pisos y estructuras." } }
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "image": "https://www.casasilviaweb.com.ar/assets/img/cat-tornillos.webp", "name": "Tornillos Autoperforantes", "category": "Fijaciones", "description": "Tornillos autoperforantes para chapa, madera, metal, hormigón y durlock: T1/T2, T25 Deck, T30 Hormigón, ensambladores, KREG, drywall, mechas FIX, mecha con alas y tarugos." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "image": "https://www.casasilviaweb.com.ar/assets/img/cat-clavos-alambres.webp", "name": "Clavos y Alambres", "category": "Clavos y alambres", "description": "Clavos punta París, espiralados, cabeza chata, perdida y de plomo; alambre galvanizado, de fardo, púas/concertina y alambre MIG." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "image": "https://www.casasilviaweb.com.ar/assets/img/cat-tirafondos.webp", "name": "Tirafondos", "category": "Fijaciones", "description": "Tirafondos de alta resistencia para madera y mampostería, cabeza hexagonal, con tarugo y galvanizados, en todas las medidas." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Product", "image": "https://www.casasilviaweb.com.ar/assets/img/cat-hierros-mallas.webp", "name": "Hierros y Mallas", "category": "Aceros para construcción", "description": "Hierro aletado y liso, mallas electrosoldadas, estribos y línea Gerdau para losas, pisos y estructuras." } }
           ]
         }
       },
@@ -227,11 +229,12 @@
   <main id="contenido">
     <!-- ============================ HERO ========================= -->
     <section class="hero" id="inicio">
-      <div class="hero__bg"><img src="assets/img/hero-deposito.jpg" alt="" aria-hidden="true" fetchpriority="high"></div>
+      <div class="hero__bg"><img src="assets/img/hero-deposito.webp" alt="" aria-hidden="true" fetchpriority="high"></div>
       <div class="container hero__inner">
         <span class="eyebrow">Mayorista de fijaciones y aceros</span>
         <h1>Tornillos, clavos y aceros <span class="accent">al por mayor</span></h1>
-        <p class="hero__lead">Somos mayoristas de fijaciones y aceros con <strong>respaldo de fábrica (Gerdau)</strong>: tornillos, clavos, alambres, tirafondos, hierros y mallas. <strong>Entregamos en CABA y GBA y abonás al recibir</strong>, con descuentos por volumen.</p>
+        <p class="hero__lead">Somos mayoristas de fijaciones y aceros con <strong>respaldo de fábrica (Gerdau)</strong>: tornillos, clavos, alambres, tirafondos, hierros y mallas. Entregamos en CABA y GBA, con descuentos por volumen.</p>
+        <p class="hero-badge"><svg class="line" aria-hidden="true"><use href="#i-check"></use></svg><span><strong>Abonás al recibir</strong> — comprás tranquilo, incluso en pedidos grandes</span></p>
         <div class="hero__actions">
           <a class="btn btn--wa btn--lg" href="https://wa.me/541166034047?text=Hola%20CASASILVIAWEB%21%20Quiero%20solicitar%20la%20lista%20de%20precios%20mayorista." target="_blank" rel="noopener" data-wa="hero" data-wa-label="Hero — Lista de precios">
             <svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg>
@@ -284,7 +287,7 @@
           <!-- Tornillos Autoperforantes -->
           <article class="cat reveal" id="tornillos-autoperforantes">
             <span class="cat__corner" aria-hidden="true"></span>
-            <div class="cat__img"><img src="assets/img/cat-tornillos.jpg" alt="Caja de tornillos autoperforantes cincados en el depósito de CASASILVIAWEB" width="900" height="650" loading="lazy"></div>
+            <div class="cat__img"><img src="assets/img/cat-tornillos.webp" alt="Caja de tornillos autoperforantes cincados en el depósito de CASASILVIAWEB" width="900" height="650" loading="lazy" decoding="async"></div>
             <div class="cat__body">
               <span class="cat__kicker">Línea 01</span>
               <h3>Tornillos Autoperforantes</h3>
@@ -300,7 +303,7 @@
           <!-- Clavos y Alambres -->
           <article class="cat reveal" id="clavos-y-alambres">
             <span class="cat__corner" aria-hidden="true"></span>
-            <div class="cat__img"><img src="assets/img/cat-clavos-alambres.jpg" alt="Rollos de alambre galvanizado en stock" width="900" height="650" loading="lazy"></div>
+            <div class="cat__img"><img src="assets/img/cat-clavos-alambres.webp" alt="Rollos de alambre galvanizado en stock" width="900" height="650" loading="lazy" decoding="async"></div>
             <div class="cat__body">
               <span class="cat__kicker">Línea 02</span>
               <h3>Clavos y Alambres</h3>
@@ -316,7 +319,7 @@
           <!-- Tirafondos -->
           <article class="cat reveal" id="tirafondos">
             <span class="cat__corner" aria-hidden="true"></span>
-            <div class="cat__img"><img src="assets/img/cat-tirafondos.jpg" alt="Tirafondos y bulones de acero cincado" width="900" height="650" loading="lazy"></div>
+            <div class="cat__img"><img src="assets/img/cat-tirafondos.webp" alt="Tirafondos y bulones de acero cincado" width="900" height="650" loading="lazy" decoding="async"></div>
             <div class="cat__body">
               <span class="cat__kicker">Línea 03</span>
               <h3>Tirafondos y fijaciones</h3>
@@ -332,7 +335,7 @@
           <!-- Hierros y Mallas -->
           <article class="cat reveal" id="hierros-y-mallas">
             <span class="cat__corner" aria-hidden="true"></span>
-            <div class="cat__img"><img src="assets/img/cat-hierros-mallas.jpg" alt="Mallas electrosoldadas apiladas en el depósito" width="900" height="650" loading="lazy"></div>
+            <div class="cat__img"><img src="assets/img/cat-hierros-mallas.webp" alt="Mallas electrosoldadas apiladas en el depósito" width="900" height="650" loading="lazy" decoding="async"></div>
             <div class="cat__body">
               <span class="cat__kicker">Línea 04</span>
               <h3>Hierros y Mallas</h3>
@@ -382,13 +385,44 @@
           </div>
 
           <div class="split__media reveal">
-            <img src="assets/img/calidad-stock.jpg" alt="Hierros y acero en stock en el depósito de CASASILVIAWEB" width="1000" height="750" loading="lazy">
+            <img src="assets/img/calidad-stock.webp" alt="Hierros y acero en stock en el depósito de CASASILVIAWEB" width="1000" height="750" loading="lazy" decoding="async">
             <div class="badge">
               <span class="trust__icon" style="background:var(--red-tint)"><svg class="line" aria-hidden="true" style="color:var(--red)"><use href="#i-shield"></use></svg></span>
               <div><b>Calidad certificada</b><span>ISO 9001 · IRAM</span></div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ======================= CÓMO COMPRAR ===================== -->
+    <section class="section section--soft" id="como-comprar" aria-label="Cómo comprar">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">Cómo comprar</span>
+          <h2>Comprar es simple y seguro</h2>
+          <p>Sin vueltas: nos escribís, te pasamos la lista y coordinamos. Y lo más importante, <strong>abonás al recibir</strong>.</p>
+        </div>
+        <ol class="steps reveal">
+          <li class="step">
+            <span class="step__num">1</span>
+            <span class="step__ic"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg></span>
+            <h3>Escribinos por WhatsApp</h3>
+            <p>Pedinos la lista de precios y contanos qué necesitás.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">2</span>
+            <span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-tag"></use></svg></span>
+            <h3>Armás tu pedido</h3>
+            <p>Te pasamos precios y descuentos por volumen, y coordinamos la entrega.</p>
+          </li>
+          <li class="step">
+            <span class="step__num">3</span>
+            <span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-truck"></use></svg></span>
+            <h3>Abonás al recibir</h3>
+            <p>Te llevamos el pedido a CABA o GBA y pagás cuando lo recibís.</p>
+          </li>
+        </ol>
       </div>
     </section>
 

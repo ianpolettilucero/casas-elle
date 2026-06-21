@@ -173,6 +173,18 @@ p { color: var(--ink-800); }
 .hero__stats { margin-top: 46px; display: flex; flex-wrap: wrap; gap: 14px 40px; }
 .hero__stat b { display: block; font-family: var(--font-head); font-size: 1.9rem; color: #fff; line-height: 1; }
 .hero__stat span { font-size: .92rem; color: #b8b8c0; letter-spacing: .02em; }
+.hero-badge { display: inline-flex; align-items: center; gap: 11px; max-width: 100%; margin-top: 22px; background: rgba(84,240,138,.12); border: 1px solid rgba(84,240,138,.45); border-radius: 999px; padding: 11px 18px; color: #fff; font-size: 1.02rem; }
+.hero-badge svg { width: 22px; height: 22px; color: #54f08a; flex: none; }
+.hero-badge strong { font-weight: 700; }
+
+/* ----------------------------------------------------------- Cómo comprar */
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; list-style: none; }
+.step { position: relative; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 36px 26px 28px; box-shadow: var(--shadow-sm); }
+.step__num { position: absolute; top: -18px; left: 26px; width: 40px; height: 40px; border-radius: 50%; background: var(--red); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm); }
+.step__ic { width: 52px; height: 52px; border-radius: 14px; background: var(--red-tint); color: var(--red); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+.step__ic svg { width: 28px; height: 28px; }
+.step h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.step p { color: var(--muted); font-size: .98rem; }
 
 /* ----------------------------------------------------------- Trust strip */
 .trust { background: var(--ink-900); color: #fff; }
@@ -353,6 +365,7 @@ p { color: var(--ink-800); }
   .hero__actions { margin-top: 32px; gap: 12px; }
   .hero__stats { margin-top: 42px; gap: 24px 34px; }
   .cats { grid-template-columns: 1fr; }
+  .steps { grid-template-columns: 1fr; gap: 30px; }
   .footer__grid { grid-template-columns: 1fr; gap: 30px; }
   .footer__bottom { flex-direction: column; }
 }

@@ -55,15 +55,17 @@ Para reemplazarlas, **mantené el mismo nombre de archivo** y pisá el que está
 | Archivo                         | Dónde se usa                         | Tamaño sugerido        |
 |---------------------------------|--------------------------------------|------------------------|
 | `logo.png`                      | Header, footer, favicon, popup       | PNG con fondo transparente, ~512px |
-| `hero.png`                      | Fondo de la portada (oscuro)         | 1920×1080, horizontal  |
-| `og-image.png`                  | Vista previa al compartir (redes)    | 1200×630               |
-| `cat-autoperforantes.jpg`       | Tarjeta "Tornillos Autoperforantes"  | 800×600                |
-| `cat-clavos-alambres.png`       | Tarjeta "Clavos y Alambres"          | 800×600                |
-| `cat-tirafondos.png`            | Tarjeta "Tirafondos"                 | 800×600                |
-| `cat-hierros-mallas.png`        | Tarjeta "Hierros y Mallas"           | 800×600                |
-| `detail-macro.png`              | Sección "Garantía de calidad"        | 800×600                |
+| `hero-deposito.webp`            | Fondo de la portada (oscuro)         | 1600×1000, horizontal  |
+| `og-image.png`                  | Vista previa al compartir (redes)    | 1200×630 (PNG/JPG, no WebP) |
+| `cat-tornillos.webp`            | Tarjeta "Tornillos Autoperforantes"  | 900×650                |
+| `cat-clavos-alambres.webp`      | Tarjeta "Clavos y Alambres"          | 900×650                |
+| `cat-tirafondos.webp`           | Tarjeta "Tirafondos y fijaciones"    | 900×650                |
+| `cat-hierros-mallas.webp`       | Tarjeta "Hierros y Mallas"           | 900×650                |
+| `calidad-stock.webp`            | Sección "Calidad y respaldo"         | 1000×750               |
 
-> Tip: optimizá los pesos (TinyPNG / Squoosh) antes de subirlas para que cargue rápido.
+> Las fotos van en **WebP** (más livianas). Para convertir: Squoosh.app o
+> `convert foto.jpg -quality 80 foto.webp`. La de compartir (`og-image`) dejala en PNG/JPG
+> porque WhatsApp/Facebook no leen bien WebP en la vista previa.
 
 ---
 
