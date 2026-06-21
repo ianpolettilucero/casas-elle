@@ -1,0 +1,25 @@
+# robots.txt · CASASILVIAWEB
+# Permitimos el rastreo completo del sitio.
+
+User-agent: *
+Allow: /
+
+# Crawlers de IA / LLMs — bienvenidos. Guía optimizada para modelos en:
+#   https://www.casasilviaweb.com.ar/llms.txt
+#   https://www.casasilviaweb.com.ar/llms-full.txt
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.casasilviaweb.com.ar/sitemap.xml

@@ -1,0 +1,14 @@
+{
+  "name": "CASASILVIAWEB — Mayorista de fijaciones y aceros",
+  "short_name": "CASASILVIAWEB",
+  "description": "Mayorista de tornillos autoperforantes, clavos, alambres, tirafondos, hierros y mallas en Tapiales, Buenos Aires.",
+  "lang": "es-AR",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0e0e10",
+  "theme_color": "#d21e28",
+  "icons": [
+    { "src": "assets/img/logo.png", "sizes": "332x291", "type": "image/png", "purpose": "any" }
+  ]
+}
