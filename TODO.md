@@ -45,19 +45,18 @@ una eventual fase de retail, que hoy no es prioridad).
 
 ## 🔜 Próximos pasos (priorizados)
 
-### Confianza (lo que más convierte al tráfico social)
-- [ ] 🔴 🛡️ **Sección "Nosotros"**: trayectoria (años en el rubro), mayorista, foco CABA/GBA,
-  respaldo Gerdau + capacidad de fábrica. *(Necesito: años de trayectoria.)*
-- [ ] 🔴 🛡️💬 **Testimonios** de clientes (4-6 para empezar). Es el equivalente a las reseñas
-  de MercadoLibre. *(Necesito: nombres/comercios + frases.)*
+### Confianza
+- [ ] ⏸️ 🛡️ **Sección "Nosotros"** y **testimonios** — *en pausa por decisión del dueño*.
+  Quedan como opción para retomar más adelante (son las palancas de confianza más fuertes).
 - [ ] 🟡 🛡️ **Datos fiscales** en el footer (razón social, CUIT, condición IVA) → confianza B2B.
 - [ ] 🟡 🛡️ Logos de marcas/clientes (Gerdau y otras) si se pueden mostrar.
 
 ### Difusión (el canal real: redes)
 - [ ] 🔴 🔍 **Google Business Profile** (Maps): para cuando te buscan por nombre o zona. *(Lo
   hacés con la cuenta del negocio; te guío.)*
-- [ ] 🟡 💬 **Links de Instagram y Facebook** reales en el footer (hoy son tentativos) y que
-  apunten desde la web a las redes (y viceversa: el link de la web en las bios).
+- [x] 💬 **Links reales de Instagram y Facebook** en el footer
+  (instagram.com/casasilviaweb · facebook.com/casasilviaweb). Falta sumar el link de la web
+  en las bios de las redes.
 - [ ] 🟡 💬 **Lista/catálogo en PDF** lista para compartir en grupos (o "pedila por WhatsApp").
 
 ### Catálogo (cuando lo cierren / si quieren crecer en orgánico)
@@ -74,7 +73,6 @@ una eventual fase de retail, que hoy no es prioridad).
 - [ ] Años de trayectoria / desde cuándo.
 - [ ] Datos fiscales (razón social, CUIT, condición IVA).
 - [ ] 4-6 testimonios (nombre/comercio + frase).
-- [ ] Links reales de **Instagram** y **Facebook**.
 - [ ] (Opcional) Fotos "bien hechas" si quieren reemplazar las actuales del depósito.
 - [ ] El catálogo cerrado (o por partes) si más adelante hacemos páginas por categoría.
 
