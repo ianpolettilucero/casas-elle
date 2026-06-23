@@ -289,6 +289,26 @@ def price_cta(heading="Pedí tu lista de precios mayorista",
       </div>
     </section>"""
 
+def gallery_section(soft=False):
+    photos = [
+      ("deposito-hierros.webp", "Stock de hierro aletado en el depósito de CASASILVIAWEB"),
+      ("deposito-tornillos.webp", "Pallets de tornillos en el depósito"),
+      ("deposito-tuercas.webp", "Tuercas y bulonería en stock"),
+      ("deposito-logistica.webp", "Autoelevador y pallets listos para despacho"),
+    ]
+    figs = "\n".join(
+      f'          <figure class="gallery__item"><img src="assets/img/{p}" alt="{a}" width="800" height="600" loading="lazy" decoding="async"></figure>'
+      for p, a in photos)
+    cls = "section section--soft" if soft else "section"
+    return f"""    <section class="{cls}" id="deposito" aria-label="Nuestro depósito">
+      <div class="container">
+        <div class="section-head center reveal"><span class="eyebrow">Nuestro depósito</span><h2>Stock real, listo para entregar</h2><p>Trabajamos con stock propio y respaldo de fábrica. Así se ve lo que tenemos para vos.</p></div>
+        <div class="gallery reveal">
+{figs}
+        </div>
+      </div>
+    </section>"""
+
 # --------------------------------------------------------------------------- DATOS DEL CATÁLOGO
 CATS = [
   {
@@ -645,6 +665,7 @@ def render_home():
         </div>
       </div>
     </section>
+{gallery_section()}
     <section class="section section--soft" id="como-comprar" aria-label="Cómo comprar">
       <div class="container">
         <div class="section-head center reveal"><span class="eyebrow">Cómo comprar</span><h2>Comprás en 3 pasos</h2><p>Nos escribís por WhatsApp, te pasamos la lista y coordinamos la entrega.</p></div>
@@ -730,6 +751,7 @@ def render_nosotros():
       </div>
     </section>
 {trust_strip()}
+{gallery_section()}
 {price_cta(heading="¿Querés trabajar con nosotros?", text="Pedí la lista de precios mayorista por WhatsApp. Te respondemos al instante.")}
 {location_section()}"""
     jsonld = {"@context":"https://schema.org","@graph":[BUSINESS_LD,
