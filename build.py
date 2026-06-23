@@ -310,7 +310,7 @@ def gallery_section(soft=False):
     cls = "section section--soft" if soft else "section"
     return f"""    <section class="{cls}" id="deposito" aria-label="Nuestro depósito">
       <div class="container">
-        <div class="section-head center reveal"><span class="eyebrow">Nuestro depósito</span><h2>Mercadería lista para entregar</h2><p>Stock propio y respaldo de fábrica para responder a cualquier pedido, grande o chico.</p></div>
+        <div class="section-head center reveal"><span class="eyebrow">Nuestro depósito</span><h2>Mercadería lista para entregar</h2><p>Stock propio y respaldo de fábrica para responder a cualquier pedido, grande o chico. <a class="link-wa" href="{wa_href('Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.')}" target="_blank" rel="noopener" data-wa="deposito" data-wa-label="Depósito — Lista de precios">Pedí la lista por WhatsApp</a>.</p></div>
         <div class="gallery reveal">
 {_figs(DEPOT_PHOTOS)}
         </div>
@@ -325,7 +325,7 @@ def cat_gallery(c, soft=True):
     cls = "section section--soft" if soft else "section"
     return f"""    <section class="{cls}" aria-label="{c['name']} en el depósito">
       <div class="container">
-        <div class="section-head center reveal"><span class="eyebrow">En nuestro depósito</span><h2>{c['name']} en stock</h2><p>Mercadería propia, lista para entregar. Pedí la lista de precios por WhatsApp.</p></div>
+        <div class="section-head center reveal"><span class="eyebrow">En nuestro depósito</span><h2>{c['name']} en stock</h2><p>Mercadería propia, lista para entregar. <a class="link-wa" href="{wa_href(c['wa_text'])}" target="_blank" rel="noopener" data-wa="cat-{c['slug']}-galeria" data-wa-label="Galería — {c['name']}">Pedí la lista de precios por WhatsApp</a>.</p></div>
         <div class="gallery gallery--fit reveal">
 {_figs(photos)}
         </div>
@@ -338,8 +338,8 @@ CATS = [
     "slug":"tornillos-autoperforantes", "name":"Tornillos Autoperforantes", "kicker":"Línea 01",
     "img":"cat-tornillos.webp", "img_alt":"Caja de tornillos autoperforantes cincados en el depósito de CASASILVIAWEB",
     "photos":[
-      ("cat-tornillos.webp","Caja de tornillos autoperforantes cincados en el depósito de CASASILVIAWEB"),
-      ("tornillos-stock.webp","Pallets de tornillos autoperforantes en stock, listos para despachar"),
+      ("tornillos-stock.webp","Pallets de tornillos autoperforantes en stock en el depósito de CASASILVIAWEB"),
+      ("tornillos-tipos.webp","Cajas de tornillos autoperforantes por tipo y medida en estantería"),
     ],
     "core":True,
     "tags":["Hexagonal mecha/aguja","FIX","Drywall metal","Drywall madera","Durlock","Punta con alas","Ensamblador","Deck T25","Hormigón T30","KREG"],
@@ -376,8 +376,8 @@ CATS = [
     "slug":"clavos-y-alambres", "name":"Clavos y Alambres", "kicker":"Línea 02",
     "img":"cat-clavos-alambres.webp", "img_alt":"Rollos de alambre galvanizado en stock",
     "photos":[
-      ("cat-clavos-alambres.webp","Rollos de alambre galvanizado en stock"),
-      ("clavos-stock.webp","Rollos de alambre embalados en pallet, stock mayorista"),
+      ("clavos-coils.webp","Rollos de alambre en pallets, gran volumen en stock"),
+      ("clavos-deposito.webp","Stock de alambre y autoelevador en el depósito de CASASILVIAWEB"),
     ],
     "core":True,
     "tags":["Punta París","Espiralados","Cabeza de plomo","Electrosoldados","Alambre galvanizado","Alambre de fardo","Púas / Concertina","Alambre MIG"],
@@ -415,7 +415,7 @@ CATS = [
     "slug":"tirafondos-y-fijaciones", "name":"Tirafondos y Fijaciones", "kicker":"Línea 03",
     "img":"cat-tirafondos.webp", "img_alt":"Tirafondos y bulones de acero cincado",
     "photos":[
-      ("cat-tirafondos.webp","Tornillos y fijaciones de acero cincado en el depósito"),
+      ("tirafondos-stock.webp","Tornillos y fijaciones junto a pallets de mercadería en el depósito"),
       ("tirafondos-tuercas.webp","Tuercas hexagonales cincadas, bulonería en stock"),
     ],
     "core":True,
@@ -451,8 +451,7 @@ CATS = [
     "slug":"hierros-y-mallas", "name":"Hierros y Mallas", "kicker":"Línea 04",
     "img":"cat-hierros-mallas.webp", "img_alt":"Mallas electrosoldadas apiladas en el depósito",
     "photos":[
-      ("cat-hierros-mallas.webp","Mallas electrosoldadas apiladas en el depósito"),
-      ("deposito-hierros.webp","Hierro aletado en barras apilado en profundidad"),
+      ("deposito-hierros.webp","Hierro aletado en barras apilado en profundidad en el depósito"),
       ("calidad-stock.webp","Operarios y autoelevador moviendo hierro en el depósito"),
     ],
     "core":True,
@@ -510,7 +509,7 @@ CATS = [
     "slug":"pinturas-y-quimicos", "name":"Pinturas y Químicos", "kicker":"Línea 06",
     "img":"cat-pinturas.webp", "img_alt":"Pallets de pintura y productos de obra en el depósito",
     "photos":[
-      ("cat-pinturas.webp","Pallets de pintura y productos de obra en el depósito"),
+      ("pinturas-stock.webp","Pallets de pintura de obra de distintos colores en stock"),
       ("deposito-logistica.webp","Autoelevador con mezcla adhesiva palletizada para despacho"),
     ],
     "core":False,
