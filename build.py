@@ -294,22 +294,40 @@ def price_cta(heading="Pedí tu lista de precios mayorista",
       </div>
     </section>"""
 
-def gallery_section(soft=False):
-    photos = [
-      ("deposito-almacen.webp", "Pallets de pintura y productos de obra apilados en altura en el depósito de CASASILVIAWEB"),
-      ("deposito-hierros.webp", "Hierro aletado en barras apilado en profundidad en el depósito de CASASILVIAWEB"),
-      ("deposito-mallas.webp", "Gran volumen de mallas electrosoldadas apiladas en el depósito de CASASILVIAWEB"),
-      ("deposito-logistica.webp", "Autoelevador cargando mercadería palletizada para despacho"),
-    ]
-    figs = "\n".join(
+DEPOT_PHOTOS = [
+  ("deposito-almacen.webp", "Pallets de pintura y productos de obra apilados en altura en el depósito de CASASILVIAWEB"),
+  ("deposito-hierros.webp", "Hierro aletado en barras apilado en profundidad en el depósito de CASASILVIAWEB"),
+  ("deposito-mallas.webp", "Gran volumen de mallas electrosoldadas apiladas en el depósito de CASASILVIAWEB"),
+  ("deposito-logistica.webp", "Autoelevador cargando mercadería palletizada para despacho"),
+]
+
+def _figs(photos):
+    return "\n".join(
       f'          <figure class="gallery__item"><img src="assets/img/{p}" alt="{a}" width="800" height="600" loading="lazy" decoding="async"></figure>'
       for p, a in photos)
+
+def gallery_section(soft=False):
     cls = "section section--soft" if soft else "section"
     return f"""    <section class="{cls}" id="deposito" aria-label="Nuestro depósito">
       <div class="container">
         <div class="section-head center reveal"><span class="eyebrow">Nuestro depósito</span><h2>Mercadería lista para entregar</h2><p>Stock propio y respaldo de fábrica para responder a cualquier pedido, grande o chico.</p></div>
         <div class="gallery reveal">
-{figs}
+{_figs(DEPOT_PHOTOS)}
+        </div>
+      </div>
+    </section>"""
+
+def cat_gallery(c, soft=True):
+    """Galería de fotos propia de cada categoría (cae a la del depósito si no tiene)."""
+    photos = c.get("photos")
+    if not photos:
+        return gallery_section(soft=soft)
+    cls = "section section--soft" if soft else "section"
+    return f"""    <section class="{cls}" aria-label="{c['name']} en el depósito">
+      <div class="container">
+        <div class="section-head center reveal"><span class="eyebrow">En nuestro depósito</span><h2>{c['name']} en stock</h2><p>Mercadería propia, lista para entregar. Pedí la lista de precios por WhatsApp.</p></div>
+        <div class="gallery gallery--fit reveal">
+{_figs(photos)}
         </div>
       </div>
     </section>"""
@@ -319,6 +337,10 @@ CATS = [
   {
     "slug":"tornillos-autoperforantes", "name":"Tornillos Autoperforantes", "kicker":"Línea 01",
     "img":"cat-tornillos.webp", "img_alt":"Caja de tornillos autoperforantes cincados en el depósito de CASASILVIAWEB",
+    "photos":[
+      ("cat-tornillos.webp","Caja de tornillos autoperforantes cincados en el depósito de CASASILVIAWEB"),
+      ("tornillos-stock.webp","Pallets de tornillos autoperforantes en stock, listos para despachar"),
+    ],
     "core":True,
     "tags":["Hexagonal mecha/aguja","FIX","Drywall metal","Drywall madera","Durlock","Punta con alas","Ensamblador","Deck T25","Hormigón T30","KREG"],
     "title":"Tornillos autoperforantes mayorista | Tipos y medidas | CASASILVIAWEB",
@@ -353,6 +375,10 @@ CATS = [
   {
     "slug":"clavos-y-alambres", "name":"Clavos y Alambres", "kicker":"Línea 02",
     "img":"cat-clavos-alambres.webp", "img_alt":"Rollos de alambre galvanizado en stock",
+    "photos":[
+      ("cat-clavos-alambres.webp","Rollos de alambre galvanizado en stock"),
+      ("clavos-stock.webp","Rollos de alambre embalados en pallet, stock mayorista"),
+    ],
     "core":True,
     "tags":["Punta París","Espiralados","Cabeza de plomo","Electrosoldados","Alambre galvanizado","Alambre de fardo","Púas / Concertina","Alambre MIG"],
     "title":"Clavos y alambres mayorista | Punta París, fardo Nº16 | CASASILVIAWEB",
@@ -388,6 +414,10 @@ CATS = [
   {
     "slug":"tirafondos-y-fijaciones", "name":"Tirafondos y Fijaciones", "kicker":"Línea 03",
     "img":"cat-tirafondos.webp", "img_alt":"Tirafondos y bulones de acero cincado",
+    "photos":[
+      ("cat-tirafondos.webp","Tornillos y fijaciones de acero cincado en el depósito"),
+      ("tirafondos-tuercas.webp","Tuercas hexagonales cincadas, bulonería en stock"),
+    ],
     "core":True,
     "tags":["Tirafondos hexagonales","Tarugos","Tuercas","Arandelas","Grampas","Gancho J","Torniquetes","Mariposas"],
     "title":"Tirafondos, tarugos y fijaciones mayorista | CASASILVIAWEB",
@@ -420,6 +450,11 @@ CATS = [
   {
     "slug":"hierros-y-mallas", "name":"Hierros y Mallas", "kicker":"Línea 04",
     "img":"cat-hierros-mallas.webp", "img_alt":"Mallas electrosoldadas apiladas en el depósito",
+    "photos":[
+      ("cat-hierros-mallas.webp","Mallas electrosoldadas apiladas en el depósito"),
+      ("deposito-hierros.webp","Hierro aletado en barras apilado en profundidad"),
+      ("calidad-stock.webp","Operarios y autoelevador moviendo hierro en el depósito"),
+    ],
     "core":True,
     "tags":["Hierro aletado","Hierro dulce","Varilla","Mallas electrosoldadas","Estribos","Línea Gerdau"],
     "title":"Hierros y mallas mayorista | Gerdau, Sima | CASASILVIAWEB",
@@ -474,6 +509,10 @@ CATS = [
   {
     "slug":"pinturas-y-quimicos", "name":"Pinturas y Químicos", "kicker":"Línea 06",
     "img":"cat-pinturas.webp", "img_alt":"Pallets de pintura y productos de obra en el depósito",
+    "photos":[
+      ("cat-pinturas.webp","Pallets de pintura y productos de obra en el depósito"),
+      ("deposito-logistica.webp","Autoelevador con mezcla adhesiva palletizada para despacho"),
+    ],
     "core":False,
     "tags":["Pinturas de obra","Impermeabilizantes","Mezcla adhesiva","Químicos para construcción"],
     "title":"Pinturas y químicos para obra mayorista | CASASILVIAWEB",
@@ -556,6 +595,7 @@ def render_category(c):
         </div>
       </div>
     </section>
+{cat_gallery(c)}
     <section class="section section--soft">
       <div class="container">
         <div class="split">
