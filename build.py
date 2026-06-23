@@ -514,7 +514,7 @@ def cat_card(c):
               <span class="cat__kicker">{c['kicker']}</span>
               <h3>{c['name']}</h3>
               <ul class="cat__tags">{tags}</ul>
-              <a class="cat__link" href="{c['slug']}.html">Ver línea <svg class="line" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
+              <a class="cat__link" href="{c['slug']}.html" aria-label="Ver línea {c['name']}">Ver línea <svg class="line" aria-hidden="true"><use href="#i-arrow"></use></svg></a>
             </div>
           </article>"""
 

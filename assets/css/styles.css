@@ -213,6 +213,9 @@ p { color: var(--ink-800); }
 .cat__link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-head); text-transform: uppercase; letter-spacing: .04em; font-weight: 600; color: #fff; }
 .cat__link svg { width: 18px; height: 18px; color: var(--wa); transition: transform .15s ease; }
 .cat:hover .cat__link svg { transform: translateX(4px); }
+/* Toda la tarjeta es clickeable: el link se estira sobre toda la .cat */
+.cat { cursor: pointer; }
+.cat__link::after { content: ""; position: absolute; inset: 0; z-index: 1; }
 .cat__corner { position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 64px 64px 0; border-color: transparent var(--red) transparent transparent; z-index: 1; }
 
 /* --------------------------------------------------------------- Calidad */
