@@ -291,10 +291,10 @@ def price_cta(heading="Pedí tu lista de precios mayorista",
 
 def gallery_section(soft=False):
     photos = [
-      ("deposito-hierros.webp", "Stock de hierro aletado en el depósito de CASASILVIAWEB"),
-      ("deposito-tornillos.webp", "Pallets de tornillos en el depósito"),
-      ("deposito-tuercas.webp", "Tuercas y bulonería en stock"),
-      ("deposito-logistica.webp", "Autoelevador y pallets listos para despacho"),
+      ("deposito-almacen.webp", "Pallets de pintura y productos de obra apilados en altura en el depósito de CASASILVIAWEB"),
+      ("deposito-hierros.webp", "Hierro aletado en barras apilado en profundidad en el depósito de CASASILVIAWEB"),
+      ("deposito-mallas.webp", "Gran volumen de mallas electrosoldadas apiladas en el depósito de CASASILVIAWEB"),
+      ("deposito-logistica.webp", "Autoelevador cargando mercadería palletizada para despacho"),
     ]
     figs = "\n".join(
       f'          <figure class="gallery__item"><img src="assets/img/{p}" alt="{a}" width="800" height="600" loading="lazy" decoding="async"></figure>'
