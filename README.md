@@ -130,28 +130,31 @@ Para cambiar el número, reemplazá `541166034047` en `index.html` (y en `whatsa
 
 ---
 
-## 🌐 Publicar / previsualizar
+## 🌐 Deploy — Cloudflare Pages (automático desde `main`)
 
-### Vista previa ahora (sin dominio) — GitHub Pages
-1. *Settings → Pages → Source: **Deploy from a branch**.*
-2. Branch: `claude/sweet-knuth-lxcsii` · carpeta `/ (root)` → **Save**.
-3. En ~1 minuto queda online en: `https://ianpolettilucero.github.io/casas-elle/`
+El sitio se publica con **Cloudflare Pages**: cada push a `main` dispara un deploy
+automático. No hay build (es estático), así que la configuración es mínima.
 
-> No incluimos el archivo `CNAME` todavía, así la vista previa funciona en la URL de
-> github.io. Las etiquetas `canonical` / Open Graph siguen apuntando al dominio final
-> (`www.casasilviaweb.com.ar`), que es lo correcto para SEO.
+### Crear el proyecto (una sola vez)
+1. Cloudflare → **Workers & Pages** → **Create** → pestaña **Pages** → **Connect to Git**.
+2. Autorizá GitHub y elegí el repo `ianpolettilucero/casas-elle`.
+3. Configuración de build:
+   - **Production branch:** `main`
+   - **Framework preset:** None
+   - **Build command:** *(vacío)*
+   - **Build output directory:** `/`
+4. **Save and Deploy** → en ~1 min queda online en una URL `…pages.dev`.
 
-### Cuando tengas acceso al dominio casasilviaweb.com.ar
-1. Creá en la raíz un archivo llamado **`CNAME`** con una sola línea: `www.casasilviaweb.com.ar`
-2. En tu proveedor de DNS: registro `CNAME` de `www` → `ianpolettilucero.github.io`
-   (y registros `A` del apex hacia las IPs de GitHub Pages si lo querés sin `www`).
-3. En *Settings → Pages → Custom domain* confirmá el dominio y activá **Enforce HTTPS**.
+### Dominio
+En el proyecto Pages → **Custom domains** → agregá `www.casasilviaweb.com.ar`
+(y el apex `casasilviaweb.com.ar`). Como el DNS ya está en Cloudflare, crea los
+registros y el certificado HTTPS solo. Borrá los registros viejos que apuntaban a Google.
 
-> Nada de esto afecta al sitio actual hasta que cambies el DNS: el original sigue
-> funcionando en el dominio hasta el momento exacto del switch.
-
-### Otras opciones
-**Netlify** o **Vercel**: importás el repo y te dan una URL al instante, sin tocar DNS.
+### A tener en cuenta
+- **No se usa GitHub Pages** ni archivo `CNAME`: Cloudflare Pages gestiona el dominio
+  desde su panel.
+- Cada cambio = push a `main` → deploy automático. Cloudflare también genera una
+  **preview por cada rama / Pull Request** para revisar sin tocar producción.
 
 ---
 
