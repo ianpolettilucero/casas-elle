@@ -302,7 +302,7 @@ def gallery_section(soft=False):
     cls = "section section--soft" if soft else "section"
     return f"""    <section class="{cls}" id="deposito" aria-label="Nuestro depósito">
       <div class="container">
-        <div class="section-head center reveal"><span class="eyebrow">Nuestro depósito</span><h2>Stock real, listo para entregar</h2><p>Trabajamos con stock propio y respaldo de fábrica. Así se ve lo que tenemos para vos.</p></div>
+        <div class="section-head center reveal"><span class="eyebrow">Nuestro depósito</span><h2>Mercadería lista para entregar</h2><p>Stock propio y respaldo de fábrica para responder a cualquier pedido, grande o chico.</p></div>
         <div class="gallery reveal">
 {figs}
         </div>
