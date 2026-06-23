@@ -130,6 +130,25 @@ Para cambiar el número, reemplazá `541166034047` en `index.html` (y en `whatsa
 
 ---
 
+## 🛠️ Editar el sitio (generador)
+
+El sitio es **multipágina** y se arma con un generador. El catálogo y el contenido
+viven en **`build.py`** (lista `CATS`). Las páginas HTML se generan estáticas (sirven en
+GitHub Pages / Cloudflare Pages sin build del host).
+
+Para regenerar todo después de editar `build.py`:
+
+```bash
+python3 build.py
+```
+
+Reescribe `index.html`, las páginas de categoría (`tornillos-autoperforantes.html`, etc.),
+`nosotros.html`, `como-comprar.html` y `sitemap.xml`. Para **sumar o editar productos/categorías**,
+modificá la lista `CATS` en `build.py` y volvé a correrlo. El header, footer y `<head>` (SEO)
+son compartidos, así que un cambio se aplica a todas las páginas.
+
+---
+
 ## 🌐 Deploy — Cloudflare Pages (automático desde `main`)
 
 El sitio se publica con **Cloudflare Pages**: cada push a `main` dispara un deploy
