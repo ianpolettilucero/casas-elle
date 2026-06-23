@@ -9,6 +9,7 @@ sirven en GitHub Pages / Cloudflare Pages sin build del lado del host).
 Uso:  python3 build.py
 """
 import json
+import os
 import urllib.parse
 from datetime import date
 
@@ -65,6 +66,7 @@ CONFIG_SCRIPT = """  <script>
 def head(title, desc, path, og_image="assets/img/og-image.png", preload=None, jsonld=None):
     canonical = f"{SITE}/{path}" if path else f"{SITE}/"
     og_img_url = f"{SITE}/{og_image}"
+    og_type = "image/png" if og_image.lower().endswith(".png") else "image/jpeg"
     preload_tag = f'\n  <link rel="preload" as="image" href="{preload}">' if preload else ""
     ld = ""
     if jsonld:
@@ -93,6 +95,9 @@ def head(title, desc, path, og_image="assets/img/og-image.png", preload=None, js
   <meta property="og:description" content="{desc}">
   <meta property="og:url" content="{canonical}">
   <meta property="og:image" content="{og_img_url}">
+  <meta property="og:image:type" content="{og_type}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="CASASILVIAWEB — Mayorista de fijaciones y aceros">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{title}">
@@ -100,7 +105,7 @@ def head(title, desc, path, og_image="assets/img/og-image.png", preload=None, js
   <meta name="twitter:image" content="{og_img_url}">
   <meta name="theme-color" content="#d21e28">
   <link rel="icon" href="assets/img/logo.png" type="image/png">
-  <link rel="apple-touch-icon" href="assets/img/logo.png">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -577,6 +582,12 @@ def render_category(c):
         <p class="related reveal">{rel_links}</p>
       </div>
     </section>"""
+    # Producto: sin precio (cotización por WhatsApp), marca Gerdau solo donde corresponde (acero)
+    product = {"@type":"Product","name":c["name"],"image":f"{SITE}/assets/img/{c['img']}",
+               "description":c["desc"],"category":"Fijaciones y aceros",
+               "url":f"{SITE}/{c['slug']}.html"}
+    if c["slug"] in ("hierros-y-mallas","soldadura"):
+        product["brand"] = {"@type":"Brand","name":"Gerdau"}
     # JSON-LD
     jsonld = {"@context":"https://schema.org","@graph":[
       {"@type":"BreadcrumbList","itemListElement":[
@@ -584,15 +595,15 @@ def render_category(c):
         {"@type":"ListItem","position":2,"name":"Productos","item":f"{SITE}/#productos"},
         {"@type":"ListItem","position":3,"name":c["name"],"item":f"{SITE}/{c['slug']}.html"},
       ]},
-      {"@type":"Product","name":c["name"],"image":f"{SITE}/assets/img/{c['img']}",
-       "description":c["desc"],"category":"Fijaciones y aceros",
-       "brand":{"@type":"Brand","name":"Gerdau"},
-       "offers":{"@type":"AggregateOffer","priceCurrency":"ARS","availability":"https://schema.org/InStock",
-                 "seller":{"@id":f"{SITE}/#business"}}},
+      product,
       {"@type":"FAQPage","mainEntity":[
         {"@type":"Question","name":q,"acceptedAnswer":{"@type":"Answer","text":a}} for q,a in c["faq"]]},
     ]}
-    html = (head(c["title"], c["desc"], f"{c['slug']}.html", og_image=f"assets/img/{c['img']}",
+    # Imagen para compartir (Open Graph): PNG/JPG por categoría (WhatsApp/FB no leen WebP)
+    og_img = f"assets/img/og-{c['slug']}.jpg"
+    if not os.path.exists(og_img):
+        og_img = "assets/img/og-image.png"
+    html = (head(c["title"], c["desc"], f"{c['slug']}.html", og_image=og_img,
                  preload=f"assets/img/{c['img']}", jsonld=jsonld)
             + header(on_home=False) + sections + footer(on_home=False))
     return html
@@ -816,6 +827,98 @@ def render_sitemap():
       for p, pr in urls)
     return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n'
 
+# --------------------------------------------------------------------------- llms.txt
+LLMS_INTRO = (
+  "Mayorista de fijaciones y aceros en Tapiales, Buenos Aires (Argentina): tornillos "
+  "autoperforantes, clavos, alambres, tirafondos, hierros y mallas, soldadura y pinturas. "
+  "Venta al por mayor con descuentos por volumen, respaldo de fábrica (Gerdau, calidad "
+  "certificada ISO 9001 / IRAM) y pago contra entrega (\"abonás al recibir\") en CABA y "
+  f"Gran Buenos Aires. Pedido mínimo $300.000. Pedidos y lista de precios por WhatsApp ({WA_DISPLAY})."
+)
+
+def render_llms():
+    prods = "\n".join(
+        f"- [{c['name']}]({SITE}/{c['slug']}.html): " + ", ".join(c["tags"]).lower() + "."
+        for c in CATS)
+    return f"""# CASASILVIAWEB
+
+> {LLMS_INTRO}
+
+## Productos
+
+{prods}
+
+## Empresa
+
+- [Nosotros]({SITE}/nosotros.html): mayorista que abastece a ferreterías, corralones, zingueros, madereras, distribuidores y constructoras.
+- [Cómo comprar]({SITE}/como-comprar.html): pedido mínimo, envíos, formas de pago y descuentos por volumen.
+
+## Contacto
+
+- [WhatsApp](https://wa.me/{WA}): {WA_DISPLAY} — pedidos y lista de precios al instante.
+- Dirección: Tuyutí 1025, Tapiales (B1770), Zona Oeste, Gran Buenos Aires, Argentina.
+- [Sitio web]({SITE}/)
+
+## Información útil
+
+- Modalidad: venta mayorista. Pedido mínimo $300.000 (pedidos habituales de $300.000 a $4.000.000).
+- Pago: abonás al recibir el pedido (efectivo o transferencia), también en pedidos grandes.
+- Envíos: CABA y todo el Gran Buenos Aires; los pedidos grandes se despachan directo desde la acería con flete.
+- Descuentos: bonificaciones por volumen de compra.
+- Calidad: respaldo de fábrica (Gerdau), una de las principales marcas de acero del país, con norma ISO 9001 otorgada por IRAM.
+- Idioma de atención: español (Argentina).
+
+## Recursos
+
+- [Versión completa para IA]({SITE}/llms-full.txt)
+"""
+
+def render_llms_full():
+    blocks = []
+    for c in CATS:
+        subs = "\n".join(f"- {n}: {d}" for n, d in c["subcats"])
+        faqs = "\n".join(f"- {q} {a}" for q, a in c["faq"])
+        blocks.append(
+            f"### {c['name']}\n"
+            f"URL: {SITE}/{c['slug']}.html\n\n"
+            f"{c['lead']}\n\n"
+            f"Tipos y líneas:\n{subs}\n\n"
+            f"Medidas y presentaciones: {c['measures']}\n\n"
+            f"Preguntas frecuentes:\n{faqs}\n")
+    catalog = "\n".join(blocks)
+    return f"""# CASASILVIAWEB — Información completa para IA
+
+> {LLMS_INTRO}
+
+## La empresa
+
+CASASILVIAWEB es un mayorista de fijaciones y aceros ubicado en Tuyutí 1025, Tapiales (B1770),
+Zona Oeste del Gran Buenos Aires, Argentina. Abastece a ferreterías, corralones, zingueros,
+madereras, distribuidores y constructoras. Trabaja con respaldo de fábrica (Gerdau, una de las
+principales marcas de acero del país, con norma ISO 9001 otorgada por IRAM). Toda la atención,
+la lista de precios y los pedidos se gestionan por WhatsApp ({WA_DISPLAY}).
+
+## Cómo comprar
+
+1. Escribís por WhatsApp ({WA_DISPLAY}) y pedís la lista de precios.
+2. Armás el pedido: te pasan precios y descuentos por volumen y coordinan la entrega.
+3. Abonás al recibir (efectivo o transferencia), también en pedidos grandes.
+
+- Pedido mínimo: $300.000 (pedidos habituales de $300.000 a $4.000.000).
+- Envíos: CABA y todo el Gran Buenos Aires. Los pedidos grandes se despachan directo desde la acería con flete.
+- Descuentos por volumen de compra.
+
+## Catálogo
+
+{catalog}
+## Contacto y ubicación
+
+- WhatsApp: {WA_DISPLAY} — https://wa.me/{WA}
+- Dirección: Tuyutí 1025, Tapiales (B1770), Zona Oeste, Gran Buenos Aires, Argentina.
+- Cobertura de entrega: CABA y Gran Buenos Aires.
+- Sitio web: {SITE}/
+"""
+
 # --------------------------------------------------------------------------- main
 def main():
     import os
@@ -826,6 +929,10 @@ def main():
     for c in CATS:
         out[f"{c['slug']}.html"] = render_category(c)
     out["sitemap.xml"] = render_sitemap()
+    out["llms.txt"] = render_llms()
+    _full = render_llms_full()
+    out["llms-full.txt"] = _full
+    out["llms_full.txt"] = _full
     for fn, content in out.items():
         with open(fn, "w", encoding="utf-8") as f:
             f.write(content)

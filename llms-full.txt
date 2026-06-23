@@ -1,82 +1,153 @@
-# CASASILVIAWEB — Mayorista de fijaciones y aceros
+# CASASILVIAWEB — Información completa para IA
 
-> Empresa mayorista de tornillos autoperforantes, clavos, alambres, tirafondos, hierros y mallas, ubicada en Tuyutí 1025, Tapiales, Zona Oeste del Gran Buenos Aires (Argentina). Vende al por mayor con precios por volumen y bonificaciones, ofrece calidad certificada (norma ISO 9001 / IRAM) y trabaja con pago contra entrega ("abonás al recibir"). El canal principal de pedidos y consulta de la lista de precios es WhatsApp: +54 11 6603-4047.
+> Mayorista de fijaciones y aceros en Tapiales, Buenos Aires (Argentina): tornillos autoperforantes, clavos, alambres, tirafondos, hierros y mallas, soldadura y pinturas. Venta al por mayor con descuentos por volumen, respaldo de fábrica (Gerdau, calidad certificada ISO 9001 / IRAM) y pago contra entrega ("abonás al recibir") en CABA y Gran Buenos Aires. Pedido mínimo $300.000. Pedidos y lista de precios por WhatsApp (+54 11 6603-4047).
 
-Este documento resume todo el contenido del sitio https://www.casasilviaweb.com.ar/ para facilitar su comprensión por modelos de lenguaje (LLMs).
+## La empresa
 
----
-
-## Quiénes somos
-
-CASASILVIAWEB es un mayorista de fijaciones y aceros. Atiende a corralones, ferreterías, instaladores, empresas constructoras y también a consumidor final, ofreciendo precios mayoristas y bonificaciones según el volumen de compra. El lema de la empresa es la venta mayorista con calidad garantizada.
-
-- Razón comercial / marca: CASASILVIAWEB (también escrito "Casa Silvia Web").
-- Rubro: venta mayorista de tornillos, clavos, alambres, tirafondos, hierros y mallas (ferretería industrial / fijaciones / aceros para la construcción).
-- Ubicación: Tuyutí 1025, Tapiales (B1770), La Matanza, Zona Oeste, Gran Buenos Aires, Argentina.
-- Coordenadas: -34.695779, -58.512789.
-- Zona de cobertura: Tapiales, La Matanza, Gran Buenos Aires, CABA y alrededores (consultar otras zonas por WhatsApp).
-
-## Propuesta de valor
-
-- Venta mayorista: precios por volumen y bonificaciones.
-- Calidad certificada: materiales de fabricantes líderes (como Gerdau) que responden a sistemas de gestión de calidad certificados según norma ISO 9001 otorgada por IRAM.
-- Abonás al recibir: el cliente paga cuando recibe el pedido.
-- Atención directa y ágil por WhatsApp, con envío inmediato de la lista de precios actualizada.
-- Stock permanente en todas las medidas y líneas de producto.
-
-## Catálogo de productos
-
-### 1) Tornillos Autoperforantes
-Tornillos con punta mecha y aguja para chapa, madera, metal, hormigón y durlock (placa de yeso).
-Incluye: T1 y T2, T25 Deck, T30 Hormigón, ensambladores, sistema KREG, drywall para madera y para metal, mechas FIX, mecha con alas y tarugos.
-
-### 2) Clavos y Alambres
-Clavería y alambres para construcción, embalaje, cercos y soldadura.
-Clavos: punta París, espiralados, cabeza chata, cabeza perdida, cabeza de plomo.
-Alambres: galvanizado, de fardo, púas y concertina, alambre MIG (para soldadura).
-
-### 3) Tirafondos
-Fijaciones de alta resistencia para madera y mampostería.
-Variantes: cabeza hexagonal, para madera, para mampostería, con tarugo, galvanizados, en todas las medidas.
-
-### 4) Hierros y Mallas
-Aceros para estructura, losas y pisos.
-Incluye: hierro aletado, hierro liso, mallas electrosoldadas (Sima), estribos y línea Gerdau.
+CASASILVIAWEB es un mayorista de fijaciones y aceros ubicado en Tuyutí 1025, Tapiales (B1770),
+Zona Oeste del Gran Buenos Aires, Argentina. Abastece a ferreterías, corralones, zingueros,
+madereras, distribuidores y constructoras. Trabaja con respaldo de fábrica (Gerdau, una de las
+principales marcas de acero del país, con norma ISO 9001 otorgada por IRAM). Toda la atención,
+la lista de precios y los pedidos se gestionan por WhatsApp (+54 11 6603-4047).
 
 ## Cómo comprar
 
-1. Escribí por WhatsApp al +54 11 6603-4047 (https://wa.me/541166034047).
-2. Pedí la lista de precios actualizada y consultá las bonificaciones y condiciones.
-3. Armás tu pedido y coordinás la entrega.
-4. Abonás al recibir.
+1. Escribís por WhatsApp (+54 11 6603-4047) y pedís la lista de precios.
+2. Armás el pedido: te pasan precios y descuentos por volumen y coordinan la entrega.
+3. Abonás al recibir (efectivo o transferencia), también en pedidos grandes.
 
-## Preguntas frecuentes
+- Pedido mínimo: $300.000 (pedidos habituales de $300.000 a $4.000.000).
+- Envíos: CABA y todo el Gran Buenos Aires. Los pedidos grandes se despachan directo desde la acería con flete.
+- Descuentos por volumen de compra.
 
-**¿Venden al por mayor y también a público?**
-Somos mayoristas. Atendemos a corralones, ferreterías, instaladores y consumidor final, con precios y bonificaciones por volumen. Consultá tus condiciones por WhatsApp.
+## Catálogo
 
-**¿Cómo pido la lista de precios?**
-Escribinos por WhatsApp al +54 11 6603-4047 y te enviamos la lista actualizada con las bonificaciones vigentes.
+### Tornillos Autoperforantes
+URL: https://www.casasilviaweb.com.ar/tornillos-autoperforantes.html
 
-**¿Qué productos tienen?**
-Tornillos autoperforantes, clavos, alambres, tirafondos, hierros y mallas, en todas las medidas y líneas.
+Toda la línea de tornillos autoperforantes para chapa, madera, metal, hormigón y construcción en seco. Punta mecha y aguja, en todas las medidas y presentaciones por caja, millar o granel.
 
-**¿Hacen envíos y cómo es el pago?**
-Coordinamos la entrega por WhatsApp y abonás al recibir tu pedido. Consultá zonas y condiciones.
+Tipos y líneas:
+- Hexagonal punta mecha: Para fijar chapa sobre estructura metálica (perfilería gruesa). Con o sin arandela, EPDM o vulcanizada. Ideal para techos y zinguería.
+- Hexagonal punta aguja / ranurada: Para chapa sobre madera o perfil liviano. Cabeza hexagonal para ajustar con tubo o atornillador.
+- FIX: Tornillo rápido de fijación liviana (línea amarilla), en medidas chicas para alta producción.
+- Drywall para metal: Punta mecha, cabeza trompeta, para placa de durlock sobre perfil de acero (construcción en seco).
+- Drywall para madera: Punta aguja tipo #17, para placa sobre estructura de madera, sin pretaladro.
+- Punta mecha con alas: Para fijar maderas o placas gruesas sobre metal: las alas escarian y evitan el desplazamiento.
+- Ensamblador: Para muebles y aglomerado, con buen agarre y cabeza avellanada.
+- Deck T25: Para deck de madera, con torx T25 y tratamiento para intemperie.
+- Hormigón T30: Fijación directa a hormigón y mampostería, torx T30, sin tarugo.
+- KREG / Pan framing: Uniones de carpintería (pocket hole) y steel framing.
 
-**¿Dónde están ubicados?**
-En Tuyutí 1025, Tapiales, Zona Oeste del Gran Buenos Aires.
+Medidas y presentaciones: Diámetros del #6 al #14 y largos desde 1/2" hasta 6". Presentaciones por caja, millar o granel. Cincados, negros, con arandela EPDM o vulcanizada según la línea.
 
-**¿Tienen stock permanente?**
-Sí, mantenemos amplio stock en todas las líneas. Si necesitás una medida puntual, consultanos por WhatsApp.
+Preguntas frecuentes:
+- ¿Qué tornillo uso para durlock sobre perfil metálico? El drywall punta mecha (rosca fina), cabeza trompeta. Para estructura de madera, el drywall punta aguja.
+- ¿Tienen autoperforantes para chapa de techo? Sí: hexagonal punta mecha o aguja, con arandela EPDM o vulcanizada para sellar.
+- ¿Venden por millar o por caja? Ambos, y a granel según la medida. Consultá presentaciones y descuentos por volumen por WhatsApp.
 
-## Contacto
+### Clavos y Alambres
+URL: https://www.casasilviaweb.com.ar/clavos-y-alambres.html
+
+Clavería y alambres para construcción, encofrados, techos, cercos y embalaje. Dos de nuestros productos más pedidos: el clavo Punta París 2½" y el alambre de fardo Nº16.
+
+Tipos y líneas:
+- Clavo Punta París: El clásico de obra y carpintería. Todas las medidas, de 1" a 6". ★ El 2½" es uno de los más vendidos.
+- Clavos espiralados: Mayor agarre, ideales para encofrados y maderas duras.
+- Clavos cabeza de plomo: Nacionales e importados, para fijación de chapa y techos.
+- Clavos electrosoldados: En tira para clavadora neumática, alta producción.
+- Clavos cabeza chata / perdida / cajonero: Para cajonería, embalaje y terminación.
+- Clavos paragua: Cabeza ancha para fijación de chapa y membranas.
+- Alambre galvanizado: Línea Acindar, para atado, cercos y construcción. Varios números.
+- Alambre de fardo / recocido Nº16: Para encofrados y atado de hierros en obra. Nacional e importado. ★ Muy pedido.
+- Alambre de púas y concertina: Seguridad perimetral y cercos.
+- Alambre tejido: Cerco romboidal.
+- Alambre para soldar / MIG: Para soldadura semiautomática.
+
+Medidas y presentaciones: Clavos de 1" a 6". Alambres del Nº8 al Nº18 según la línea, en rollos por kilo o granel. Galvanizado, recocido (fardo) y para soldar.
+
+Preguntas frecuentes:
+- ¿Tienen el clavo Punta París 2½"? Sí, es uno de los más vendidos. También todas las demás medidas, por kilo o por bulto.
+- ¿Qué alambre se usa para encofrados? El alambre de fardo (recocido) Nº16, para atar armaduras. Lo tenemos nacional e importado.
+- ¿Venden alambre galvanizado por rollo? Sí, en rollos y a granel, en distintos números. Consultá medidas por WhatsApp.
+
+### Tirafondos y Fijaciones
+URL: https://www.casasilviaweb.com.ar/tirafondos-y-fijaciones.html
+
+Fijaciones de alta resistencia y todos los accesorios de bulonería para sujetar soportes pesados, instalaciones y estructuras.
+
+Tipos y líneas:
+- Tirafondos cabeza hexagonal (DIN 571): Para madera y mampostería (con tarugo). Para soportes pesados: aires, toldos, soportes de TV, antenas.
+- Tarugos: De nylon, en todas las medidas, para fijar en pared y hormigón.
+- Tuercas hexagonales: Bulonería general, distintas medidas y calidades.
+- Arandelas: Planas y de presión.
+- Grampas / Grampas Omega: Para fijación de caños y conductos.
+- Gancho J: Para sujeción de chapa y tirantes.
+- Torniquetes: Para tensado de alambre y cables.
+- Mariposas: Fijación en placas huecas (durlock).
+
+Medidas y presentaciones: Tirafondos de 3/16" a 3/8" de diámetro y largos de 1" a 8". Tarugos, tuercas y arandelas en todas las medidas. Cincados.
+
+Preguntas frecuentes:
+- ¿Qué necesito para colgar algo pesado en la pared? Tirafondo hexagonal + tarugo del diámetro correspondiente. Te asesoramos según el peso y el material.
+- ¿Tienen tarugos en todas las medidas? Sí, de nylon en distintos diámetros, junto con tirafondos, tuercas y arandelas.
+- ¿Venden bulonería suelta o por caja? Por caja y a granel según la medida. Consultá por WhatsApp.
+
+### Hierros y Mallas
+URL: https://www.casasilviaweb.com.ar/hierros-y-mallas.html
+
+Acero para estructura de hormigón armado: hierro aletado y dulce, mallas electrosoldadas y estribos, con respaldo de Gerdau. Para pedidos grandes despachamos directo desde la acería.
+
+Tipos y líneas:
+- Hierro aletado (nervado): Para hormigón armado: columnas, vigas y losas. Diámetros según proyecto.
+- Hierro dulce / liso: Para estribos, herrería y usos generales.
+- Varillas: Barras de 12 m para construcción.
+- Mallas electrosoldadas (Sima): Para losas, pisos y contrapisos. Distintas separaciones y diámetros (ej. 15x25, 18x18).
+- Estribos: Armados para columnas y vigas.
+- Línea Gerdau: Acero con calidad certificada de una de las marcas líderes del país.
+
+Medidas y presentaciones: Hierro aletado de Ø4,2 a Ø25 mm; varillas de 12 m. Mallas electrosoldadas en distintas medidas y diámetros. Consultá medidas y armados por WhatsApp.
+
+Preguntas frecuentes:
+- ¿Trabajan con Gerdau? Sí. Gerdau es una de las principales marcas de acero del país, con calidad certificada.
+- ¿Hacen entregas grandes de hierro? Sí. En pedidos grandes despachamos directo desde la acería con flete, y abonás al recibir.
+- ¿Qué malla uso para un contrapiso? Depende de la luz y la carga. Te orientamos con la separación y el diámetro por WhatsApp.
+
+### Soldadura
+URL: https://www.casasilviaweb.com.ar/soldadura.html
+
+Insumos de soldadura para herrería, estructuras metálicas y reparaciones.
+
+Tipos y líneas:
+- Electrodos Gerdau E-6013: Para soldadura al arco, uso general. Distintos diámetros (2,0 / 2,5 / 3,25 mm).
+- Alambre MIG: Para soldadura semiautomática, en rollos (0,8 / 0,9 mm).
+- Accesorios: Consultá disponibilidad de insumos y accesorios de soldadura.
+
+Medidas y presentaciones: Electrodos por kilo y por caja; alambre MIG en rollos. Consultá diámetros y marcas por WhatsApp.
+
+Preguntas frecuentes:
+- ¿Tienen electrodos Gerdau? Sí, E-6013 en distintos diámetros, por kilo y por caja.
+- ¿Venden alambre MIG? Sí, en rollos de 0,8 y 0,9 mm. Consultá stock por WhatsApp.
+
+### Pinturas y Químicos
+URL: https://www.casasilviaweb.com.ar/pinturas-y-quimicos.html
+
+Complementamos la obra con pinturas y químicos para construcción y terminaciones.
+
+Tipos y líneas:
+- Pinturas de obra: Líneas para interior y exterior. Consultá marcas y medidas disponibles.
+- Impermeabilizantes: Para techos y superficies expuestas.
+- Mezcla adhesiva: Para colocación y pegado en obra.
+
+Medidas y presentaciones: Distintas presentaciones y marcas. Consultá disponibilidad y precios por WhatsApp.
+
+Preguntas frecuentes:
+- ¿Qué marcas de pintura manejan? Trabajamos distintas líneas de obra. Consultá disponibilidad y precios por WhatsApp.
+- ¿Tienen impermeabilizantes y adhesivos? Sí, productos químicos para construcción. Consultá stock por WhatsApp.
+
+## Contacto y ubicación
 
 - WhatsApp: +54 11 6603-4047 — https://wa.me/541166034047
 - Dirección: Tuyutí 1025, Tapiales (B1770), Zona Oeste, Gran Buenos Aires, Argentina.
+- Cobertura de entrega: CABA y Gran Buenos Aires.
 - Sitio web: https://www.casasilviaweb.com.ar/
-- Idioma de atención: español (Argentina).
-
-## Palabras clave
-
-tornillos autoperforantes mayorista, tornillos T1 T2, T25 deck, T30 hormigón, tornillos drywall, tornillos ensambladores, KREG, mecha con alas, tarugos, clavos punta París, clavos espiralados, alambre galvanizado, alambre de fardo, alambre de púas, concertina, alambre MIG, tirafondos, hierro aletado, hierro liso, mallas electrosoldadas, estribos, Gerdau, ferretería mayorista, fijaciones, Tapiales, La Matanza, Zona Oeste, Gran Buenos Aires, Argentina.

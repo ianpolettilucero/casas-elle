@@ -143,9 +143,14 @@ python3 build.py
 ```
 
 Reescribe `index.html`, las páginas de categoría (`tornillos-autoperforantes.html`, etc.),
-`nosotros.html`, `como-comprar.html` y `sitemap.xml`. Para **sumar o editar productos/categorías**,
+`nosotros.html`, `como-comprar.html`, `sitemap.xml` y los archivos para IA
+(`llms.txt`, `llms-full.txt`, `llms_full.txt`). Para **sumar o editar productos/categorías**,
 modificá la lista `CATS` en `build.py` y volvé a correrlo. El header, footer y `<head>` (SEO)
 son compartidos, así que un cambio se aplica a todas las páginas.
+
+> **No edites a mano** `llms.txt` / `llms-full.txt` / `sitemap.xml`: se generan desde `CATS`.
+> Cada categoría usa su propia imagen para compartir (`assets/img/og-<slug>.jpg`, 1200×630);
+> si no existe, cae a `og-image.png`. Las páginas que no son de categoría usan `og-image.png`.
 
 ---
 
@@ -183,5 +188,5 @@ registros y el certificado HTTPS solo. Borrá los registros viejos que apuntaban
 - [ ] Confirmar/actualizar los enlaces de **Instagram** y **Facebook** en el footer
       (hoy apuntan a `instagram.com/casasilviaweb` y `facebook.com/casasilviaweb` como tentativos).
 - [ ] Cargar los IDs de medición (GTM / GA4 / Google Ads / Meta Pixel) en `CSW_CONFIG`.
-- [ ] (Opcional) Agregar íconos cuadrados 192×192 y 512×512 para la PWA.
-- [ ] Verificar el horario de atención si se quiere mostrar.
+- [x] Íconos cuadrados 192×192 y 512×512 para la PWA (`assets/img/icon-192.png`, `icon-512.png`).
+- [ ] Verificar el horario de atención si se quiere mostrar (se puede sumar `openingHoursSpecification` al JSON-LD cuando se confirme).
