@@ -452,7 +452,7 @@ CATS = [
     "img":"cat-hierros-mallas.webp", "img_alt":"Mallas electrosoldadas apiladas en el depósito",
     "photos":[
       ("deposito-hierros.webp","Hierro aletado en barras apilado en profundidad en el depósito"),
-      ("calidad-stock.webp","Operarios y autoelevador moviendo hierro en el depósito"),
+      ("calidad-stock.webp","Operario moviendo barras de hierro aletado en el depósito de CASASILVIAWEB"),
     ],
     "core":True,
     "tags":["Hierro aletado","Hierro dulce","Varilla","Mallas electrosoldadas","Estribos","Línea Gerdau"],
