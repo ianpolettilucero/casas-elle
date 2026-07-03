@@ -54,7 +54,7 @@ SPRITE = r"""<svg width="0" height="0" style="position:absolute" aria-hidden="tr
 CONFIG_SCRIPT = """  <script>
     window.CSW_CONFIG = {
       gtmId: "",                    // "GTM-XXXXXXX"
-      ga4Id: "",                    // "G-XXXXXXXXXX"
+      ga4Id: "G-PWKB7N27M1",        // Google Analytics 4
       googleAdsId: "",              // "AW-XXXXXXXXX"
       googleAdsConversionLabel: "", // etiqueta de conversión de Google Ads
       metaPixelId: "",              // Pixel de Facebook/Instagram
