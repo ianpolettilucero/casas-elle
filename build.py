@@ -1194,7 +1194,9 @@ def render_sitemap():
     body = "\n".join(
       f'  <url><loc>{SITE}/{p}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>{pr}</priority></url>'
       for p, pr in urls)
-    return f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n'
+    return ('<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>\n'
+            f'<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{body}\n</urlset>\n')
 
 # --------------------------------------------------------------------------- llms.txt
 LLMS_INTRO = (
