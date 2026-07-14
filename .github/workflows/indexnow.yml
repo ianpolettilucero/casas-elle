@@ -1,0 +1,35 @@
+# Notifica a los buscadores que usan IndexNow (Bing, Yandex, Naver, Seznam)
+# cada vez que se publica el sitio. Google no usa IndexNow: para Google se
+# envía el sitemap una vez desde Search Console y después se re-rastrea solo.
+name: IndexNow ping
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Cloudflare Pages tarda ~1-2 min en publicar; esperamos a que la clave
+      # IndexNow esté en vivo antes de avisar.
+      - name: Esperar el deploy de Cloudflare Pages
+        run: sleep 150
+
+      - name: Ping a IndexNow con todas las URLs del sitemap
+        run: |
+          KEY=b5a1c835135653201064af094dfac54c
+          HOST=www.casasilviaweb.com.ar
+          URLS=$(grep -o '<loc>[^<]*</loc>' sitemap.xml | sed 's/<[^>]*>//g' | jq -R . | jq -s .)
+          echo "URLs a notificar: $(echo "$URLS" | jq length)"
+          BODY=$(jq -n --arg host "$HOST" --arg key "$KEY" --argjson urls "$URLS" \
+            '{host:$host, key:$key, keyLocation:("https://"+$host+"/"+$key+".txt"), urlList:$urls}')
+          curl -sS -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "$BODY" -w "\nHTTP %{http_code}\n"
