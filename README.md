@@ -162,23 +162,42 @@ WhatsApp con cantidades, precio unitario, subtotales y total. El botón del carr
 contador está en el header de todas las páginas y abre un panel lateral.
 
 - Lógica: `assets/js/carrito.js` · Datos: `assets/data/productos.json`.
-- Eventos GA4 que emite: `add_to_cart`, `view_cart`, `begin_checkout`, `search`
-  (además del `whatsapp_click` de siempre al enviar el pedido).
+- El catálogo se muestra tipo vidriera: sección **"Los más pedidos"** (ids curados en
+  `DESTACADOS` dentro de `carrito.js`), separadores por categoría y secciones por línea
+  con imagen. Los productos con varias presentaciones (látex 1/4/10/20 L, cajas x5000 /
+  x5500) se agrupan en **una sola tarjeta con pastillas** para elegir la medida.
+- Al enviar el pedido, la pestaña navega a **`gracias-pedido.html`** (ver "Conversiones").
 
-### Actualizar la lista de precios
+### Actualizar las listas de precios
 
-Cuando llegue una lista nueva (PDF):
+**Fijaciones (tornillos, clavos, tirafondos…)** — PDF en formato lista:
 
 ```bash
 pdftotext -layout LISTA_DE_PRECIOS_NUEVA.pdf tools/lista-precios-AAAA-MM.txt
 python3 tools/parse_precios.py tools/lista-precios-AAAA-MM.txt
 ```
 
-Eso regenera `assets/data/productos.json` (revisá el resumen que imprime: cantidad de
-productos por categoría y los que quedaron "a consultar" sin precio). Después actualizá
-la leyenda "Lista MM/AAAA" en `render_pedido()` de `build.py` y corré `python3 build.py`.
-Si el PDF cambia de formato (nuevas secciones), agregalas al diccionario `SECTIONS`
-de `tools/parse_precios.py`.
+**Pinturas y químicos** — PDF en formato matriz (producto × presentación): los precios
+viven transcriptos en **`tools/pinturas.py`**. Editá ahí los valores (o agregá productos)
+y corré `python3 tools/parse_precios.py` para regenerar el JSON combinado.
+
+En ambos casos revisá el resumen que imprime (productos por categoría y los que quedan
+"a consultar") y después corré `python3 build.py`. Si un PDF de fijaciones cambia de
+formato (nuevas secciones), agregalas al diccionario `SECTIONS` de `tools/parse_precios.py`.
+
+### Conversiones (Google Ads / GA4)
+
+- **`gracias-pedido.html`**: llega ahí quien envía un pedido desde el carrito (WhatsApp
+  se abre en otra pestaña). Dispara el evento **`purchase`** de GA4 con el total y los
+  ítems (transaction_id único por pedido), y la conversión de Google Ads si configurás
+  `googleAdsId` + `googleAdsConversionLabel` en `CSW_CONFIG`. En Google Ads también podés
+  crear la conversión por **destino de página**: `/gracias-pedido.html`.
+- **`gracias.html`**: página de gracias genérica para usar como destino en campañas o
+  flujos de contacto (dispara `lead_gracias_page`).
+- Ambas van con `noindex` y fuera del sitemap.
+- Todos los eventos custom (`whatsapp_click`, `generate_lead`, `add_to_cart`,
+  `view_cart`, `begin_checkout`, `search`, `purchase`) se envían con `gtag()` cuando no
+  hay GTM configurado, y via `dataLayer` cuando sí lo hay.
 
 ---
 

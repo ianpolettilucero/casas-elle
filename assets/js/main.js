@@ -85,6 +85,11 @@
     dl(payload);
     // GA4: evento recomendado de generación de lead
     dl({ event: "generate_lead", currency: CONFIG.currency, value: CONFIG.leadValue, method: "whatsapp", lead_source: source });
+    // Sin GTM, los push de objetos al dataLayer no llegan a GA4: hay que usar gtag()
+    if (!CONFIG.gtmId && window.gtag) {
+      window.gtag("event", "whatsapp_click", { lead_source: source || "desconocido", lead_label: label || "" });
+      window.gtag("event", "generate_lead", { currency: CONFIG.currency, value: CONFIG.leadValue, method: "whatsapp", lead_source: source });
+    }
 
     // Google Ads (conversión) vía gtag, si está configurado sin GTM
     if (!CONFIG.gtmId && window.gtag && CONFIG.googleAdsId && CONFIG.googleAdsConversionLabel) {
@@ -100,7 +105,10 @@
     }
   }
 
-  function trackEvent(name, params) { dl(Object.assign({ event: name }, params || {})); }
+  function trackEvent(name, params) {
+    dl(Object.assign({ event: name }, params || {}));
+    if (!CONFIG.gtmId && window.gtag) window.gtag("event", name, params || {});
+  }
 
   // Delegación: cualquier elemento con [data-wa] dispara el lead
   document.addEventListener("click", function (e) {

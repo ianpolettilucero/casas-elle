@@ -67,11 +67,12 @@ CONFIG_SCRIPT = """  <script>
   </script>"""
 
 # --------------------------------------------------------------------------- head
-def head(title, desc, path, og_image="assets/img/og-image.png", preload=None, jsonld=None):
+def head(title, desc, path, og_image="assets/img/og-image.png", preload=None, jsonld=None, noindex=False):
     canonical = f"{SITE}/{path}" if path else f"{SITE}/"
     og_img_url = f"{SITE}/{og_image}"
     og_type = "image/png" if og_image.lower().endswith(".png") else "image/jpeg"
     preload_tag = f'\n  <link rel="preload" as="image" href="{preload}">' if preload else ""
+    robots = "noindex, nofollow" if noindex else "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
     ld = ""
     if jsonld:
         ld = '\n  <script type="application/ld+json">\n' + json.dumps(jsonld, ensure_ascii=False, indent=2) + "\n  </script>"
@@ -84,7 +85,7 @@ def head(title, desc, path, og_image="assets/img/og-image.png", preload=None, js
   <title>{title}</title>
   <meta name="description" content="{desc}">
   <meta name="author" content="CASASILVIAWEB">
-  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="robots" content="{robots}">
   <meta name="geo.region" content="AR-B">
   <meta name="geo.placename" content="Tapiales, Buenos Aires">
   <meta name="geo.position" content="-34.695779;-58.512789">
@@ -907,7 +908,7 @@ def render_pedido():
           <h1>Armá tu pedido online</h1>
           <p class="lead-big">Buscá los productos, agregalos al carrito y mirá el total en tiempo real. Cuando termines, lo enviás por WhatsApp y te confirmamos <strong>descuentos por volumen</strong> y entrega. <strong>Abonás al recibir.</strong></p>
           <ul class="pedido-meta">
-            <li><svg class="line" aria-hidden="true"><use href="#i-tag"></use></svg> Lista 05/2026</li>
+            <li><svg class="line" aria-hidden="true"><use href="#i-tag"></use></svg> Listas vigentes 2026</li>
             <li><svg class="line" aria-hidden="true"><use href="#i-box"></use></svg> <span id="pedido-total-productos">—</span> productos</li>
             <li><svg class="line" aria-hidden="true"><use href="#i-truck"></use></svg> Pedido mínimo $300.000 · Entrega CABA y GBA</li>
           </ul>
@@ -925,6 +926,13 @@ def render_pedido():
           <select id="pedido-grupo" aria-label="Filtrar por línea"><option value="">Todas las líneas</option></select>
         </div>
         <p class="pedido-result" id="pedido-result" aria-live="polite"></p>
+        <section class="destacados" id="destacados-wrap" hidden aria-label="Los más pedidos">
+          <div class="destacados__head">
+            <span class="destacados__star"><svg class="fill" aria-hidden="true"><use href="#i-star"></use></svg></span>
+            <div><h2>Los más pedidos</h2><p>Lo que más nos compran ferreterías y corralones, listo para agregar.</p></div>
+          </div>
+          <div class="destacados__row" id="destacados"></div>
+        </section>
         <div class="prod-list" id="prod-list" aria-live="polite"></div>
         <div class="pedido-mas-wrap"><button class="btn btn--ghost-dark" id="pedido-mas" type="button" hidden>Mostrar más productos</button></div>
         <p class="cart-disclaimer center">Precios de lista (sin descuentos aplicados), sujetos a confirmación por WhatsApp. Las presentaciones son por caja, sobre o estuche según el producto.</p>
@@ -942,6 +950,57 @@ def render_pedido():
     return (head("Catálogo con precios | Armá tu pedido online | CASASILVIAWEB",
                  "Catálogo mayorista con precios de lista: tornillos, clavos, alambres, tirafondos y más. Armá tu carrito online, mirá el total en tiempo real y envialo por WhatsApp.",
                  "pedido.html", jsonld=jsonld)
+            + header() + sections + footer())
+
+# --------------------------------------------------------------------------- páginas de gracias (conversiones Ads/GA4)
+def render_gracias_pedido():
+    """Página a la que llega el cliente después de enviar el pedido por WhatsApp.
+    carrito.js marca acá la conversión `purchase` (GA4) y la de Google Ads.
+    Para Google Ads también sirve como conversión por destino: /gracias-pedido.html"""
+    sections = f"""    <section class="section gracias" id="gracias-pedido">
+      <div class="container gracias__inner">
+        <span class="gracias__ic"><svg class="line" aria-hidden="true"><use href="#i-check"></use></svg></span>
+        <span class="eyebrow">Pedido enviado</span>
+        <h1>¡Gracias! Tu pedido ya está en WhatsApp</h1>
+        <p class="lead-big">Se abrió una conversación de WhatsApp con tu pedido cargado. Si todavía no lo enviaste, tocá <b>enviar</b> en WhatsApp y te respondemos enseguida para confirmar <strong>precios, descuentos por volumen y entrega</strong>. Recordá: <strong>abonás al recibir</strong>.</p>
+        <div class="gracias__acciones">
+          <a class="btn btn--wa btn--lg" id="gracias-wa" href="https://wa.me/{WA}" target="_blank" rel="noopener" data-wa="gracias-pedido" data-wa-label="Gracias — Reabrir WhatsApp"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg>¿No se abrió? Reabrir WhatsApp</a>
+          <a class="btn btn--ghost-dark btn--lg" href="pedido.html">Seguir comprando</a>
+        </div>
+        <div class="gracias-resumen" id="gracias-resumen" hidden>
+          <h2>Resumen de lo que enviaste</h2>
+          <table><tbody></tbody><tfoot><tr><td>Total estimado</td><td id="gracias-total"></td></tr></tfoot></table>
+          <p class="cart-disclaimer">Precios de lista sujetos a confirmación. Te pasamos los descuentos por volumen por WhatsApp.</p>
+          <button class="gracias__vaciar" id="gracias-vaciar" type="button">Ya lo envié, vaciar el carrito</button>
+        </div>
+        <ol class="steps reveal gracias__pasos">
+          <li class="step"><span class="step__num">1</span><span class="step__ic"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg></span><h3>Te confirmamos</h3><p>Revisamos tu pedido y te confirmamos precios y descuentos.</p></li>
+          <li class="step"><span class="step__num">2</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-truck"></use></svg></span><h3>Coordinamos la entrega</h3><p>Envío a CABA y GBA, o retiro en Tuyutí 1025, Tapiales.</p></li>
+          <li class="step"><span class="step__num">3</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-check"></use></svg></span><h3>Abonás al recibir</h3><p>Efectivo o transferencia cuando te llega el pedido.</p></li>
+        </ol>
+      </div>
+    </section>"""
+    return (head("Pedido enviado | CASASILVIAWEB", "Tu pedido se envió por WhatsApp. Te confirmamos precios, descuentos y entrega enseguida.",
+                 "gracias-pedido.html", noindex=True)
+            + header() + sections + footer())
+
+def render_gracias():
+    """Página de gracias genérica (leads): destino para campañas de Google Ads."""
+    sections = f"""    <section class="section gracias" id="gracias-contacto">
+      <div class="container gracias__inner">
+        <span class="gracias__ic"><svg class="line" aria-hidden="true"><use href="#i-check"></use></svg></span>
+        <span class="eyebrow">Mensaje recibido</span>
+        <h1>¡Gracias por contactarnos!</h1>
+        <p class="lead-big">Te respondemos por WhatsApp a la brevedad con la <strong>lista de precios</strong> y las bonificaciones vigentes. Mientras tanto, podés ir armando tu pedido online con precios.</p>
+        <div class="gracias__acciones">
+          <a class="btn btn--red btn--lg" href="pedido.html"><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg> Armá tu pedido online</a>
+          {wa_btn("Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.", "gracias-contacto", "Gracias — WhatsApp", "btn btn--wa btn--lg", inner="Escribinos por WhatsApp")}
+        </div>
+      </div>
+    </section>
+{trust_strip()}"""
+    return (head("¡Gracias por contactarnos! | CASASILVIAWEB", "Recibimos tu consulta. Te respondemos por WhatsApp con la lista de precios mayorista.",
+                 "gracias.html", noindex=True)
             + header() + sections + footer())
 
 # --------------------------------------------------------------------------- sitemap
@@ -1051,6 +1110,8 @@ def main():
     out = {}
     out["index.html"] = render_home()
     out["pedido.html"] = render_pedido()
+    out["gracias-pedido.html"] = render_gracias_pedido()
+    out["gracias.html"] = render_gracias()
     out["nosotros.html"] = render_nosotros()
     out["como-comprar.html"] = render_como_comprar()
     for c in CATS:

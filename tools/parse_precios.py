@@ -151,7 +151,14 @@ def main(path):
             "sinStock": sin_stock,
         })
 
-    out = {"actualizado": "2026-05", "moneda": "ARS", "items": items}
+    # Pinturas y químicos: lista aparte en formato matriz, transcripta a mano
+    import os
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import pinturas
+    items.extend(pinturas.items())
+
+    out = {"actualizado": {"fijaciones": "2026-05", "pinturas": pinturas.ACTUALIZADO},
+           "moneda": "ARS", "items": items}
     dest = "assets/data/productos.json"
     with open(dest, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))

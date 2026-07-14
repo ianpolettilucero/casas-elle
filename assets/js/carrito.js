@@ -2,20 +2,37 @@
    CASASILVIAWEB · carrito.js
    - Carrito mayorista persistido en localStorage (sobrevive entre visitas)
    - Badge en el header + drawer lateral en todas las páginas
-   - Catálogo con buscador y filtros en pedido.html (assets/data/productos.json)
-   - Checkout: arma el mensaje de WhatsApp con cantidades, precios y total
+   - Catálogo tipo vidriera en pedido.html: "Los más pedidos", secciones por
+     línea con imagen, tarjetas con variantes de presentación (1L/4L/10L/20L)
+   - Checkout: mensaje de WhatsApp formateado + redirección a gracias-pedido
+     (conversión "purchase" para GA4 / Google Ads)
    ========================================================================== */
 (function () {
   "use strict";
 
+  var CFG = window.CSW_CONFIG || {};
   var CART_KEY = "csw_carrito_v1";
-  var WA_NUMBER = (window.CSW_CONFIG && window.CSW_CONFIG.whatsappNumber) || "541166034047";
+  var ORDER_KEY = "csw_last_order";
+  var WA_NUMBER = CFG.whatsappNumber || "541166034047";
   var MINIMO = 300000;
-  var PAGE_SIZE = 60;
+  var PAGE_SIZE = 48;   // resultados de búsqueda por tanda
+  var PREVIEW_N = 6;    // tarjetas visibles por línea antes de "ver todos"
 
   /* ------------------------------------------------------------------ utils */
   function $(id) { return document.getElementById(id); }
   function dl(obj) { (window.dataLayer = window.dataLayer || []).push(obj); }
+
+  // GA4: sin GTM los push de objetos al dataLayer no llegan; hay que usar gtag()
+  var USE_GTM = !!CFG.gtmId;
+  function track(name, params) {
+    if (USE_GTM) dl(Object.assign({ event: name }, params || {}));
+    else if (window.gtag) window.gtag("event", name, params || {});
+  }
+  function gaItems(lines) {
+    return lines.map(function (i) {
+      return { item_id: i.cod, item_name: i.desc + (i.pres ? " " + i.pres : ""), price: i.precio, quantity: i.qty };
+    });
+  }
 
   function fmt(n) {
     return "$" + Number(n).toLocaleString("es-AR", { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -23,12 +40,14 @@
   function fmt0(n) {
     return "$" + Number(n).toLocaleString("es-AR", { maximumFractionDigits: 0 });
   }
-
   function normalize(s) {
     return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   }
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
 
-  /* ------------------------------------------------------------------ estado */
+  /* ------------------------------------------------------------------ estado del carrito */
   // items: [{id, cod, desc, pack, pres, precio, qty}]
   function loadCart() {
     try {
@@ -46,7 +65,6 @@
 
   function cartCount() { return cart.reduce(function (a, i) { return a + i.qty; }, 0); }
   function cartTotal() { return cart.reduce(function (a, i) { return a + (i.precio || 0) * i.qty; }, 0); }
-
   function findLine(id) {
     for (var i = 0; i < cart.length; i++) if (cart[i].id === id) return cart[i];
     return null;
@@ -59,8 +77,7 @@
       cart.push({ id: prod.id, cod: prod.cod, desc: prod.desc, pack: prod.pack, pres: prod.pres, precio: prod.precio, qty: qty });
     }
     saveCart(); renderCart();
-    dl({ event: "add_to_cart", currency: "ARS", value: (prod.precio || 0) * qty,
-         items: [{ item_id: prod.cod, item_name: prod.desc, price: prod.precio, quantity: qty }] });
+    track("add_to_cart", { currency: "ARS", value: (prod.precio || 0) * qty, items: gaItems([{ cod: prod.cod, desc: prod.desc, pres: prod.pres, precio: prod.precio, qty: qty }]) });
   }
 
   function setQty(id, qty) {
@@ -70,6 +87,8 @@
     else { line.qty = qty; }
     saveCart(); renderCart();
   }
+
+  function emptyCart() { cart = []; saveCart(); renderCart(); }
 
   /* ------------------------------------------------------------------ WhatsApp */
   function buildMessage() {
@@ -85,11 +104,12 @@
     lines.push("Enviado desde casasilviaweb.com.ar");
     return lines.join("\n");
   }
-
+  function waLink(msg) {
+    return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
+  }
   function updateSendLink() {
     var send = $("cart-send");
-    if (!send) return;
-    send.href = "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(buildMessage());
+    if (send) send.href = waLink(buildMessage());
   }
 
   /* ------------------------------------------------------------------ drawer */
@@ -100,7 +120,7 @@
     layer.hidden = false;
     requestAnimationFrame(function () { layer.classList.add("is-open"); });
     document.documentElement.classList.add("cart-lock");
-    dl({ event: "view_cart", currency: "ARS", value: cartTotal() });
+    track("view_cart", { currency: "ARS", value: cartTotal(), items: gaItems(cart) });
   }
   function closeCart() {
     if (!layer) return;
@@ -126,10 +146,10 @@
     if (items) {
       items.innerHTML = cart.map(function (i) {
         var pres = [i.pack, i.pres].filter(Boolean).join(" · ");
-        return '<li class="cart-item" data-id="' + i.id + '">' +
+        return '<li class="cart-item" data-id="' + esc(i.id) + '">' +
           '<div class="cart-item__info">' +
-            '<b>' + i.desc + '</b>' +
-            '<span class="cart-item__meta">' + (pres ? pres + " · " : "") + 'Cód. ' + i.cod + '</span>' +
+            '<b>' + esc(i.desc) + '</b>' +
+            '<span class="cart-item__meta">' + (pres ? esc(pres) + " · " : "") + 'Cód. ' + esc(i.cod) + '</span>' +
             '<span class="cart-item__price">' + fmt(i.precio || 0) + ' c/u</span>' +
           '</div>' +
           '<div class="cart-item__side">' +
@@ -175,25 +195,250 @@
       var q = parseInt(e.target.value, 10);
       setQty(li.getAttribute("data-id"), isNaN(q) ? 1 : q);
     });
+
+    // Checkout: guarda el pedido, abre WhatsApp (target=_blank) y lleva esta
+    // pestaña a la página de gracias (ahí se marca la conversión "purchase").
     var sendBtn = $("cart-send");
     if (sendBtn) sendBtn.addEventListener("click", function () {
-      dl({ event: "begin_checkout", currency: "ARS", value: cartTotal(),
-           items: cart.map(function (i) { return { item_id: i.cod, item_name: i.desc, price: i.precio, quantity: i.qty }; }) });
+      var order = { items: cart.slice(), total: cartTotal(), count: cartCount(), ts: Date.now(), msg: buildMessage() };
+      try { localStorage.setItem(ORDER_KEY, JSON.stringify(order)); } catch (_) {}
+      track("begin_checkout", { currency: "ARS", value: order.total, items: gaItems(cart) });
+      setTimeout(function () { location.href = "gracias-pedido.html"; }, 900);
     });
   }
 
   /* ------------------------------------------------------------------ catálogo (pedido.html) */
   var listEl = $("prod-list");
-  var PRODUCTS = [], FILTERED = [], shown = 0;
+
   var CAT_NAMES = {
     "tornillos-autoperforantes": "Tornillos",
     "clavos-y-alambres": "Clavos y Alambres",
     "tirafondos-y-fijaciones": "Tirafondos y Fijaciones",
     "hierros-y-mallas": "Hierros",
-    "soldadura": "Soldadura"
+    "soldadura": "Soldadura",
+    "pinturas-y-quimicos": "Pinturas y Químicos"
   };
-  var state = { q: "", cat: "", grupo: "" };
+  var CAT_IMG = {
+    "tornillos-autoperforantes": "tornillos-tipos.webp",
+    "clavos-y-alambres": "clavos-coils.webp",
+    "tirafondos-y-fijaciones": "tirafondos-tuercas.webp",
+    "hierros-y-mallas": "cat-hierros-mallas.webp",
+    "soldadura": "cat-soldadura.webp",
+    "pinturas-y-quimicos": "pinturas-stock.webp"
+  };
+  var GRUPO_IMG = {
+    "Tirafondos": "cat-tirafondos.webp",
+    "Clavos punta París": "cat-clavos-alambres.webp",
+    "Látex Símbolo-Tex": "cat-pinturas.webp",
+    "Hexagonal punta mecha": "cat-tornillos.webp",
+    "Hierro dulce": "deposito-hierros.webp"
+  };
+  function grupoImg(grupo, cat) {
+    return "assets/img/" + (GRUPO_IMG[grupo] || CAT_IMG[cat] || "deposito-almacen.webp");
+  }
 
+  // Los más pedidos (por id; el orden es el de la vidriera)
+  var DESTACADOS = ["CLA04", "ALA06", "PIN007", "N001066", "PIN019", "i001074", "N001035", "i001489"];
+
+  var ITEMS = [];      // productos crudos del JSON
+  var CARDS = [];      // tarjetas: variantes agrupadas por (cat, grupo, desc)
+  var CARD_BY_VID = {}; // id de variante -> tarjeta
+  var GRUPOS = [];     // [{grupo, cat, cards:[...]}] en orden de lista
+  var expanded = {};   // grupo -> true (ver todos)
+  var state = { q: "", cat: "", grupo: "" };
+  var shownFlat = 0, flatCards = [];
+
+  function buildCards() {
+    var byKey = {}, order = [];
+    ITEMS.forEach(function (p) {
+      var key = p.cat + "|" + p.grupo + "|" + p.desc;
+      if (!byKey[key]) {
+        byKey[key] = { key: key, desc: p.desc, grupo: p.grupo, cat: p.cat, variants: [] };
+        order.push(byKey[key]);
+      }
+      byKey[key].variants.push(p);
+    });
+    CARDS = order;
+    CARDS.forEach(function (c) {
+      c.variants.forEach(function (v) { CARD_BY_VID[v.id] = c; });
+    });
+    var gid = {};
+    GRUPOS = [];
+    CARDS.forEach(function (c) {
+      var k = c.cat + "|" + c.grupo;
+      if (!gid[k]) { gid[k] = { grupo: c.grupo, cat: c.cat, cards: [] }; GRUPOS.push(gid[k]); }
+      gid[k].cards.push(c);
+    });
+  }
+
+  function cardMatches(c) {
+    if (state.cat && c.cat !== state.cat) return false;
+    if (state.grupo && c.grupo !== state.grupo) return false;
+    var q = normalize(state.q).split(/\s+/).filter(Boolean);
+    if (!q.length) return true;
+    var hay = normalize(c.desc + " " + c.grupo + " " + c.variants.map(function (v) { return v.cod + " " + v.pres + " " + v.pack; }).join(" "));
+    return q.every(function (t) { return hay.indexOf(t) !== -1; });
+  }
+
+  /* ---------------- tarjeta de producto (con variantes de presentación) */
+  function pillLabels(variants) {
+    // etiqueta que distinga cada variante: presentación, si no alcanza el
+    // pack (caja x5000 vs x5500), y como último recurso el código
+    function dup(l) {
+      var seen = {};
+      for (var i = 0; i < l.length; i++) { if (seen[l[i]]) return true; seen[l[i]] = 1; }
+      return false;
+    }
+    var l = variants.map(function (v) { return v.pres || v.pack || v.cod; });
+    if (dup(l)) l = variants.map(function (v) { return v.pack || v.pres || v.cod; });
+    if (dup(l)) l = variants.map(function (v) { return [v.pack, v.pres].filter(Boolean).join(" ") || v.cod; });
+    if (dup(l)) l = variants.map(function (v) { return v.cod; });
+    return l;
+  }
+
+  function cardHTML(c, opts) {
+    opts = opts || {};
+    var sel = 0;
+    if (opts.preferId) c.variants.forEach(function (v, i) { if (v.id === opts.preferId) sel = i; });
+    var v0 = c.variants[sel];
+    var multi = c.variants.length > 1;
+    var pills = "";
+    if (multi) {
+      var labels = pillLabels(c.variants);
+      pills = '<div class="prod__pills" role="group" aria-label="Presentaciones">' + c.variants.map(function (v, i) {
+        return '<button type="button" class="pill' + (i === sel ? " is-active" : "") + '" data-vid="' + esc(v.id) + '">' + esc(labels[i]) + '</button>';
+      }).join("") + '</div>';
+    }
+    var meta = [];
+    if (!multi) {
+      var pres = [v0.pack, v0.pres].filter(Boolean).join(" · ");
+      if (pres) meta.push(esc(pres));
+    }
+    meta.push('Cód. <span class="prod__cod">' + esc(v0.cod) + '</span>');
+    if (v0.sinStock) meta.push('<span class="prod__stock">Sin stock — consultá</span>');
+
+    var precio = v0.precio == null
+      ? '<a class="prod__consultar" href="' + waLink("Hola CASASILVIAWEB! Quiero consultar el precio de: " + c.desc + " (Cód. " + v0.cod + ")") + '" target="_blank" rel="noopener" data-wa="pedido-consulta" data-wa-label="Consulta precio ' + esc(v0.cod) + '">Consultar precio</a>'
+      : '<b class="prod__precio">' + fmt(v0.precio) + '</b>';
+    var controls = v0.precio == null ? "" :
+      '<div class="prod__acciones">' +
+        '<div class="qty"><button type="button" class="qty__btn" data-menos aria-label="Restar uno"><svg class="line" aria-hidden="true"><use href="#i-minus"></use></svg></button>' +
+        '<input class="qty__num" type="number" min="1" inputmode="numeric" value="1" aria-label="Cantidad">' +
+        '<button type="button" class="qty__btn" data-mas aria-label="Sumar uno"><svg class="line" aria-hidden="true"><use href="#i-plus"></use></svg></button></div>' +
+        '<button type="button" class="btn btn--add" data-agregar><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg><span>Agregar</span></button>' +
+      '</div>';
+
+    var img = opts.img ? '<div class="prod__img"><img src="' + grupoImg(c.grupo, c.cat) + '" alt="" loading="lazy" decoding="async">' +
+      '<span class="prod__badge"><svg class="fill" aria-hidden="true"><use href="#i-star"></use></svg> Más pedido</span></div>' : "";
+
+    return '<article class="prod' + (opts.img ? " prod--star" : "") + (v0.sinStock ? " prod--sinstock" : "") + '" data-key="' + esc(c.key) + '" data-sel="' + esc(v0.id) + '">' +
+      img +
+      '<div class="prod__main">' +
+        '<h3 class="prod__nombre">' + esc(c.desc) + '</h3>' +
+        '<div class="prod__meta">' + meta.map(function (m) { return "<span>" + m + "</span>"; }).join("") + '</div>' +
+        pills +
+        '<span class="prod__encart" hidden><svg class="line" aria-hidden="true"><use href="#i-check"></use></svg> <b>0</b> en tu pedido</span>' +
+      '</div>' +
+      '<div class="prod__buy">' + precio + controls + '</div>' +
+    '</article>';
+  }
+
+  function findCardByKey(key) {
+    for (var i = 0; i < CARDS.length; i++) if (CARDS[i].key === key) return CARDS[i];
+    return null;
+  }
+  function findItem(id) {
+    for (var i = 0; i < ITEMS.length; i++) if (ITEMS[i].id === id) return ITEMS[i];
+    return null;
+  }
+
+  /* ---------------- render principal */
+  function renderCatalog() {
+    var res = $("pedido-result");
+    var moreBtn = $("pedido-mas");
+    var destacadosWrap = $("destacados-wrap");
+    var matched = CARDS.filter(cardMatches);
+    var searching = !!(state.q || state.grupo);
+
+    if (destacadosWrap) destacadosWrap.hidden = searching;
+
+    if (searching) {
+      flatCards = matched;
+      shownFlat = 0;
+      listEl.innerHTML = "";
+      if (res) res.textContent = matched.length + (matched.length === 1 ? " producto encontrado" : " productos encontrados");
+      renderFlatMore();
+      if (!matched.length) {
+        listEl.innerHTML = '<div class="prod-vacio"><p><b>No encontramos productos con esa búsqueda.</b></p>' +
+          '<p>Probá con menos palabras (ej: "fix 4.5", "latex 20" o "tirafondo 1/4") o <a href="' + waLink("Hola CASASILVIAWEB! Estoy buscando: " + state.q) + '" target="_blank" rel="noopener" data-wa="pedido-sin-resultado" data-wa-label="Búsqueda sin resultado">consultanos por WhatsApp</a>.</p></div>';
+        if (moreBtn) moreBtn.hidden = true;
+      }
+    } else {
+      if (res) res.textContent = "";
+      if (moreBtn) moreBtn.hidden = true;
+      renderDestacados();
+      renderGrouped(matched);
+    }
+    syncCatalogButtons();
+  }
+
+  function renderFlatMore() {
+    var next = flatCards.slice(shownFlat, shownFlat + PAGE_SIZE);
+    if (shownFlat === 0) listEl.innerHTML = '<div class="prod-grid"></div>';
+    listEl.querySelector(".prod-grid").insertAdjacentHTML("beforeend", next.map(function (c) { return cardHTML(c); }).join(""));
+    shownFlat += next.length;
+    var more = $("pedido-mas");
+    if (more) {
+      more.hidden = shownFlat >= flatCards.length;
+      more.textContent = "Mostrar más productos (" + (flatCards.length - shownFlat) + " restantes)";
+    }
+    syncCatalogButtons();
+  }
+
+  function renderDestacados() {
+    var row = $("destacados");
+    if (!row) return;
+    var html = DESTACADOS.map(function (id) {
+      var c = CARD_BY_VID[id];
+      if (!c) return "";
+      if (state.cat && c.cat !== state.cat) return "";
+      return cardHTML(c, { img: true, preferId: id });
+    }).join("");
+    row.innerHTML = html;
+    var wrap = $("destacados-wrap");
+    if (wrap) wrap.hidden = !html;
+  }
+
+  function renderGrouped(matchedCards) {
+    var matchedKeys = {};
+    matchedCards.forEach(function (c) { matchedKeys[c.key] = true; });
+    var html = "", lastCat = null;
+    GRUPOS.forEach(function (g) {
+      var cards = g.cards.filter(function (c) { return matchedKeys[c.key]; });
+      if (!cards.length) return;
+      if (g.cat !== lastCat) {
+        lastCat = g.cat;
+        html += '<div class="cat-divider"><h2>' + esc(CAT_NAMES[g.cat] || g.cat) + '</h2><span></span></div>';
+      }
+      var isOpen = !!expanded[g.grupo];
+      var visible = isOpen ? cards : cards.slice(0, PREVIEW_N);
+      var totalSkus = cards.reduce(function (a, c) { return a + c.variants.length; }, 0);
+      html += '<section class="grupo" data-grupo="' + esc(g.grupo) + '">' +
+        '<header class="grupo__head">' +
+          '<img src="' + grupoImg(g.grupo, g.cat) + '" alt="" width="72" height="72" loading="lazy" decoding="async">' +
+          '<div><h3>' + esc(g.grupo) + '</h3><span>' + totalSkus + (totalSkus === 1 ? " producto" : " productos") + ' · ' + esc(CAT_NAMES[g.cat] || "") + '</span></div>' +
+        '</header>' +
+        '<div class="prod-grid">' + visible.map(function (c) { return cardHTML(c); }).join("") + '</div>' +
+        (cards.length > PREVIEW_N
+          ? '<button type="button" class="grupo__mas" data-grupo-mas>' + (isOpen ? "Ver menos" : "Ver los " + cards.length + " productos de esta línea") + "</button>"
+          : "") +
+      '</section>';
+    });
+    listEl.innerHTML = html;
+    syncCatalogButtons();
+  }
+
+  /* ---------------- sincronización de estado en las tarjetas */
   function renderStickyBar() {
     var bar = $("pedido-sticky");
     if (!bar) return;
@@ -207,108 +452,49 @@
 
   function syncCatalogButtons() {
     if (!listEl) return;
-    listEl.querySelectorAll(".prod").forEach(function (card) {
-      var line = findLine(card.getAttribute("data-id"));
+    document.querySelectorAll(".prod[data-key]").forEach(function (card) {
+      var c = findCardByKey(card.getAttribute("data-key"));
+      if (!c) return;
+      var total = c.variants.reduce(function (a, v) { var l = findLine(v.id); return a + (l ? l.qty : 0); }, 0);
       var flag = card.querySelector(".prod__encart");
       if (flag) {
-        flag.hidden = !line;
-        if (line) flag.querySelector("b").textContent = String(line.qty);
+        flag.hidden = total === 0;
+        if (total) flag.querySelector("b").textContent = String(total);
       }
     });
   }
 
-  function prodCard(p) {
-    var pres = [p.pack, p.pres].filter(Boolean).join(" · ");
-    var precio = p.precio == null
-      ? '<a class="prod__consultar" href="https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent("Hola CASASILVIAWEB! Quiero consultar el precio de: " + p.desc + " (Cód. " + p.cod + ")") + '" target="_blank" rel="noopener" data-wa="pedido-consulta" data-wa-label="Consulta precio ' + p.cod + '">Consultar precio</a>'
-      : '<b class="prod__precio">' + fmt(p.precio) + '</b>';
-    var controls = p.precio == null ? "" :
-      '<div class="prod__acciones">' +
-        '<div class="qty"><button type="button" class="qty__btn" data-menos aria-label="Restar uno"><svg class="line" aria-hidden="true"><use href="#i-minus"></use></svg></button>' +
-        '<input class="qty__num" type="number" min="1" inputmode="numeric" value="1" aria-label="Cantidad">' +
-        '<button type="button" class="qty__btn" data-mas aria-label="Sumar uno"><svg class="line" aria-hidden="true"><use href="#i-plus"></use></svg></button></div>' +
-        '<button type="button" class="btn btn--add" data-agregar><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg><span>Agregar</span></button>' +
-      '</div>';
-    return '<article class="prod' + (p.sinStock ? " prod--sinstock" : "") + '" data-id="' + p.id + '">' +
-      '<div class="prod__main">' +
-        '<h3 class="prod__nombre">' + p.desc + '</h3>' +
-        '<div class="prod__meta">' +
-          '<span class="prod__grupo">' + p.grupo + '</span>' +
-          (pres ? '<span>' + pres + '</span>' : "") +
-          '<span class="prod__cod">Cód. ' + p.cod + '</span>' +
-          (p.sinStock ? '<span class="prod__stock">Sin stock — consultá</span>' : "") +
-        '</div>' +
-        '<span class="prod__encart" hidden><svg class="line" aria-hidden="true"><use href="#i-check"></use></svg> <b>0</b> en tu pedido</span>' +
-      '</div>' +
-      '<div class="prod__compra">' + precio + controls + '</div>' +
-    '</article>';
-  }
-
-  function applyFilter() {
-    var q = normalize(state.q).split(/\s+/).filter(Boolean);
-    FILTERED = PRODUCTS.filter(function (p) {
-      if (state.cat && p.cat !== state.cat) return false;
-      if (state.grupo && p.grupo !== state.grupo) return false;
-      if (!q.length) return true;
-      var hay = normalize(p.desc + " " + p.grupo + " " + p.cod);
-      return q.every(function (term) { return hay.indexOf(term) !== -1; });
-    });
-    shown = 0;
-    listEl.innerHTML = "";
-    renderMore();
-    var res = $("pedido-result");
-    if (res) res.textContent = FILTERED.length === PRODUCTS.length
-      ? ""
-      : FILTERED.length + (FILTERED.length === 1 ? " producto encontrado" : " productos encontrados");
-  }
-
-  function renderMore() {
-    var next = FILTERED.slice(shown, shown + PAGE_SIZE);
-    listEl.insertAdjacentHTML("beforeend", next.map(prodCard).join(""));
-    shown += next.length;
-    var more = $("pedido-mas");
-    if (more) {
-      more.hidden = shown >= FILTERED.length;
-      more.textContent = "Mostrar más productos (" + (FILTERED.length - shown) + " restantes)";
-    }
-    if (!FILTERED.length) {
-      listEl.innerHTML = '<div class="prod-vacio"><p><b>No encontramos productos con esa búsqueda.</b></p>' +
-        '<p>Probá con menos palabras (ej: “fix 4.5” o “tirafondo 1/4”) o <a href="https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent("Hola CASASILVIAWEB! Estoy buscando: " + state.q) + '" target="_blank" rel="noopener" data-wa="pedido-sin-resultado" data-wa-label="Búsqueda sin resultado">consultanos por WhatsApp</a>.</p></div>';
-    }
-    syncCatalogButtons();
-  }
-
+  /* ---------------- filtros */
   function buildFilters() {
-    // chips de categoría
     var chips = $("pedido-chips");
     var cats = [];
-    PRODUCTS.forEach(function (p) { if (cats.indexOf(p.cat) === -1) cats.push(p.cat); });
+    ITEMS.forEach(function (p) { if (cats.indexOf(p.cat) === -1) cats.push(p.cat); });
     chips.innerHTML = '<button type="button" class="chip is-active" data-cat="">Todo</button>' +
       cats.map(function (c) {
-        return '<button type="button" class="chip" data-cat="' + c + '">' + (CAT_NAMES[c] || c) + '</button>';
+        return '<button type="button" class="chip" data-cat="' + esc(c) + '">' + esc(CAT_NAMES[c] || c) + '</button>';
       }).join("");
     chips.addEventListener("click", function (e) {
       var b = e.target.closest(".chip");
       if (!b) return;
       state.cat = b.getAttribute("data-cat");
       chips.querySelectorAll(".chip").forEach(function (x) { x.classList.toggle("is-active", x === b); });
-      buildGrupoSelect();
       state.grupo = "";
+      buildGrupoSelect();
       $("pedido-grupo").value = "";
-      applyFilter();
+      renderCatalog();
     });
 
     var sel = $("pedido-grupo");
-    sel.addEventListener("change", function () { state.grupo = sel.value; applyFilter(); });
+    sel.addEventListener("change", function () { state.grupo = sel.value; renderCatalog(); });
     buildGrupoSelect();
 
     var input = $("buscador"), t = null;
     input.addEventListener("input", function () {
       clearTimeout(t);
       t = setTimeout(function () {
-        state.q = input.value;
-        applyFilter();
-        if (state.q.length >= 3) dl({ event: "search", search_term: state.q });
+        state.q = input.value.trim();
+        renderCatalog();
+        if (state.q.length >= 3) track("search", { search_term: state.q });
       }, 160);
     });
 
@@ -323,40 +509,70 @@
   function buildGrupoSelect() {
     var sel = $("pedido-grupo");
     var grupos = [];
-    PRODUCTS.forEach(function (p) {
+    ITEMS.forEach(function (p) {
       if (state.cat && p.cat !== state.cat) return;
       if (grupos.indexOf(p.grupo) === -1) grupos.push(p.grupo);
     });
     sel.innerHTML = '<option value="">Todas las líneas</option>' +
-      grupos.map(function (g) { return '<option>' + g + "</option>"; }).join("");
+      grupos.map(function (g) { return '<option>' + esc(g) + "</option>"; }).join("");
   }
 
+  /* ---------------- arranque del catálogo */
   function initCatalog() {
     fetch("assets/data/productos.json")
       .then(function (r) { return r.json(); })
       .then(function (data) {
-        PRODUCTS = data.items;
+        ITEMS = data.items;
+        buildCards();
         var tot = $("pedido-total-productos");
-        if (tot) tot.textContent = String(PRODUCTS.length);
+        if (tot) tot.textContent = String(ITEMS.length);
         buildFilters();
-        applyFilter();
+        renderCatalog();
       })
       .catch(function () {
         listEl.innerHTML = '<div class="prod-vacio"><p><b>No pudimos cargar el catálogo.</b></p>' +
           '<p>Recargá la página o <a href="https://wa.me/' + WA_NUMBER + '" target="_blank" rel="noopener">pedinos la lista por WhatsApp</a>.</p></div>';
       });
 
-    // interacción con las cards
-    listEl.addEventListener("click", function (e) {
-      var card = e.target.closest(".prod");
-      if (!card) return;
+    var moreBtn = $("pedido-mas");
+    if (moreBtn) moreBtn.addEventListener("click", renderFlatMore);
+
+    // interacción con las tarjetas (delegado en todo el documento: los
+    // destacados viven fuera de #prod-list)
+    document.addEventListener("click", function (e) {
+      var card = e.target.closest(".prod[data-key]");
+      if (!card) {
+        var gm = e.target.closest("[data-grupo-mas]");
+        if (gm) {
+          var sec = gm.closest(".grupo");
+          var grupo = sec.getAttribute("data-grupo");
+          expanded[grupo] = !expanded[grupo];
+          renderCatalog();
+          if (!expanded[grupo]) sec = document.querySelector('.grupo[data-grupo="' + grupo.replace(/"/g, '\\"') + '"]');
+        }
+        return;
+      }
       var qtyInput = card.querySelector(".qty__num");
-      if (e.target.closest("[data-mas]")) qtyInput.value = String((parseInt(qtyInput.value, 10) || 1) + 1);
-      else if (e.target.closest("[data-menos]")) qtyInput.value = String(Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1));
+
+      // cambiar presentación (pill)
+      var pill = e.target.closest(".pill[data-vid]");
+      if (pill) {
+        var vid = pill.getAttribute("data-vid");
+        var item = findItem(vid);
+        if (!item) return;
+        card.setAttribute("data-sel", vid);
+        card.querySelectorAll(".pill").forEach(function (x) { x.classList.toggle("is-active", x === pill); });
+        var priceEl = card.querySelector(".prod__precio");
+        if (priceEl) priceEl.textContent = fmt(item.precio);
+        var codEl = card.querySelector(".prod__cod");
+        if (codEl) codEl.textContent = item.cod;
+        return;
+      }
+
+      if (e.target.closest("[data-mas]") && qtyInput) qtyInput.value = String((parseInt(qtyInput.value, 10) || 1) + 1);
+      else if (e.target.closest("[data-menos]") && qtyInput) qtyInput.value = String(Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1));
       else if (e.target.closest("[data-agregar]")) {
-        var id = card.getAttribute("data-id");
-        var prod = null;
-        for (var i = 0; i < PRODUCTS.length; i++) if (PRODUCTS[i].id === id) { prod = PRODUCTS[i]; break; }
+        var prod = findItem(card.getAttribute("data-sel"));
         if (!prod) return;
         var q = Math.max(1, parseInt(qtyInput.value, 10) || 1);
         addToCart(prod, q);
@@ -369,7 +585,7 @@
       }
     });
 
-    // barra inferior fija (mobile) con total + abrir carrito
+    // barra inferior fija con total en tiempo real
     var sticky = document.createElement("div");
     sticky.className = "pedido-sticky";
     sticky.id = "pedido-sticky";
@@ -381,6 +597,55 @@
   }
 
   if (listEl) initCatalog();
+
+  /* ------------------------------------------------------------------ página de gracias (conversión) */
+  var graciasPedido = $("gracias-pedido");
+  if (graciasPedido) {
+    var order = null;
+    try { order = JSON.parse(localStorage.getItem(ORDER_KEY) || "null"); } catch (_) {}
+    if (order && order.items && order.items.length) {
+      // conversión "purchase" (una sola vez por pedido)
+      var fired = null;
+      try { fired = localStorage.getItem("csw_purchase_fired"); } catch (_) {}
+      if (String(order.ts) !== fired) {
+        track("purchase", {
+          transaction_id: "wa-" + order.ts, currency: "ARS", value: order.total,
+          items: gaItems(order.items)
+        });
+        // conversión de Google Ads (si está configurada y no se gestiona por GTM)
+        if (!USE_GTM && window.gtag && CFG.googleAdsId && CFG.googleAdsConversionLabel) {
+          window.gtag("event", "conversion", {
+            send_to: CFG.googleAdsId + "/" + CFG.googleAdsConversionLabel,
+            value: order.total, currency: "ARS", transaction_id: "wa-" + order.ts
+          });
+        }
+        try { localStorage.setItem("csw_purchase_fired", String(order.ts)); } catch (_) {}
+      }
+
+      // resumen del pedido en pantalla
+      var resumen = $("gracias-resumen");
+      if (resumen) {
+        resumen.hidden = false;
+        resumen.querySelector("tbody").innerHTML = order.items.map(function (i) {
+          var pres = [i.pack, i.pres].filter(Boolean).join(" ");
+          return "<tr><td>" + i.qty + " × " + esc(i.desc) + (pres ? " <small>(" + esc(pres) + ")</small>" : "") + "</td><td>" + fmt((i.precio || 0) * i.qty) + "</td></tr>";
+        }).join("");
+        $("gracias-total").textContent = fmt(order.total);
+      }
+      var waAgain = $("gracias-wa");
+      if (waAgain) waAgain.href = waLink(order.msg || buildMessage());
+    }
+    var vaciar = $("gracias-vaciar");
+    if (vaciar) vaciar.addEventListener("click", function () {
+      emptyCart();
+      vaciar.textContent = "Carrito vaciado ✓";
+      vaciar.disabled = true;
+    });
+  }
+
+  if ($("gracias-contacto")) {
+    track("lead_gracias_page", { method: "whatsapp" });
+  }
 
   /* ------------------------------------------------------------------ arranque */
   renderCart();
