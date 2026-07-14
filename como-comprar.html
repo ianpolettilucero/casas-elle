@@ -125,6 +125,10 @@
 <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
 <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.4l2.2 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.2L21.5 8H6.1"/><circle cx="9.8" cy="20.4" r="1.5" fill="currentColor" stroke="none"/><circle cx="17.6" cy="20.4" r="1.5" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M6.5 7l.9 12a1.6 1.6 0 0 0 1.6 1.5h6a1.6 1.6 0 0 0 1.6-1.5l.9-12"/><path d="M10 11v6M14 11v6"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
 <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
 <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.4l6-.9z" fill="currentColor" stroke="none"/></symbol>
 <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2l-6 6 2.2 2.2 6-6a4 4 0 0 0 5.2-5.4l-2.5 2.5-2-2 2.5-2.5z"/></symbol>
@@ -150,12 +154,17 @@
             <a href="pinturas-y-quimicos.html">Pinturas y Químicos</a>
           </div>
         </div>
+        <a class="nav__pedido" href="pedido.html">Armá tu pedido</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="como-comprar.html">Cómo comprar</a>
         <a href="index.html#contacto">Contacto</a>
       </nav>
       <div class="header__cta">
         <a class="btn btn--wa" href="https://wa.me/541166034047?text=Hola%20CASASILVIAWEB%21%20Quiero%20solicitar%20la%20lista%20de%20precios%20mayorista." target="_blank" rel="noopener" data-wa="header" data-wa-label="Header — Lista de precios"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg><span class="cta-text">Lista de precios</span></a>
+        <button class="cart-btn" id="cart-open" type="button" aria-label="Ver tu pedido" title="Tu pedido">
+          <svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg>
+          <span class="cart-btn__badge" id="cart-badge" hidden>0</span>
+        </button>
         <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
           <svg class="line" aria-hidden="true"><use href="#i-menu"></use></svg>
         </button>
@@ -243,6 +252,7 @@
         <div>
           <h4>Empresa</h4>
           <nav class="footer__links" aria-label="Empresa">
+            <a href="pedido.html">Armá tu pedido</a>
             <a href="nosotros.html">Nosotros</a>
             <a href="como-comprar.html">Cómo comprar</a>
             <a href="index.html#contacto">Contacto y ubicación</a>
@@ -279,7 +289,33 @@
       <span class="wa-badge" id="wa-badge">1</span>
       <svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg>
     </button>
+  </div>  <div class="cart-layer" id="cart-layer" hidden>
+    <div class="cart-layer__backdrop" id="cart-backdrop"></div>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Tu pedido">
+      <header class="cart-drawer__head">
+        <span class="cart-drawer__ic"><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg></span>
+        <div><b>Tu pedido</b><span id="cart-count-label">Sin productos</span></div>
+        <button class="cart-drawer__close" id="cart-close" type="button" aria-label="Cerrar carrito"><svg class="line" aria-hidden="true"><use href="#i-close"></use></svg></button>
+      </header>
+      <div class="cart-drawer__body" id="cart-body">
+        <div class="cart-empty" id="cart-empty">
+          <svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg>
+          <p><b>Todavía no agregaste productos.</b></p>
+          <p>Buscá en el catálogo con precios y armá tu pedido: lo enviás por WhatsApp y te confirmamos descuentos y entrega.</p>
+          <a class="btn btn--wa" href="pedido.html" style="--btn-bg:var(--red)">Ver catálogo con precios</a>
+        </div>
+        <ul class="cart-items" id="cart-items"></ul>
+      </div>
+      <footer class="cart-drawer__foot" id="cart-foot" hidden>
+        <div class="cart-minimo" id="cart-minimo" hidden>Pedido mínimo mayorista: <b>$300.000</b>. Te falta <b id="cart-minimo-falta"></b> para llegar.</div>
+        <div class="cart-total"><span>Total estimado</span><b id="cart-total">$0</b></div>
+        <p class="cart-disclaimer">Precios de lista sujetos a confirmación. Los descuentos por volumen se aplican al confirmar por WhatsApp.</p>
+        <a class="btn btn--wa btn--lg btn--block" id="cart-send" href="#" target="_blank" rel="noopener" data-wa="carrito" data-wa-label="Carrito — Enviar pedido"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg>Enviar pedido por WhatsApp</a>
+        <a class="cart-drawer__more" href="pedido.html">Seguir agregando productos →</a>
+      </footer>
+    </aside>
   </div>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/carrito.js" defer></script>
 </body>
 </html>

@@ -13,6 +13,7 @@
 
 ## Empresa
 
+- [Armá tu pedido](https://www.casasilviaweb.com.ar/pedido.html): catálogo online con precios de lista; el carrito se envía por WhatsApp.
 - [Nosotros](https://www.casasilviaweb.com.ar/nosotros.html): mayorista que abastece a ferreterías, corralones, zingueros, madereras, distribuidores y constructoras.
 - [Cómo comprar](https://www.casasilviaweb.com.ar/como-comprar.html): pedido mínimo, envíos, formas de pago y descuentos por volumen.
 

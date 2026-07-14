@@ -154,10 +154,12 @@
   }
   if (popClose) popClose.addEventListener("click", function () { closePop(true); });
 
-  // Auto-apertura una sola vez por visitante, salvo que ya lo haya cerrado
+  // Auto-apertura una sola vez por visitante, salvo que ya lo haya cerrado.
+  // En la página del catálogo con carrito (pedido.html) no se abre solo:
+  // taparía el buscador y compite con el flujo de armado del pedido.
   var alreadyClosed = false;
   try { alreadyClosed = localStorage.getItem(STORAGE_KEY) === "1"; } catch (_) {}
-  if (pop && !alreadyClosed) {
+  if (pop && !alreadyClosed && !document.getElementById("prod-list")) {
     setTimeout(openPop, 3500);
   }
 

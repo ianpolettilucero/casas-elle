@@ -43,6 +43,10 @@ SPRITE = r"""<svg width="0" height="0" style="position:absolute" aria-hidden="tr
 <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></symbol>
 <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
 <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+<symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2.4l2.2 11.2a1.6 1.6 0 0 0 1.6 1.3h8.7a1.6 1.6 0 0 0 1.6-1.2L21.5 8H6.1"/><circle cx="9.8" cy="20.4" r="1.5" fill="currentColor" stroke="none"/><circle cx="17.6" cy="20.4" r="1.5" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2M6.5 7l.9 12a1.6 1.6 0 0 0 1.6 1.5h6a1.6 1.6 0 0 0 1.6-1.5l.9-12"/><path d="M10 11v6M14 11v6"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/></symbol>
+<symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
 <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
 <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.7 5.5 6 .9-4.3 4.2 1 6-5.4-2.8-5.4 2.8 1-6L3.3 9.4l6-.9z" fill="currentColor" stroke="none"/></symbol>
 <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2l-6 6 2.2 2.2 6-6a4 4 0 0 0 5.2-5.4l-2.5 2.5-2-2 2.5-2.5z"/></symbol>
@@ -146,12 +150,17 @@ def header(on_home=False):
 {dd}
           </div>
         </div>
+        <a class="nav__pedido" href="pedido.html">Armá tu pedido</a>
         <a href="nosotros.html">Nosotros</a>
         <a href="como-comprar.html">Cómo comprar</a>
         <a href="{sec}#contacto">Contacto</a>
       </nav>
       <div class="header__cta">
         {wa_btn("Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.", "header", "Header — Lista de precios", "btn btn--wa", inner='<span class="cta-text">Lista de precios</span>')}
+        <button class="cart-btn" id="cart-open" type="button" aria-label="Ver tu pedido" title="Tu pedido">
+          <svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg>
+          <span class="cart-btn__badge" id="cart-badge" hidden>0</span>
+        </button>
         <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
           <svg class="line" aria-hidden="true"><use href="#i-menu"></use></svg>
         </button>
@@ -190,6 +199,7 @@ def footer(on_home=False):
         <div>
           <h4>Empresa</h4>
           <nav class="footer__links" aria-label="Empresa">
+            <a href="pedido.html">Armá tu pedido</a>
             <a href="nosotros.html">Nosotros</a>
             <a href="como-comprar.html">Cómo comprar</a>
             <a href="{sec}#contacto">Contacto y ubicación</a>
@@ -210,10 +220,38 @@ def footer(on_home=False):
       </div>
     </div>
   </footer>
-""" + WA_FLOAT + """
+""" + WA_FLOAT + CART_DRAWER + """
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/carrito.js" defer></script>
 </body>
 </html>"""
+
+CART_DRAWER = """  <div class="cart-layer" id="cart-layer" hidden>
+    <div class="cart-layer__backdrop" id="cart-backdrop"></div>
+    <aside class="cart-drawer" role="dialog" aria-modal="true" aria-label="Tu pedido">
+      <header class="cart-drawer__head">
+        <span class="cart-drawer__ic"><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg></span>
+        <div><b>Tu pedido</b><span id="cart-count-label">Sin productos</span></div>
+        <button class="cart-drawer__close" id="cart-close" type="button" aria-label="Cerrar carrito"><svg class="line" aria-hidden="true"><use href="#i-close"></use></svg></button>
+      </header>
+      <div class="cart-drawer__body" id="cart-body">
+        <div class="cart-empty" id="cart-empty">
+          <svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg>
+          <p><b>Todavía no agregaste productos.</b></p>
+          <p>Buscá en el catálogo con precios y armá tu pedido: lo enviás por WhatsApp y te confirmamos descuentos y entrega.</p>
+          <a class="btn btn--wa" href="pedido.html" style="--btn-bg:var(--red)">Ver catálogo con precios</a>
+        </div>
+        <ul class="cart-items" id="cart-items"></ul>
+      </div>
+      <footer class="cart-drawer__foot" id="cart-foot" hidden>
+        <div class="cart-minimo" id="cart-minimo" hidden>Pedido mínimo mayorista: <b>$300.000</b>. Te falta <b id="cart-minimo-falta"></b> para llegar.</div>
+        <div class="cart-total"><span>Total estimado</span><b id="cart-total">$0</b></div>
+        <p class="cart-disclaimer">Precios de lista sujetos a confirmación. Los descuentos por volumen se aplican al confirmar por WhatsApp.</p>
+        <a class="btn btn--wa btn--lg btn--block" id="cart-send" href="#" target="_blank" rel="noopener" data-wa="carrito" data-wa-label="Carrito — Enviar pedido"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg>Enviar pedido por WhatsApp</a>
+        <a class="cart-drawer__more" href="pedido.html">Seguir agregando productos →</a>
+      </footer>
+    </aside>
+  </div>"""
 
 WA_FLOAT = f"""  <div class="wa-float">
     <div class="wa-pop is-hidden" id="wa-pop" hidden role="dialog" aria-label="Chat de WhatsApp con CASASILVIAWEB">
@@ -576,7 +614,7 @@ def render_category(c):
             <p class="lead-big">{c['lead']}</p>
             <div class="cat-intro__actions">
               {wa_btn(c['wa_text'], 'cat-'+c['slug'], 'Categoría '+c['name'], 'btn btn--wa btn--lg', inner='Pedir lista de precios')}
-              <a class="btn btn--ghost-dark btn--lg" href="como-comprar.html">Cómo comprar</a>
+              <a class="btn btn--ghost-dark btn--lg" href="pedido.html?cat={c['slug']}"><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg> Armá tu pedido con precios</a>
             </div>
           </div>
           <div class="split__media reveal">
@@ -669,7 +707,7 @@ def render_home():
         <p class="hero__lead">Somos mayoristas de fijaciones y aceros con <strong>respaldo de fábrica (Gerdau)</strong>: tornillos, clavos, alambres, tirafondos, hierros y mallas. Entregamos en CABA y GBA y <strong>abonás al recibir</strong>, con descuentos por volumen.</p>
         <div class="hero__actions">
           {wa_btn("Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.", "hero", "Hero — Lista de precios", "btn btn--wa btn--lg", inner="Pedir lista de precios")}
-          <a class="btn btn--ghost btn--lg" href="#productos">Ver productos</a>
+          <a class="btn btn--ghost btn--lg" href="pedido.html"><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg> Armá tu pedido online</a>
         </div>
         <div class="hero__stats">
           <div class="hero__stat"><b>Respaldo Gerdau</b><span>Acero líder, primera calidad</span></div>
@@ -858,9 +896,57 @@ def render_como_comprar():
                 "Cómo comprar al por mayor en CASASILVIAWEB: pedís por WhatsApp, te pasamos la lista, coordinás y abonás al recibir. Envíos a CABA y GBA, descuentos por volumen.",
                 "como-comprar.html", jsonld=jsonld) + header() + sections + footer()
 
+# --------------------------------------------------------------------------- pedido (catálogo con precios + carrito)
+def render_pedido():
+    crumb = breadcrumb([("Inicio","index.html"),("Armá tu pedido",None)])
+    sections = f"""    <section class="section section--soft pedido-hero">
+      <div class="container">
+        {crumb}
+        <div class="section-head reveal">
+          <span class="eyebrow">Catálogo con precios</span>
+          <h1>Armá tu pedido online</h1>
+          <p class="lead-big">Buscá los productos, agregalos al carrito y mirá el total en tiempo real. Cuando termines, lo enviás por WhatsApp y te confirmamos <strong>descuentos por volumen</strong> y entrega. <strong>Abonás al recibir.</strong></p>
+          <ul class="pedido-meta">
+            <li><svg class="line" aria-hidden="true"><use href="#i-tag"></use></svg> Lista 05/2026</li>
+            <li><svg class="line" aria-hidden="true"><use href="#i-box"></use></svg> <span id="pedido-total-productos">—</span> productos</li>
+            <li><svg class="line" aria-hidden="true"><use href="#i-truck"></use></svg> Pedido mínimo $300.000 · Entrega CABA y GBA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="section pedido-catalogo" id="catalogo">
+      <div class="container">
+        <div class="pedido-toolbar" id="pedido-toolbar">
+          <label class="pedido-search" for="buscador">
+            <svg class="line" aria-hidden="true"><use href="#i-search"></use></svg>
+            <input type="search" id="buscador" placeholder="Buscá por producto, medida o código (ej: fix 4.5, tirafondo 1/4, N001066)" autocomplete="off">
+          </label>
+          <div class="pedido-chips" id="pedido-chips" role="tablist" aria-label="Filtrar por categoría"></div>
+          <select id="pedido-grupo" aria-label="Filtrar por línea"><option value="">Todas las líneas</option></select>
+        </div>
+        <p class="pedido-result" id="pedido-result" aria-live="polite"></p>
+        <div class="prod-list" id="prod-list" aria-live="polite"></div>
+        <div class="pedido-mas-wrap"><button class="btn btn--ghost-dark" id="pedido-mas" type="button" hidden>Mostrar más productos</button></div>
+        <p class="cart-disclaimer center">Precios de lista (sin descuentos aplicados), sujetos a confirmación por WhatsApp. Las presentaciones son por caja, sobre o estuche según el producto.</p>
+      </div>
+    </section>
+{price_cta(heading="¿Preferís que te armemos el pedido?",
+           text="Escribinos por WhatsApp con lo que necesitás y te pasamos precios, descuentos por volumen y entrega. <strong>Abonás al recibir.</strong>",
+           source="pedido-ayuda", label="Pedido — Ayuda por WhatsApp")}"""
+    jsonld = {"@context":"https://schema.org","@graph":[
+      {"@type":"BreadcrumbList","itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Inicio","item":f"{SITE}/"},
+        {"@type":"ListItem","position":2,"name":"Armá tu pedido","item":f"{SITE}/pedido.html"}]},
+      {"@type":"WebPage","name":"Armá tu pedido online","url":f"{SITE}/pedido.html",
+       "description":"Catálogo mayorista con precios: armá tu carrito y envialo por WhatsApp."}]}
+    return (head("Catálogo con precios | Armá tu pedido online | CASASILVIAWEB",
+                 "Catálogo mayorista con precios de lista: tornillos, clavos, alambres, tirafondos y más. Armá tu carrito online, mirá el total en tiempo real y envialo por WhatsApp.",
+                 "pedido.html", jsonld=jsonld)
+            + header() + sections + footer())
+
 # --------------------------------------------------------------------------- sitemap
 def render_sitemap():
-    urls = [("", "1.0")] + [(f"{c['slug']}.html","0.8") for c in CATS] + [("nosotros.html","0.6"),("como-comprar.html","0.6")]
+    urls = [("", "1.0"),("pedido.html","0.9")] + [(f"{c['slug']}.html","0.8") for c in CATS] + [("nosotros.html","0.6"),("como-comprar.html","0.6")]
     body = "\n".join(
       f'  <url><loc>{SITE}/{p}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>{pr}</priority></url>'
       for p, pr in urls)
@@ -889,6 +975,7 @@ def render_llms():
 
 ## Empresa
 
+- [Armá tu pedido]({SITE}/pedido.html): catálogo online con precios de lista; el carrito se envía por WhatsApp.
 - [Nosotros]({SITE}/nosotros.html): mayorista que abastece a ferreterías, corralones, zingueros, madereras, distribuidores y constructoras.
 - [Cómo comprar]({SITE}/como-comprar.html): pedido mínimo, envíos, formas de pago y descuentos por volumen.
 
@@ -963,6 +1050,7 @@ def main():
     import os
     out = {}
     out["index.html"] = render_home()
+    out["pedido.html"] = render_pedido()
     out["nosotros.html"] = render_nosotros()
     out["como-comprar.html"] = render_como_comprar()
     for c in CATS:

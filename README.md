@@ -154,6 +154,34 @@ son compartidos, así que un cambio se aplica a todas las páginas.
 
 ---
 
+## 🛒 Carrito de pedidos (pedido.html)
+
+`pedido.html` es el **catálogo con precios**: el cliente busca, filtra por categoría/línea,
+arma el carrito (queda guardado en `localStorage`, sobrevive entre visitas) y lo envía por
+WhatsApp con cantidades, precio unitario, subtotales y total. El botón del carrito con
+contador está en el header de todas las páginas y abre un panel lateral.
+
+- Lógica: `assets/js/carrito.js` · Datos: `assets/data/productos.json`.
+- Eventos GA4 que emite: `add_to_cart`, `view_cart`, `begin_checkout`, `search`
+  (además del `whatsapp_click` de siempre al enviar el pedido).
+
+### Actualizar la lista de precios
+
+Cuando llegue una lista nueva (PDF):
+
+```bash
+pdftotext -layout LISTA_DE_PRECIOS_NUEVA.pdf tools/lista-precios-AAAA-MM.txt
+python3 tools/parse_precios.py tools/lista-precios-AAAA-MM.txt
+```
+
+Eso regenera `assets/data/productos.json` (revisá el resumen que imprime: cantidad de
+productos por categoría y los que quedaron "a consultar" sin precio). Después actualizá
+la leyenda "Lista MM/AAAA" en `render_pedido()` de `build.py` y corré `python3 build.py`.
+Si el PDF cambia de formato (nuevas secciones), agregalas al diccionario `SECTIONS`
+de `tools/parse_precios.py`.
+
+---
+
 ## 🌐 Deploy — Cloudflare Pages (automático desde `main`)
 
 El sitio se publica con **Cloudflare Pages**: cada push a `main` dispara un deploy
