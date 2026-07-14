@@ -784,3 +784,17 @@ p { color: var(--ink-800); }
   .pedido-chips { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
   .pedido-chips::-webkit-scrollbar { display: none; }
 }
+
+/* Chips de marca / bulto / presentación en las tarjetas del catálogo */
+.prod__tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+.tagchip {
+  display: inline-flex; align-items: center;
+  font-family: var(--font-head); font-weight: 600; font-size: .8rem;
+  letter-spacing: .05em; text-transform: uppercase; line-height: 1;
+  padding: 5px 10px; border-radius: 7px; white-space: nowrap;
+}
+.tagchip--pack { background: var(--ink-900); color: #fff; }
+.tagchip--pres { background: #fff7e6; color: #8a5a00; border: 1px solid #f0dcae; }
+.tagchip--brand { background: #fff; border: 1.5px solid var(--red); color: var(--red); }
+.tagchip[hidden] { display: none !important; }
+.tagchip--pack { text-transform: none; letter-spacing: .03em; }

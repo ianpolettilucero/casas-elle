@@ -349,24 +349,46 @@
     return l;
   }
 
+  // Marcas conocidas dentro de las descripciones -> chip destacado
+  var BRANDS = [
+    ["LOMA NEGRA", "Loma Negra"], ["SIMBOLO-TEX", "Símbolo-Tex"], ["SÍMBOLO-TEX", "Símbolo-Tex"],
+    ["SIMBOLOTEX", "Símbolo-Tex"], ["CIBEL", "Cibel"], ["CASABLANCA", "Casablanca"],
+    ["SINTEPLAST", "Sinteplast"], ["EL GALGO", "El Galgo"], ["CETOL", "Cetol"],
+    ["BRIK-COL", "Brik-Col"], ["TRI-MAS", "Tri-Mas"], ["TRIMAS", "Tri-Mas"],
+    ["PENETRIT", "Penetrit"], ["STA ELENA", "Sta. Elena"], ["MAGIPLAST", "Magiplast"],
+    ["GERDAU", "Gerdau"], ["KRG", "Tipo KREG"], ["KREG", "Tipo KREG"]
+  ];
+  function brandOf(desc, grupo) {
+    var hay = (desc + " " + grupo).toUpperCase();
+    for (var i = 0; i < BRANDS.length; i++) if (hay.indexOf(BRANDS[i][0]) !== -1) return BRANDS[i][1];
+    return null;
+  }
+  function packLabel(pack) { return pack ? pack + " u." : ""; }
+
   function cardHTML(c, opts) {
     opts = opts || {};
     var sel = 0;
     if (opts.preferId) c.variants.forEach(function (v, i) { if (v.id === opts.preferId) sel = i; });
     var v0 = c.variants[sel];
     var multi = c.variants.length > 1;
-    var pills = "";
+    var pills = "", labels = null;
     if (multi) {
-      var labels = pillLabels(c.variants);
+      labels = pillLabels(c.variants);
       pills = '<div class="prod__pills" role="group" aria-label="Presentaciones">' + c.variants.map(function (v, i) {
         return '<button type="button" class="pill' + (i === sel ? " is-active" : "") + '" data-vid="' + esc(v.id) + '">' + esc(labels[i]) + '</button>';
       }).join("") + '</div>';
     }
+
+    // Chips visuales: marca + cantidad por bulto (x2000 u.) + presentación (Granel)
+    var pillsUsePres = multi && labels[sel] === (v0.pres || "");
+    var tags = [];
+    var brand = brandOf(c.desc, c.grupo);
+    if (brand) tags.push('<span class="tagchip tagchip--brand">' + esc(brand) + '</span>');
+    tags.push('<span class="tagchip tagchip--pack" data-chip-pack' + (v0.pack ? "" : " hidden") + '>' + esc(packLabel(v0.pack)) + '</span>');
+    tags.push('<span class="tagchip tagchip--pres" data-chip-pres' + (v0.pres && !pillsUsePres ? "" : " hidden") + '>' + esc(v0.pres || "") + '</span>');
+    var tagsHtml = '<div class="prod__tags">' + tags.join("") + '</div>';
+
     var meta = [];
-    if (!multi) {
-      var pres = [v0.pack, v0.pres].filter(Boolean).join(" · ");
-      if (pres) meta.push(esc(pres));
-    }
     meta.push('Cód. <span class="prod__cod">' + esc(v0.cod) + '</span>');
     if (v0.sinStock) meta.push('<span class="prod__stock">Sin stock — consultá</span>');
 
@@ -388,6 +410,7 @@
       img +
       '<div class="prod__main">' +
         '<h3 class="prod__nombre">' + esc(c.desc) + '</h3>' +
+        tagsHtml +
         '<div class="prod__meta">' + meta.map(function (m) { return "<span>" + m + "</span>"; }).join("") + '</div>' +
         pills +
         '<span class="prod__encart" hidden><svg class="line" aria-hidden="true"><use href="#i-check"></use></svg> <b>0</b> en tu pedido</span>' +
@@ -619,6 +642,18 @@
         if (priceEl) priceEl.textContent = fmt(item.precio);
         var codEl = card.querySelector(".prod__cod");
         if (codEl) codEl.textContent = item.cod;
+        // chips de bulto/presentación de la variante elegida
+        var packChip = card.querySelector("[data-chip-pack]");
+        if (packChip) {
+          packChip.hidden = !item.pack;
+          packChip.textContent = packLabel(item.pack);
+        }
+        var presChip = card.querySelector("[data-chip-pres]");
+        if (presChip) {
+          var dupPill = pill.textContent === (item.pres || "");
+          presChip.hidden = !item.pres || dupPill;
+          presChip.textContent = item.pres || "";
+        }
         return;
       }
 
