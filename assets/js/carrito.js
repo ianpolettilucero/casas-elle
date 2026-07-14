@@ -218,23 +218,76 @@
     "soldadura": "Soldadura",
     "pinturas-y-quimicos": "Pinturas y Químicos"
   };
-  var CAT_IMG = {
-    "tornillos-autoperforantes": "tornillos-tipos.webp",
-    "clavos-y-alambres": "clavos-coils.webp",
-    "tirafondos-y-fijaciones": "tirafondos-tuercas.webp",
-    "hierros-y-mallas": "cat-hierros-mallas.webp",
-    "soldadura": "cat-soldadura.webp",
-    "pinturas-y-quimicos": "pinturas-stock.webp"
+  // Pictogramas por línea (símbolos p-* del sprite). Nada de fotos genéricas:
+  // cada línea muestra un ícono representativo del producto real.
+  var CAT_ICON = {
+    "tornillos-autoperforantes": "p-screw-hex",
+    "clavos-y-alambres": "p-nail",
+    "tirafondos-y-fijaciones": "p-lag",
+    "hierros-y-mallas": "p-rebar",
+    "soldadura": "p-weld",
+    "pinturas-y-quimicos": "p-paint"
   };
-  var GRUPO_IMG = {
-    "Tirafondos": "cat-tirafondos.webp",
-    "Clavos punta París": "cat-clavos-alambres.webp",
-    "Látex Símbolo-Tex": "cat-pinturas.webp",
-    "Hexagonal punta mecha": "cat-tornillos.webp",
-    "Hierro dulce": "deposito-hierros.webp"
+  var GRUPO_ICON = {
+    "Hexagonal punta ranurada/aguja": "p-screw-hex",
+    "Hexagonal punta mecha": "p-screw-hex",
+    "FIX": "p-screw",
+    "Deck T25": "p-screw",
+    "Hormigón T30": "p-screw",
+    "Drywall madera": "p-screw-drywall",
+    "Drywall metal punta aguja": "p-screw-drywall",
+    "Drywall metal punta mecha": "p-screw-drywall",
+    "Tanque aguja": "p-screw-pan",
+    "Tanque mecha": "p-screw-pan",
+    "Tanque p/tuerca": "p-screw-pan",
+    "Parker aguja": "p-screw-pan",
+    "Parker mecha": "p-screw-pan",
+    "Pan framing": "p-screw-pan",
+    "Ensamblador": "p-screw",
+    "Tipo KREG (oculto)": "p-screw",
+    "Punta mecha con alas": "p-screw",
+    "Tirafondos": "p-lag",
+    "Tuercas hexagonales": "p-nut",
+    "Arandelas planas": "p-washer",
+    "Arandelas chapista": "p-washer",
+    "Tarugos comunes sin tope": "p-plug",
+    "Tarugos comunes con tope": "p-plug",
+    "Tarugos universales sin tope": "p-plug",
+    "Tarugos universales con tope": "p-plug",
+    "Tarugos FX (hueco)": "p-plug",
+    "Tarugos yeso/durlock": "p-plug",
+    "Tarugos mariposa": "p-plug",
+    "Grampas Omega": "p-clamp",
+    "Grampas": "p-staple",
+    "Ganchos J": "p-hook",
+    "Torniquetes": "p-turnbuckle",
+    "Alambre galvanizado": "p-wire",
+    "Alambre negro recocido": "p-wire",
+    "Alambre para soldar (MIG)": "p-weld",
+    "Alambre de púas": "p-barbed",
+    "Concertina": "p-barbed",
+    "Alambre tejido": "p-mesh",
+    "Hierro dulce": "p-rebar",
+    "Electrodos": "p-weld",
+    "Látex Símbolo-Tex": "p-paint",
+    "Sintéticos 3 en 1": "p-can",
+    "Polvos y morteros": "p-bag",
+    "Pinturas al agua y cal": "p-paint",
+    "Polvos para colorear": "p-pigment",
+    "Combustibles y diluyentes": "p-jerrican",
+    "Asfaltos": "p-paint",
+    "Químicos Símbolo-Tex": "p-flask",
+    "Vendas y mantas sintéticas": "p-roll",
+    "Accesorios y varios": "p-tape",
+    "Cibel / Casablanca / Tintas": "p-can",
+    "Rodillos y pinceles El Galgo": "p-roller",
+    "Cetol / Brik-Col (nuevos ingresos)": "p-can"
   };
-  function grupoImg(grupo, cat) {
-    return "assets/img/" + (GRUPO_IMG[grupo] || CAT_IMG[cat] || "deposito-almacen.webp");
+  function grupoIcon(grupo, cat) {
+    return GRUPO_ICON[grupo] || CAT_ICON[cat] || "p-screw";
+  }
+  function iconSvg(grupo, cat) {
+    return '<svg class="line" aria-hidden="true"><use href="#' + grupoIcon(grupo, cat) + '"></use></svg>';
   }
 
   // Los más pedidos (por id; el orden es el de la vidriera)
@@ -328,7 +381,7 @@
         '<button type="button" class="btn btn--add" data-agregar><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg><span>Agregar</span></button>' +
       '</div>';
 
-    var img = opts.img ? '<div class="prod__img"><img src="' + grupoImg(c.grupo, c.cat) + '" alt="" loading="lazy" decoding="async">' +
+    var img = opts.img ? '<div class="prod__hero">' + iconSvg(c.grupo, c.cat) +
       '<span class="prod__badge"><svg class="fill" aria-hidden="true"><use href="#i-star"></use></svg> Más pedido</span></div>' : "";
 
     return '<article class="prod' + (opts.img ? " prod--star" : "") + (v0.sinStock ? " prod--sinstock" : "") + '" data-key="' + esc(c.key) + '" data-sel="' + esc(v0.id) + '">' +
@@ -425,7 +478,7 @@
       var totalSkus = cards.reduce(function (a, c) { return a + c.variants.length; }, 0);
       html += '<section class="grupo" data-grupo="' + esc(g.grupo) + '">' +
         '<header class="grupo__head">' +
-          '<img src="' + grupoImg(g.grupo, g.cat) + '" alt="" width="72" height="72" loading="lazy" decoding="async">' +
+          '<span class="grupo__ic">' + iconSvg(g.grupo, g.cat) + '</span>' +
           '<div><h3>' + esc(g.grupo) + '</h3><span>' + totalSkus + (totalSkus === 1 ? " producto" : " productos") + ' · ' + esc(CAT_NAMES[g.cat] || "") + '</span></div>' +
         '</header>' +
         '<div class="prod-grid">' + visible.map(function (c) { return cardHTML(c); }).join("") + '</div>' +

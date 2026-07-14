@@ -633,7 +633,11 @@ p { color: var(--ink-800); }
 .cat-divider span { flex: 1; height: 3px; background: linear-gradient(90deg, var(--red), transparent); border-radius: 3px; }
 .grupo { margin-top: 26px; }
 .grupo__head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-.grupo__head img { width: 58px; height: 58px; border-radius: 12px; object-fit: cover; flex: none; }
+.grupo__ic {
+  width: 56px; height: 56px; border-radius: 14px; background: var(--red-tint); color: var(--red);
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+}
+.grupo__ic svg { width: 30px; height: 30px; }
 .grupo__head h3 { font-size: 1.28rem; line-height: 1.1; }
 .grupo__head span { color: var(--muted); font-size: .9rem; font-weight: 600; }
 .grupo__mas {
@@ -658,8 +662,14 @@ p { color: var(--ink-800); }
 .destacados__row { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
 .prod--star { border-color: #f3d9db; box-shadow: 0 6px 24px rgba(210,30,40,.07); padding: 0 0 18px; overflow: hidden; }
 .prod--star .prod__main, .prod--star .prod__buy { padding-inline: 18px; }
-.prod__img { position: relative; height: 130px; margin-bottom: 14px; }
-.prod__img img { width: 100%; height: 100%; object-fit: cover; }
+.prod__hero {
+  position: relative; height: 118px; margin-bottom: 14px;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(320px 150px at 85% -20%, rgba(210,30,40,.35), transparent 70%),
+    linear-gradient(135deg, var(--ink-900), var(--ink-700));
+}
+.prod__hero > svg { width: 56px; height: 56px; color: #ff8a90; stroke-width: 1.6; }
 .prod__badge {
   position: absolute; left: 12px; bottom: 10px; display: inline-flex; align-items: center; gap: 6px;
   background: var(--red); color: #fff; border-radius: 999px; padding: 6px 12px;
