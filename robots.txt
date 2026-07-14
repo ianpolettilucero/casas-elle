@@ -23,3 +23,21 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://www.casasilviaweb.com.ar/sitemap.xml
+
+# Más agentes de IA (asistentes y buscadores con IA)
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: MistralAI-User
+Allow: /

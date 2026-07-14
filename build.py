@@ -628,6 +628,24 @@ def cat_card(c):
           </article>"""
 
 # --------------------------------------------------------------------------- página de categoría
+def precios_por_linea(c):
+    """Links a las páginas de precios por línea de la categoría (SEO interno)."""
+    gs = GRUPOS_BY_CAT.get(c["slug"])
+    if not gs:
+        return ""
+    links = "\n".join(
+        f'          <a class="linea-link" href="{grupo_url(g)}"><b>{g["grupo"]}</b>'
+        f'<span>{len(g["items"])} {"producto" if len(g["items"]) == 1 else "productos"} con precio</span></a>'
+        for g in gs)
+    return f"""    <section class="section">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Listas de precios</span><h2>Precios de {c['name'].lower()} por línea</h2><p>Precios de lista actualizados 2026. Entrá a la línea que buscás o <a href="pedido.html?cat={c['slug']}">armá tu pedido online</a>.</p></div>
+        <div class="lineas-grid reveal">
+{links}
+        </div>
+      </div>
+    </section>"""
+
 def render_category(c):
     crumb = breadcrumb([("Inicio","index.html"),("Productos","index.html#productos"),(c["name"],None)])
     related = [x for x in CATS if x["slug"] != c["slug"]][:5]
@@ -679,6 +697,7 @@ def render_category(c):
         </div>
       </div>
     </section>
+{precios_por_linea(c)}
 {faq_block(c['faq'], center=True, heading='Sobre '+c['name'].lower())}
 {price_cta(heading='Pedí la lista de '+c['name'].lower(), wa_text=c['wa_text'], source='cat-'+c['slug']+'-cta', label='CTA '+c['name'])}
     <section class="section">
@@ -925,6 +944,28 @@ def render_como_comprar():
                 "como-comprar.html", jsonld=jsonld) + header() + sections + footer()
 
 # --------------------------------------------------------------------------- pedido (catálogo con precios + carrito)
+def catalogo_estatico():
+    """Contenido indexable de pedido.html: el catálogo real lo dibuja carrito.js,
+    pero los buscadores (y quien navegue sin JS) ven este índice de líneas con
+    links a las páginas de precios estáticas."""
+    blocks = []
+    for c in CATS:
+        gs = GRUPOS_BY_CAT.get(c["slug"])
+        if not gs:
+            continue
+        lis = "\n".join(
+            f'              <li><a href="{grupo_url(g)}">{g["grupo"]}</a> — '
+            f'{len(g["items"])} {"producto con precio" if len(g["items"]) == 1 else "productos con precio"}</li>'
+            for g in gs)
+        blocks.append(f"""          <section>
+            <h2><a href="{c['slug']}.html">{c['name']}</a></h2>
+            <ul>
+{lis}
+            </ul>
+          </section>""")
+    return ('        <nav class="catalogo-estatico" aria-label="Listas de precios por línea">\n'
+            + "\n".join(blocks) + "\n        </nav>")
+
 def render_pedido():
     crumb = breadcrumb([("Inicio","index.html"),("Armá tu pedido",None)])
     sections = f"""    <section class="section section--soft pedido-hero">
@@ -960,7 +1001,9 @@ def render_pedido():
           </div>
           <div class="destacados__row" id="destacados"></div>
         </section>
-        <div class="prod-list" id="prod-list" aria-live="polite"></div>
+        <div class="prod-list" id="prod-list" aria-live="polite">
+{catalogo_estatico()}
+        </div>
         <div class="pedido-mas-wrap"><button class="btn btn--ghost-dark" id="pedido-mas" type="button" hidden>Mostrar más productos</button></div>
         <p class="cart-disclaimer center">Precios de lista (sin descuentos aplicados), sujetos a confirmación por WhatsApp. Las presentaciones son por caja, sobre o estuche según el producto.</p>
       </div>
@@ -972,12 +1015,124 @@ def render_pedido():
       {"@type":"BreadcrumbList","itemListElement":[
         {"@type":"ListItem","position":1,"name":"Inicio","item":f"{SITE}/"},
         {"@type":"ListItem","position":2,"name":"Armá tu pedido","item":f"{SITE}/pedido.html"}]},
-      {"@type":"WebPage","name":"Armá tu pedido online","url":f"{SITE}/pedido.html",
-       "description":"Catálogo mayorista con precios: armá tu carrito y envialo por WhatsApp."}]}
+      {"@type":"CollectionPage","name":"Armá tu pedido online","url":f"{SITE}/pedido.html",
+       "description":"Catálogo mayorista con precios: armá tu carrito y envialo por WhatsApp."},
+      {"@type":"ItemList","name":"Listas de precios por línea","numberOfItems":len(GRUPOS),
+       "itemListElement":[{"@type":"ListItem","position":i+1,"name":g["grupo"],
+                           "url":f"{SITE}/{grupo_url(g)}"} for i, g in enumerate(GRUPOS)]}]}
     return (head("Catálogo con precios | Armá tu pedido online | CASASILVIAWEB",
                  "Catálogo mayorista con precios de lista: tornillos, clavos, alambres, tirafondos y más. Armá tu carrito online, mirá el total en tiempo real y envialo por WhatsApp.",
                  "pedido.html", jsonld=jsonld)
             + header() + sections + footer())
+
+# --------------------------------------------------------------------------- datos de productos (para SEO)
+import re as _re
+import unicodedata as _ud
+
+INDEXNOW_KEY = "b5a1c835135653201064af094dfac54c"  # clave IndexNow (Bing/Yandex/Naver)
+
+def slugify(s):
+    s = _ud.normalize("NFD", s)
+    s = "".join(ch for ch in s if _ud.category(ch) != "Mn")
+    return _re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+def precio_ar(v):
+    s = f"{v:,.2f}"
+    return "$" + s.replace(",", "X").replace(".", ",").replace("X", ".")
+
+with open("assets/data/productos.json", encoding="utf-8") as _f:
+    _PROD_DATA = json.load(_f)
+PRODUCTOS = _PROD_DATA["items"]
+
+GRUPOS = []   # [{grupo, cat, items:[...]}] en orden de lista
+_gidx = {}
+for _p in PRODUCTOS:
+    _k = (_p["grupo"], _p["cat"])
+    if _k not in _gidx:
+        _gidx[_k] = {"grupo": _p["grupo"], "cat": _p["cat"], "items": []}
+        GRUPOS.append(_gidx[_k])
+    _gidx[_k]["items"].append(_p)
+GRUPOS_BY_CAT = {}
+for _g in GRUPOS:
+    GRUPOS_BY_CAT.setdefault(_g["cat"], []).append(_g)
+
+def grupo_url(g):
+    return f"precios-{slugify(g['grupo'])}.html"
+
+def _pres_txt(i):
+    return " · ".join(x for x in ((i["pack"] + " u.") if i["pack"] else "", i["pres"]) if x)
+
+# --------------------------------------------------------------------------- páginas de precios por línea (SEO)
+def render_grupo(g):
+    grupo, cat, items = g["grupo"], g["cat"], g["items"]
+    catname = CAT_BY_SLUG[cat]["name"]
+    n = len(items)
+    url = grupo_url(g)
+    crumb = breadcrumb([("Inicio", "index.html"), ("Armá tu pedido", "pedido.html"), (grupo, None)])
+    rows = "\n".join(
+        f'              <tr><td class="cod">{i["cod"]}</td><td>{i["desc"]}'
+        + (' <em class="sinstock">(sin stock, consultá)</em>' if i["sinStock"] else "")
+        + f'</td><td>{_pres_txt(i)}</td>'
+        + f'<td class="num">{precio_ar(i["precio"]) if i["precio"] is not None else "Consultar"}</td></tr>'
+        for i in items)
+    related = [x for x in GRUPOS_BY_CAT[cat] if x["grupo"] != grupo]
+    rel_links = " · ".join(f'<a href="{grupo_url(r)}">{r["grupo"]}</a>' for r in related[:12])
+    otras = f"""    <section class="section section--soft">
+      <div class="container">
+        <div class="section-head reveal"><span class="eyebrow">Más líneas de {catname}</span><h2>Otras listas de precios</h2></div>
+        <p class="related reveal">{rel_links} · <a href="{cat}.html">Ver la línea completa</a></p>
+      </div>
+    </section>""" if related else ""
+    wa_text = f"Hola CASASILVIAWEB! Me interesa {grupo} ({catname}). ¿Me pasan precios y descuentos por volumen?"
+    sections = f"""    <section class="section section--soft">
+      <div class="container">
+        {crumb}
+        <div class="section-head reveal">
+          <span class="eyebrow">{catname} · Lista mayorista</span>
+          <h1>{grupo}: precios por mayor</h1>
+          <p>Lista de precios mayorista de <strong>{grupo.lower()}</strong> con {n} {"producto" if n == 1 else "productos"}, actualizada 2026.
+          Comprá por caja, sobre o granel con <strong>descuentos por volumen</strong> y <strong>abonás al recibir</strong> en CABA y GBA. Pedido mínimo $300.000.</p>
+          <div class="cat-intro__actions">
+            <a class="btn btn--red btn--lg" href="pedido.html?grupo={slugify(grupo)}"><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg> Agregar al pedido online</a>
+            {wa_btn(wa_text, 'grupo-' + slugify(grupo), 'Línea ' + grupo, 'btn btn--wa btn--lg', inner='Consultar por WhatsApp')}
+          </div>
+        </div>
+        <div class="table-wrap reveal">
+          <table class="ptable">
+            <thead><tr><th>Código</th><th>Producto</th><th>Presentación</th><th>Precio de lista</th></tr></thead>
+            <tbody>
+{rows}
+            </tbody>
+          </table>
+        </div>
+        <p class="cart-disclaimer">Precios de lista en pesos argentinos, sin descuentos aplicados y sujetos a confirmación por WhatsApp. Los descuentos por volumen se definen según el monto del pedido.</p>
+      </div>
+    </section>
+{trust_strip()}
+{otras}
+{price_cta(heading='Pedí ' + grupo.lower() + ' al por mayor', wa_text=wa_text, source='grupo-' + slugify(grupo) + '-cta', label='CTA ' + grupo)}"""
+    products_ld = []
+    for i in items[:30]:
+        if i["precio"] is None:
+            continue
+        products_ld.append({"@type": "ListItem", "position": len(products_ld) + 1, "item": {
+            "@type": "Product", "name": (i["desc"] + (" " + i["pres"] if i["pres"] else "")).strip(),
+            "sku": i["cod"], "category": catname, "url": f"{SITE}/{url}",
+            "offers": {"@type": "Offer", "price": round(i["precio"], 2), "priceCurrency": "ARS",
+                       "availability": "https://schema.org/" + ("OutOfStock" if i["sinStock"] else "InStock"),
+                       "priceValidUntil": f"{date.today().year}-12-31",
+                       "seller": {"@id": f"{SITE}/#business"}}}})
+    jsonld = {"@context": "https://schema.org", "@graph": [
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Inicio", "item": f"{SITE}/"},
+            {"@type": "ListItem", "position": 2, "name": "Armá tu pedido", "item": f"{SITE}/pedido.html"},
+            {"@type": "ListItem", "position": 3, "name": grupo, "item": f"{SITE}/{url}"}]},
+        {"@type": "ItemList", "name": f"{grupo} — precios mayoristas", "numberOfItems": len(products_ld),
+         "itemListElement": products_ld}]}
+    title = f"{grupo}: precios por mayor 2026 | CASASILVIAWEB"
+    desc = (f"Lista de precios mayorista de {grupo.lower()} ({catname.lower()}): {n} productos actualizados. "
+            "Descuentos por volumen, abonás al recibir, envíos a CABA y GBA.")
+    return head(title, desc, url, jsonld=jsonld) + header() + sections + footer()
 
 # --------------------------------------------------------------------------- páginas de gracias (conversiones Ads/GA4)
 def render_gracias_pedido():
@@ -1032,7 +1187,10 @@ def render_gracias():
 
 # --------------------------------------------------------------------------- sitemap
 def render_sitemap():
-    urls = [("", "1.0"),("pedido.html","0.9")] + [(f"{c['slug']}.html","0.8") for c in CATS] + [("nosotros.html","0.6"),("como-comprar.html","0.6")]
+    urls = ([("", "1.0"), ("pedido.html", "0.9")]
+            + [(f"{c['slug']}.html", "0.8") for c in CATS]
+            + [(grupo_url(g), "0.7") for g in GRUPOS]
+            + [("nosotros.html", "0.6"), ("como-comprar.html", "0.6")])
     body = "\n".join(
       f'  <url><loc>{SITE}/{p}</loc><lastmod>{TODAY}</lastmod><changefreq>weekly</changefreq><priority>{pr}</priority></url>'
       for p, pr in urls)
@@ -1059,9 +1217,13 @@ def render_llms():
 
 {prods}
 
+## Precios
+
+- [Armá tu pedido]({SITE}/pedido.html): catálogo online con {len(PRODUCTOS)} productos y precios de lista; el carrito se envía por WhatsApp.
+{chr(10).join(f"- [{g['grupo']} — precios]({SITE}/{grupo_url(g)})" for g in GRUPOS)}
+
 ## Empresa
 
-- [Armá tu pedido]({SITE}/pedido.html): catálogo online con precios de lista; el carrito se envía por WhatsApp.
 - [Nosotros]({SITE}/nosotros.html): mayorista que abastece a ferreterías, corralones, zingueros, madereras, distribuidores y constructoras.
 - [Cómo comprar]({SITE}/como-comprar.html): pedido mínimo, envíos, formas de pago y descuentos por volumen.
 
@@ -1098,6 +1260,18 @@ def render_llms_full():
             f"Medidas y presentaciones: {c['measures']}\n\n"
             f"Preguntas frecuentes:\n{faqs}\n")
     catalog = "\n".join(blocks)
+    # lista de precios completa, por línea, para consumo de LLMs
+    price_blocks = []
+    for g in GRUPOS:
+        lines = "\n".join(
+            f"- {i['cod']} · {i['desc']}"
+            + (f" ({_pres_txt(i)})" if _pres_txt(i) else "")
+            + ": " + (precio_ar(i["precio"]) if i["precio"] is not None else "consultar")
+            + (" [SIN STOCK]" if i["sinStock"] else "")
+            for i in g["items"])
+        price_blocks.append(f"### {g['grupo']} ({CAT_BY_SLUG[g['cat']]['name']})\n"
+                            f"URL: {SITE}/{grupo_url(g)}\n{lines}\n")
+    precios_full = "\n".join(price_blocks)
     return f"""# CASASILVIAWEB — Información completa para IA
 
 > {LLMS_INTRO}
@@ -1123,6 +1297,12 @@ la lista de precios y los pedidos se gestionan por WhatsApp ({WA_DISPLAY}).
 ## Catálogo
 
 {catalog}
+## Lista de precios completa (precios de lista 2026, ARS, sin descuentos)
+
+Los precios son de lista, sujetos a confirmación por WhatsApp; los descuentos por
+volumen se definen según el monto del pedido. Pedido online: {SITE}/pedido.html
+
+{precios_full}
 ## Contacto y ubicación
 
 - WhatsApp: {WA_DISPLAY} — https://wa.me/{WA}
@@ -1139,6 +1319,9 @@ def main():
     out["pedido.html"] = render_pedido()
     out["gracias-pedido.html"] = render_gracias_pedido()
     out["gracias.html"] = render_gracias()
+    for g in GRUPOS:
+        out[grupo_url(g)] = render_grupo(g)
+    out[f"{INDEXNOW_KEY}.txt"] = INDEXNOW_KEY
     out["nosotros.html"] = render_nosotros()
     out["como-comprar.html"] = render_como_comprar()
     for c in CATS:

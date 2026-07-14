@@ -121,6 +121,34 @@ Para cambiar el número, reemplazá `541166034047` en `index.html` (y en `whatsa
 
 ## 🔎 SEO incluido
 
+### Páginas de precios por línea (SEO programático)
+
+`build.py` genera una página estática por cada línea del catálogo
+(`precios-<linea>.html`, ~53 páginas) con la tabla completa de productos y
+precios, JSON-LD `ItemList`/`Product` con ofertas, y CTAs al pedido online
+(`pedido.html?grupo=<slug>`). Apuntan a búsquedas tipo "tirafondos precio por
+mayor". Se regeneran solas al correr `python3 build.py` (usan
+`assets/data/productos.json`). `pedido.html` incluye un índice estático de
+esas páginas para que los buscadores lo rastreen aunque el catálogo se dibuje
+con JS. `llms-full.txt` incluye la lista de precios completa.
+
+### IndexNow (Bing, Yandex, Naver…)
+
+El sitio publica la clave IndexNow (`<clave>.txt` en la raíz; la clave vive en
+`INDEXNOW_KEY` de `build.py`). Tras cada deploy con URLs nuevas o cambiadas se
+puede notificar a los buscadores con:
+
+```bash
+curl -X POST "https://api.indexnow.org/indexnow" \
+  -H "Content-Type: application/json; charset=utf-8" \
+  -d '{"host":"www.casasilviaweb.com.ar","key":"<INDEXNOW_KEY>","urlList":["https://www.casasilviaweb.com.ar/", "..."]}'
+```
+
+Google no usa IndexNow: para Google, verificá el dominio en Search Console y
+enviá `sitemap.xml` una vez (después se re-rastrea solo).
+
+
+
 - HTML semántico, un solo `<h1>`, jerarquía de encabezados y `alt` descriptivos.
 - Meta `title`/`description`, **Open Graph** y **Twitter Cards**.
 - **Datos estructurados (JSON-LD)**: `HardwareStore`/`Organization`, `WebSite` y `FAQPage`.

@@ -46,6 +46,9 @@
   function esc(s) {
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
   }
+  function slugify(s) {
+    return normalize(s).replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  }
 
   /* ------------------------------------------------------------------ estado del carrito */
   // items: [{id, cod, desc, pack, pres, precio, qty}]
@@ -579,6 +582,20 @@
     if (m) {
       var target = chips.querySelector('[data-cat="' + m[1] + '"]');
       if (target) target.click();
+    }
+
+    // ?grupo= desde las páginas de precios por línea (slug -> nombre de grupo)
+    var mg = location.search.match(/[?&]grupo=([\w-]+)/);
+    if (mg) {
+      var slug = mg[1];
+      for (var gi = 0; gi < GRUPOS.length; gi++) {
+        if (slugify(GRUPOS[gi].grupo) === slug) {
+          state.grupo = GRUPOS[gi].grupo;
+          sel.value = state.grupo;
+          renderCatalog();
+          break;
+        }
+      }
     }
   }
 

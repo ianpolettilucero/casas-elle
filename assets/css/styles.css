@@ -798,3 +798,38 @@ p { color: var(--ink-800); }
 .tagchip--brand { background: #fff; border: 1.5px solid var(--red); color: var(--red); }
 .tagchip[hidden] { display: none !important; }
 .tagchip--pack { text-transform: none; letter-spacing: .03em; }
+
+/* Catálogo estático (SEO / sin JS) dentro de pedido.html */
+.catalogo-estatico section { margin-bottom: 26px; }
+.catalogo-estatico h2 { font-size: 1.4rem; margin-bottom: 10px; }
+.catalogo-estatico h2 a:hover { color: var(--red); }
+.catalogo-estatico ul { columns: 2; gap: 28px; }
+.catalogo-estatico li { margin-bottom: 8px; break-inside: avoid; color: var(--muted); }
+.catalogo-estatico li a { font-weight: 700; color: var(--ink-800); text-decoration: underline; text-underline-offset: 3px; }
+.catalogo-estatico li a:hover { color: var(--red); }
+@media (max-width: 700px) { .catalogo-estatico ul { columns: 1; } }
+
+/* Tablas de precios por línea */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.ptable { width: 100%; border-collapse: collapse; font-size: .95rem; min-width: 640px; }
+.ptable th {
+  text-align: left; font-family: var(--font-head); text-transform: uppercase; letter-spacing: .06em;
+  font-size: .88rem; background: var(--ink-900); color: #fff; padding: 12px 16px; white-space: nowrap;
+}
+.ptable td { padding: 11px 16px; border-top: 1px solid var(--line); vertical-align: top; }
+.ptable tbody tr:nth-child(even) { background: var(--bg-soft); }
+.ptable tbody tr:hover { background: var(--red-tint); }
+.ptable .cod { font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+.ptable .num { text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ptable .sinstock { color: var(--red-700); font-style: normal; font-size: .85em; }
+
+/* Grid de links a listas de precios por línea */
+.lineas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.linea-link {
+  display: flex; flex-direction: column; gap: 2px; padding: 14px 16px;
+  border: 1px solid var(--line); border-radius: 12px; background: #fff;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+.linea-link:hover { border-color: var(--red); box-shadow: var(--shadow-md); }
+.linea-link b { font-size: .98rem; }
+.linea-link span { color: var(--muted); font-size: .85rem; }
