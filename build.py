@@ -10,6 +10,7 @@ Uso:  python3 build.py
 """
 import json
 import os
+import re
 import urllib.parse
 from datetime import date
 
@@ -94,7 +95,35 @@ CONFIG_SCRIPT = """  <script>
   </script>"""
 
 # --------------------------------------------------------------------------- head
-def head(title, desc, path, og_image="assets/img/og-image.png", preload=None, jsonld=None, noindex=False):
+def fit_title(t, limit=60):
+    """Google corta los títulos cerca de los 60 caracteres. Si no entra, sacamos
+    primero el sufijo de marca (mejor eso que un corte al azar a mitad de palabra)."""
+    t = t.strip()
+    if len(t) <= limit:
+        return t
+    if " | " in t:
+        base = t.rsplit(" | ", 1)[0].strip()
+        if len(base) <= limit:
+            return base
+        t = base
+    return t[:limit - 1].rsplit(" ", 1)[0] + "…"
+
+def fit_desc(d, limit=155):
+    """Recorta la meta description en el último corte de frase que entre, para que
+    Google no la trunque a mitad de idea."""
+    d = " ".join(d.split())
+    if len(d) <= limit:
+        return d
+    cut = d[:limit]
+    for sep in (". ", " · ", ", "):
+        i = cut.rfind(sep)
+        if i > limit * 0.6:
+            return cut[:i].rstrip(" ,.·") + "."
+    return cut.rsplit(" ", 1)[0].rstrip(" ,.·") + "…"
+
+def head(title, desc, path, og_image="assets/img/og-image.jpg", preload=None, jsonld=None, noindex=False):
+    title = fit_title(title)
+    desc = fit_desc(desc)
     canonical = f"{SITE}/{path}" if path else f"{SITE}/"
     og_img_url = f"{SITE}/{og_image}"
     og_type = "image/png" if og_image.lower().endswith(".png") else "image/jpeg"
@@ -208,7 +237,7 @@ def footer(on_home=False):
       <div class="footer__grid">
         <div>
           <a class="brand" href="{'#inicio' if on_home else 'index.html'}" aria-label="CASASILVIAWEB — inicio">
-            <img class="brand__logo" src="assets/img/logo.png" alt="Logo de CASASILVIAWEB" width="42" height="42">
+            <img class="brand__logo" src="assets/img/logo.png" alt="Logo de CASASILVIAWEB" width="42" height="42" loading="lazy" decoding="async">
             <span class="brand__name"><b>CASASILVIAWEB</b><span>Mayorista</span></span>
           </a>
           <p>Mayorista de tornillos autoperforantes, clavos, alambres, tirafondos, hierros y mallas, soldadura y pinturas. Respaldo Gerdau, descuentos por volumen y abonás al recibir en Tapiales, Buenos Aires.</p>
@@ -284,7 +313,7 @@ CART_DRAWER = """  <div class="cart-layer" id="cart-layer" hidden>
 WA_FLOAT = f"""  <div class="wa-float">
     <div class="wa-pop is-hidden" id="wa-pop" hidden role="dialog" aria-label="Chat de WhatsApp con CASASILVIAWEB">
       <div class="wa-pop__head">
-        <span class="wa-pop__avatar"><img src="assets/img/logo.png" alt="CASASILVIAWEB"></span>
+        <span class="wa-pop__avatar"><img src="assets/img/logo.png" alt="CASASILVIAWEB" width="40" height="40" loading="lazy" decoding="async"></span>
         <div><b>CASASILVIAWEB</b><span>En línea</span></div>
         <button class="wa-pop__close" id="wa-pop-close" type="button" aria-label="Cerrar"><svg class="line" aria-hidden="true"><use href="#i-close"></use></svg></button>
       </div>
@@ -726,7 +755,7 @@ def render_category(c):
     # Imagen para compartir (Open Graph): PNG/JPG por categoría (WhatsApp/FB no leen WebP)
     og_img = f"assets/img/og-{c['slug']}.jpg"
     if not os.path.exists(og_img):
-        og_img = "assets/img/og-image.png"
+        og_img = "assets/img/og-image.jpg"
     html = (head(c["title"], c["desc"], f"{c['slug']}.html", og_image=og_img,
                  preload=f"assets/img/{c['img']}", jsonld=jsonld)
             + header(on_home=False) + sections + footer(on_home=False))
@@ -747,7 +776,7 @@ def render_home():
       ("¿Dónde están ubicados?","Estamos en Tuyutí 1025, Tapiales, Zona Oeste del Gran Buenos Aires. Mirá el mapa más abajo."),
     ]
     sections = f"""    <section class="hero" id="inicio">
-      <div class="hero__bg"><img src="assets/img/hero-deposito.webp" alt="" aria-hidden="true" fetchpriority="high"></div>
+      <div class="hero__bg"><img src="assets/img/hero-deposito.webp" alt="" aria-hidden="true" width="1500" height="938" fetchpriority="high" decoding="async"></div>
       <div class="container hero__inner">
         <span class="eyebrow">Mayorista de fijaciones y aceros</span>
         <h1>Tornillos, clavos y aceros <span class="accent">al por mayor</span></h1>
@@ -853,7 +882,7 @@ BUSINESS_LD = {
   "alternateName":"Casa Silvia Web","slogan":"Mayorista de fijaciones y aceros. Abonás al recibir.",
   "knowsAbout":["Tornillos autoperforantes","Clavos","Alambres","Tirafondos","Hierros","Mallas electrosoldadas","Soldadura","Pinturas","Fijaciones","Acero Gerdau","Venta mayorista"],
   "description":"Mayorista de tornillos autoperforantes, clavos, alambres, tirafondos, hierros y mallas en Tapiales, Buenos Aires.",
-  "url":f"{SITE}/","logo":f"{SITE}/assets/img/logo.png","image":f"{SITE}/assets/img/og-image.png",
+  "url":f"{SITE}/","logo":f"{SITE}/assets/img/logo.png","image":f"{SITE}/assets/img/og-image.jpg",
   "telephone":"+541166034047","priceRange":"$$","currenciesAccepted":"ARS","paymentAccepted":"Efectivo, Transferencia",
   "areaServed":["Tapiales","San Justo","Ramos Mejía","Lomas del Mirador","Villa Madero","Ciudad Evita","Isidro Casanova","González Catán","La Matanza","Zona Oeste","Gran Buenos Aires","CABA","Argentina"],
   "address":{"@type":"PostalAddress","streetAddress":"Tuyutí 1025","addressLocality":"Tapiales","addressRegion":"Buenos Aires","postalCode":"B1770","addressCountry":"AR"},
@@ -1130,8 +1159,10 @@ def render_grupo(g):
         {"@type": "ItemList", "name": f"{grupo} — precios mayoristas", "numberOfItems": len(products_ld),
          "itemListElement": products_ld}]}
     title = f"{grupo}: precios por mayor 2026 | CASASILVIAWEB"
-    desc = (f"Lista de precios mayorista de {grupo.lower()} ({catname.lower()}): {n} productos actualizados. "
-            "Descuentos por volumen, abonás al recibir, envíos a CABA y GBA.")
+    # La description se arma corta a propósito: la propuesta de valor (volumen /
+    # pago contra entrega / zona) tiene que entrar antes de los 155 caracteres.
+    desc = (f"{grupo}: {n} {'producto' if n == 1 else 'productos'} con precio mayorista 2026. "
+            "Descuentos por volumen, abonás al recibir y envío a CABA y GBA.")
     return head(title, desc, url, jsonld=jsonld) + header() + sections + footer()
 
 # --------------------------------------------------------------------------- páginas de gracias (conversiones Ads/GA4)
@@ -1314,6 +1345,26 @@ volumen se definen según el monto del pedido. Pedido online: {SITE}/pedido.html
 """
 
 # --------------------------------------------------------------------------- main
+# --------------------------------------------------------------------------- URLs limpias
+# Cloudflare Pages sirve las páginas SIN extensión: pedir /x.html devuelve un 307 hacia /x.
+# Si declaramos (canonical, og:url, JSON-LD, sitemap) y enlazamos la versión .html, cada
+# página se rastrea dos veces y cada click del usuario paga una redirección de más.
+# Este post-procesado deja todo apuntando directo a la URL final que se sirve.
+_ABS_HTML = re.compile(re.escape(SITE) + r"/([A-Za-z0-9._-]+)\.html")
+_REL_HTML = re.compile(r'href="([A-Za-z0-9._-]+)\.html((?:#|\?)[^"]*)?"')
+
+def clean_urls(text):
+    """Reescribe URLs internas .html a su forma limpia (index.html -> /)."""
+    text = _ABS_HTML.sub(
+        lambda m: SITE + "/" + ("" if m.group(1) == "index" else m.group(1)), text)
+
+    def _rel(m):
+        slug, frag = m.group(1), m.group(2) or ""
+        return 'href="%s%s"' % ("/" if slug == "index" else slug, frag)
+
+    return _REL_HTML.sub(_rel, text)
+
+# --------------------------------------------------------------------------- main
 def main():
     import os
     out = {}
@@ -1334,6 +1385,7 @@ def main():
     out["llms-full.txt"] = _full
     out["llms_full.txt"] = _full
     for fn, content in out.items():
+        content = clean_urls(content)
         with open(fn, "w", encoding="utf-8") as f:
             f.write(content)
         print("escrito:", fn, f"({len(content)//1024} KB)")
