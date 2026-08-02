@@ -1,0 +1,7 @@
+# Legado Mercado Shops: URLs indexadas que ya no existen -> catálogo
+/MLA-*        /pedido   301
+/p/MLA-*      /pedido   301
+/gz/*         /pedido   301
+
+# Compatibilidad: cualquier enlace viejo con .html sigue funcionando
+/index.html   /         301

@@ -295,7 +295,7 @@ CART_DRAWER = """  <div class="cart-layer" id="cart-layer" hidden>
         <div class="cart-empty" id="cart-empty">
           <svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg>
           <p><b>Todavía no agregaste productos.</b></p>
-          <p>Buscá en el catálogo con precios y armá tu pedido: lo enviás por WhatsApp y te confirmamos descuentos y entrega.</p>
+          <p>Consultá el catálogo con precios y armá tu pedido. Lo enviás por WhatsApp y confirmamos descuentos y entrega.</p>
           <a class="btn btn--wa" href="pedido.html" style="--btn-bg:var(--red)">Ver catálogo con precios</a>
         </div>
         <ul class="cart-items" id="cart-items"></ul>
@@ -371,7 +371,7 @@ def faq_block(faqs, center=True, title="Preguntas frecuentes", heading="Lo que m
     </section>"""
 
 def price_cta(heading="Pedí tu lista de precios mayorista",
-              text="Te enviamos la lista actualizada al instante. <strong>Descuentos por volumen</strong>, entrega en CABA y GBA y <strong>abonás al recibir</strong>, también en pedidos grandes.",
+              text="Enviamos la lista vigente por WhatsApp. <strong>Descuentos por volumen</strong>, entrega en CABA y Gran Buenos Aires y <strong>pago contra entrega</strong>, también en pedidos de gran volumen.",
               wa_text="Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.",
               source="lista-precios", label="Banner — Lista de precios"):
     return f"""    <section class="section price-cta" id="precios">
@@ -405,7 +405,7 @@ def gallery_section(soft=False):
     cls = "section section--soft" if soft else "section"
     return f"""    <section class="{cls}" id="deposito" aria-label="Nuestro depósito">
       <div class="container">
-        <div class="section-head center reveal"><span class="eyebrow">Nuestro depósito</span><h2>Mercadería lista para entregar</h2><p>Stock propio y respaldo de fábrica para responder a cualquier pedido, grande o chico. <a class="link-wa" href="{wa_href('Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.')}" target="_blank" rel="noopener" data-wa="deposito" data-wa-label="Depósito — Lista de precios">Pedí la lista por WhatsApp</a>.</p></div>
+        <div class="section-head center reveal"><span class="eyebrow">Nuestro depósito</span><h2>Mercadería lista para entregar</h2><p>Stock propio y respaldo de fábrica para abastecer pedidos de cualquier volumen. <a class="link-wa" href="{wa_href('Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.')}" target="_blank" rel="noopener" data-wa="deposito" data-wa-label="Depósito — Lista de precios">Pedí la lista por WhatsApp</a>.</p></div>
         <div class="gallery reveal">
 {_figs(DEPOT_PHOTOS)}
         </div>
@@ -780,7 +780,7 @@ def render_home():
       <div class="container hero__inner">
         <span class="eyebrow">Mayorista de fijaciones y aceros</span>
         <h1>Tornillos, clavos y aceros <span class="accent">al por mayor</span></h1>
-        <p class="hero__lead">Somos mayoristas de fijaciones y aceros con <strong>respaldo de fábrica (Gerdau)</strong>: tornillos, clavos, alambres, tirafondos, hierros y mallas. Entregamos en CABA y GBA y <strong>abonás al recibir</strong>, con descuentos por volumen.</p>
+        <p class="hero__lead">Distribuidor mayorista de fijaciones y aceros con <strong>respaldo de fábrica Gerdau</strong>: tornillos, clavos, alambres, tirafondos, hierros y mallas. Entrega en CABA y Gran Buenos Aires, <strong>pago contra entrega</strong> y descuentos por volumen.</p>
         <div class="hero__actions">
           {wa_btn("Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.", "hero", "Hero — Lista de precios", "btn btn--wa btn--lg", inner="Pedir lista de precios")}
           <a class="btn btn--ghost btn--lg" href="pedido.html"><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg> Armá tu pedido online</a>
@@ -798,7 +798,7 @@ def render_home():
         <div class="section-head reveal">
           <span class="eyebrow">Nuestro catálogo</span>
           <h2>Todo en fijaciones y aceros</h2>
-          <p>Seis líneas de producto, en todas las medidas y para cada trabajo. Entrá a la categoría que necesites o pedí la lista por WhatsApp.</p>
+          <p>Seis líneas de producto en todas las medidas y presentaciones. Ingresá a una categoría o solicitá la lista de precios por WhatsApp.</p>
         </div>
         <div class="cats">
 {cards}
@@ -814,7 +814,7 @@ def render_home():
             <h2>Respaldo de fábrica, precios de mayorista</h2>
             <p>Trabajamos con <strong>Gerdau</strong>, una de las principales marcas de acero del país, con Sistema de Gestión de Calidad certificado según <strong>norma ISO 9001 otorgada por IRAM</strong>. Tenemos stock propio y entregamos <strong>cualquier cantidad</strong>: los pedidos grandes se despachan directo desde la acería.</p>
             <div class="feature-list">
-              <div class="feature"><span class="feature__ic"><svg class="line" aria-hidden="true"><use href="#i-shield"></use></svg></span><div><b>Calidad Gerdau</b><p>Acero de primera, una de las marcas líderes del mercado argentino.</p></div></div>
+              <div class="feature"><span class="feature__ic"><svg class="line" aria-hidden="true"><use href="#i-shield"></use></svg></span><div><b>Calidad Gerdau</b><p>Acero con calidad certificada, de una de las principales marcas del mercado argentino.</p></div></div>
               <div class="feature"><span class="feature__ic"><svg class="line" aria-hidden="true"><use href="#i-box"></use></svg></span><div><b>Stock y respaldo de fábrica</b><p>Entregamos cualquier cantidad; los pedidos grandes salen directo de la acería.</p></div></div>
               <div class="feature"><span class="feature__ic"><svg class="line" aria-hidden="true"><use href="#i-check"></use></svg></span><div><b>Comprás tranquilo</b><p>Abonás al recibir, también en pedidos grandes, con descuentos por volumen.</p></div></div>
             </div>
@@ -832,11 +832,11 @@ def render_home():
 {gallery_section()}
     <section class="section section--soft" id="como-comprar" aria-label="Cómo comprar">
       <div class="container">
-        <div class="section-head center reveal"><span class="eyebrow">Cómo comprar</span><h2>Comprás en 3 pasos</h2><p>Nos escribís por WhatsApp, te pasamos la lista y coordinamos la entrega.</p></div>
+        <div class="section-head center reveal"><span class="eyebrow">Cómo comprar</span><h2>Comprás en 3 pasos</h2><p>Solicitás la lista por WhatsApp, armás el pedido y coordinamos la entrega.</p></div>
         <ol class="steps reveal">
-          <li class="step"><span class="step__num">1</span><span class="step__ic"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg></span><h3>Escribinos por WhatsApp</h3><p>Pedinos la lista de precios y contanos qué necesitás.</p></li>
-          <li class="step"><span class="step__num">2</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-tag"></use></svg></span><h3>Armás tu pedido</h3><p>Te pasamos precios y descuentos por volumen, y coordinamos la entrega.</p></li>
-          <li class="step"><span class="step__num">3</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-truck"></use></svg></span><h3>Abonás al recibir</h3><p>Te llevamos el pedido a CABA o GBA y pagás cuando lo recibís.</p></li>
+          <li class="step"><span class="step__num">1</span><span class="step__ic"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg></span><h3>Escribinos por WhatsApp</h3><p>Solicitá la lista de precios e indicanos qué necesitás.</p></li>
+          <li class="step"><span class="step__num">2</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-tag"></use></svg></span><h3>Armás tu pedido</h3><p>Recibís precios y descuentos por volumen, y coordinamos la entrega.</p></li>
+          <li class="step"><span class="step__num">3</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-truck"></use></svg></span><h3>Abonás al recibir</h3><p>Entregamos en CABA o Gran Buenos Aires y abonás contra entrega.</p></li>
         </ol>
         <p class="center-cta reveal"><a class="btn btn--ghost-dark" href="como-comprar.html">Ver envíos, pagos y mínimos →</a></p>
       </div>
@@ -856,7 +856,7 @@ def location_section():
         <div class="section-head reveal">
           <span class="eyebrow">¿Dónde estamos?</span>
           <h2>Visitanos o coordiná tu pedido</h2>
-          <p>Estamos en <strong>Tuyutí 1025, Tapiales</strong> (La Matanza). Entregamos en <strong>CABA y todo el Gran Buenos Aires</strong> y abonás al recibir; los pedidos grandes salen directo desde la acería. Coordinás envío o retiro por WhatsApp.</p>
+          <p>Depósito en <strong>Tuyutí 1025, Tapiales</strong> (La Matanza). Entregamos en <strong>CABA y todo el Gran Buenos Aires</strong> con pago contra entrega; los pedidos de gran volumen se despachan directo desde la acería. Coordinás envío o retiro por WhatsApp.</p>
         </div>
         <div class="loc">
           <div class="loc__card reveal">
@@ -939,9 +939,9 @@ def render_como_comprar():
         {crumb}
         <div class="section-head center reveal"><span class="eyebrow">Cómo comprar</span><h1>Comprar es simple</h1><p>Todo se coordina por WhatsApp. Te pasamos la lista, armás el pedido y <strong>abonás al recibir</strong>.</p></div>
         <ol class="steps reveal">
-          <li class="step"><span class="step__num">1</span><span class="step__ic"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg></span><h3>Escribinos por WhatsApp</h3><p>Pedinos la lista de precios y contanos qué necesitás.</p></li>
-          <li class="step"><span class="step__num">2</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-tag"></use></svg></span><h3>Armás tu pedido</h3><p>Te pasamos precios y descuentos por volumen, y coordinamos la entrega.</p></li>
-          <li class="step"><span class="step__num">3</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-truck"></use></svg></span><h3>Abonás al recibir</h3><p>Te llevamos el pedido a CABA o GBA y pagás cuando lo recibís.</p></li>
+          <li class="step"><span class="step__num">1</span><span class="step__ic"><svg class="fill" aria-hidden="true"><use href="#i-wa"></use></svg></span><h3>Escribinos por WhatsApp</h3><p>Solicitá la lista de precios e indicanos qué necesitás.</p></li>
+          <li class="step"><span class="step__num">2</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-tag"></use></svg></span><h3>Armás tu pedido</h3><p>Recibís precios y descuentos por volumen, y coordinamos la entrega.</p></li>
+          <li class="step"><span class="step__num">3</span><span class="step__ic"><svg class="line" aria-hidden="true"><use href="#i-truck"></use></svg></span><h3>Abonás al recibir</h3><p>Entregamos en CABA o Gran Buenos Aires y abonás contra entrega.</p></li>
         </ol>
       </div>
     </section>
@@ -1216,6 +1216,46 @@ def render_gracias():
                  "gracias.html", noindex=True)
             + header() + sections + footer())
 
+def render_redirects():
+    """_redirects de Cloudflare Pages.
+
+    El dominio estuvo apuntando a una tienda de Mercado Shops, así que Google
+    tiene indexadas decenas de URLs con el formato /MLA-<id>-<slug>-_JM que hoy
+    devuelven 404: se pierde el tráfico que llega desde el buscador y la
+    autoridad acumulada de esas URLs. Se redirigen con 301 al catálogo, que es
+    la página equivalente (mismo producto, ahora con precio mayorista).
+    """
+    return "\n".join([
+        "# Legado Mercado Shops: URLs indexadas que ya no existen -> catálogo",
+        "/MLA-*        /pedido   301",
+        "/p/MLA-*      /pedido   301",
+        "/gz/*         /pedido   301",
+        "",
+        "# Compatibilidad: cualquier enlace viejo con .html sigue funcionando",
+        "/index.html   /         301",
+        "",
+    ])
+
+def render_404():
+    """Página 404. Se genera con el mismo head/header/footer que el resto para que
+    herede la medición (GA4) y la navegación: quien cae acá tiene que poder seguir."""
+    sections = f"""    <section class="section gracias" id="error-404">
+      <div class="container gracias__inner">
+        <span class="eyebrow">Error 404</span>
+        <h1>No encontramos esa página</h1>
+        <p class="lead-big">Puede que haya cambiado de dirección. Entrá al catálogo con precios o escribinos y te pasamos lo que necesites.</p>
+        <div class="gracias__acciones">
+          <a class="btn btn--red btn--lg" href="pedido.html"><svg class="line" aria-hidden="true"><use href="#i-cart"></use></svg> Ver catálogo y precios</a>
+          {wa_btn("Hola CASASILVIAWEB! Quiero solicitar la lista de precios mayorista.", "404", "404 — WhatsApp", "btn btn--wa btn--lg", inner="Escribinos por WhatsApp")}
+        </div>
+      </div>
+    </section>
+{trust_strip()}"""
+    return (head("Página no encontrada | CASASILVIAWEB",
+                 "La página que buscás no está disponible. Entrá al catálogo mayorista con precios o escribinos por WhatsApp.",
+                 "404.html", noindex=True)
+            + header() + sections + footer())
+
 # --------------------------------------------------------------------------- sitemap
 def render_sitemap():
     urls = ([("", "1.0"), ("pedido.html", "0.9")]
@@ -1379,13 +1419,20 @@ def main():
     out["como-comprar.html"] = render_como_comprar()
     for c in CATS:
         out[f"{c['slug']}.html"] = render_category(c)
+    out["_redirects"] = render_redirects()
     out["sitemap.xml"] = render_sitemap()
     out["llms.txt"] = render_llms()
     _full = render_llms_full()
     out["llms-full.txt"] = _full
     out["llms_full.txt"] = _full
+    out["404.html"] = render_404()
     for fn, content in out.items():
         content = clean_urls(content)
+        if fn == "404.html":
+            # El 404 puede servirse en CUALQUIER ruta (/a/b/c), así que sus rutas
+            # relativas romperían. Se absolutizan para que funcione a cualquier nivel.
+            content = re.sub(r'(src|href)="(?!/|https?:|#|mailto:|tel:|data:)([^"]+)"',
+                             r'\1="/\2"', content)
         with open(fn, "w", encoding="utf-8") as f:
             f.write(content)
         print("escrito:", fn, f"({len(content)//1024} KB)")
