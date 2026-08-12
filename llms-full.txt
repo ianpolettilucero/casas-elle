@@ -152,572 +152,572 @@ volumen se definen según el monto del pedido. Pedido online: https://www.casasi
 
 ### Hexagonal punta ranurada/aguja (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-hexagonal-punta-ranurada-aguja
-- N001114 · HEX. P. RANURADA 14 X 1 S/ ARANDELA (x2000 u. · Granel): $100.568,30
-- N001115 · HEX. P. RANURADA 14 X 2 S/ ARANDELA (x1000 u. · Granel): $70.162,23
-- N001120 · HEX. P. RANURADA 14 X 2 EPDM - COLOCADA (x1000 u. · Granel): $75.073,40
-- N001125 · HEX. P. RANURADA 14 X 1 C/ VULC - COLOCADA (x2000 u. · Granel): $118.368,41
-- i001262 · HEX. P. RANURADA 14 X 1-1/2 C/ VULC - COLOCADA (x1600 u. · Granel): $109.869,02
-- N001126 · HEX. P. RANURADA 14 X 2 C/ VULC - COLOCADA (x1000 u. · Granel): $82.580,80
-- i001263 · HEX. P. RANURADA 14 X 2 C/ VULC - COLOCADA (x1200 u. · Granel): $99.096,84
-- i001264 · HEX. P. RANURADA 14 X 2-1/2 C/ VULC - COLOCADA (x800 u. · Granel): $77.503,90
-- i001265 · HEX. P. RANURADA 14 X 3 C/ VULC - COLOCADA (x800 u. · Granel): $88.459,12
-- i001266 · HEX. P. RANURADA 14 X 4 C/ VULC - COLOCADA (x600 u. · Granel): $83.232,53
-- i001277 · HEX. P. RANURADA NEGRO 14 X 2 C/ VULC - COLOCADA (x1200 u. · Granel): $129.205,89
-- N001146 · HEX. P. RANURADA NEGRO 14 X 2-1/2 C/ VULC - COLOCADA (x1000 u. · Granel): $122.293,43
-- i001278 · HEX. P. RANURADA NEGRO 14 X 2-1/2 C/ VULC - COLOCADA (x800 u. · Granel): $97.834,74
-- i001279 · HEX. P. RANURADA NEGRO 14 X 3 C/ VULC - COLOCADA (x800 u. · Granel): $109.683,21
+- N001114 · HEX. P. RANURADA 14 X 1 S/ ARANDELA (x2000 u. · Granel): $100.568,30 [SIN STOCK]
+- N001115 · HEX. P. RANURADA 14 X 2 S/ ARANDELA (x1000 u. · Granel): $75.775,26
+- N001120 · HEX. P. RANURADA 14 X 2 EPDM - COLOCADA (x1000 u. · Granel): $75.073,40 [SIN STOCK]
+- N001125 · HEX. P. RANURADA 14 X 1 C/ VULC - COLOCADA (x2000 u. · Granel): $118.368,41 [SIN STOCK]
+- i001262 · HEX. P. RANURADA 14 X 1-1/2 C/ VULC - COLOCADA (x1600 u. · Granel): $118.658,56
+- N001126 · HEX. P. RANURADA 14 X 2 C/ VULC - COLOCADA (x1000 u. · Granel): $82.580,80 [SIN STOCK]
+- i001263 · HEX. P. RANURADA 14 X 2 C/ VULC - COLOCADA (x1200 u. · Granel): $85.619,72
+- i001264 · HEX. P. RANURADA 14 X 2-1/2 C/ VULC - COLOCADA (x800 u. · Granel): $66.963,43
+- i001265 · HEX. P. RANURADA 14 X 3 C/ VULC - COLOCADA (x800 u. · Granel): $95.535,95
+- i001266 · HEX. P. RANURADA 14 X 4 C/ VULC - COLOCADA (x600 u. · Granel): $89.891,18
+- i001277 · HEX. P. RANURADA NEGRO 14 X 2 C/ VULC - COLOCADA (x1200 u. · Granel): $139.542,40
+- N001146 · HEX. P. RANURADA NEGRO 14 X 2-1/2 C/ VULC - COLOCADA (x1000 u. · Granel): $132.076,97
+- i001278 · HEX. P. RANURADA NEGRO 14 X 2-1/2 C/ VULC - COLOCADA (x800 u. · Granel): $105.661,60
+- i001279 · HEX. P. RANURADA NEGRO 14 X 3 C/ VULC - COLOCADA (x800 u. · Granel): $118.457,94
 
 ### Hexagonal punta mecha (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-hexagonal-punta-mecha
-- i001222 · HEX. P. MECHA 10 X 3/4 S/ ARANDELA (x6500 u. · Granel): $151.267,51
-- i001580 · HEX. P. MECHA 14 X 3/4 S/ ARANDELA (x3500 u. · Granel): $171.690,96
-- N001066 · HEX. P. MECHA 14 X 1 S/ ARANDELA (x2000 u. · Granel): $89.969,86
-- N001067 · HEX. P. MECHA 14 X 2 S/ ARANDELA (x1000 u. · Granel): $66.712,13
-- N001068 · HEX. P. MECHA 14 X 2-1/2 S/ ARANDELA (x1000 u. · Granel): $78.255,86
-- N001072 · HEX. P. MECHA 14 X 1 EPDM - COLOCADA (x2000 u. · Granel): $96.267,70
-- N001073 · HEX. P. MECHA 14 X 2 EPDM - COLOCADA (x1000 u. · Granel): $71.381,89
-- i001584 · HEX. P. MECHA 14 X 3/4 C/ VULC - COLOCADA (x3500 u. · Granel): $202.079,72
-- i001228 · HEX. P. MECHA 14 X 1 C/ VULC - COLOCADA (x2200 u. · Granel): $116.483,77
-- i001229 · HEX. P. MECHA 14 X 1-1/2 C/ VULC - COLOCADA (x1600 u. · Granel): $112.647,70
-- N001079 · HEX. P. MECHA 14 X 2 C/ VULC - COLOCADA (x1000 u. · Granel): $78.519,94
-- i001230 · HEX. P. MECHA 14 X 2 C/ VULC - COLOCADA (x1200 u. · Granel): $94.223,86
-- i001231 · HEX. P. MECHA 14 X 2-1/2 C/ VULC - COLOCADA (x800 u. · Granel): $73.685,54
-- i001232 · HEX. P. MECHA 14 X 3 C/ VULC - COLOCADA (x800 u. · Granel): $85.087,98
-- i001233 · HEX. P. MECHA 14 X 4 C/ VULC - COLOCADA (x600 u. · Granel): $82.759,39
-- i001234 · HEX. P. MECHA 14 X 5 C/ VULC - COLOCADA (x450 u. · Granel): $71.155,80
-- i001235 · HEX. P. MECHA 14 X 6 C/ VULC - COLOCADA (x450 u. · Granel): $120.774,97
-- N001096 · HEX. P. MECHA NEGRO 14 X 2 EPDM - COLOCADA (x1000 u. · Granel): $105.015,93
-- N001097 · HEX. P. MECHA NEGRO 14 X 2-1/2 EPDM - COLOCADA (x1000 u. · Granel): $127.381,50
-- N001099 · HEX. P. MECHA NEGRO 14 X 2 C/ VULC - COLOCADA (x1000 u. · Granel): $115.517,30
-- i001256 · HEX. P. MECHA NEGRO 14 X 2 C/ VULC - COLOCADA (x1200 u. · Granel): $138.620,78
-- N001100 · HEX. P. MECHA NEGRO 14 X 2-1/2 C/ VULC - COLOCADA (x1000 u. · Granel): $140.119,45
-- i001257 · HEX. P. MECHA NEGRO 14 X 2-1/2 C/ VULC - COLOCADA (x800 u. · Granel): $112.095,60
+- i001222 · HEX. P. MECHA 10 X 3/4 S/ ARANDELA (x6500 u. · Granel): $163.369,01
+- i001580 · HEX. P. MECHA 14 X 3/4 S/ ARANDELA (x3500 u. · Granel): $185.426,29
+- N001066 · HEX. P. MECHA 14 X 1 S/ ARANDELA (x2000 u. · Granel): $97.167,51
+- N001067 · HEX. P. MECHA 14 X 2 S/ ARANDELA (x1000 u. · Granel): $72.049,19
+- N001068 · HEX. P. MECHA 14 X 2-1/2 S/ ARANDELA (x1000 u. · Granel): $84.516,37
+- N001072 · HEX. P. MECHA 14 X 1 EPDM - COLOCADA (x2000 u. · Granel): $96.267,70 [SIN STOCK]
+- N001073 · HEX. P. MECHA 14 X 2 EPDM - COLOCADA (x1000 u. · Granel): $71.381,89 [SIN STOCK]
+- i001584 · HEX. P. MECHA 14 X 3/4 C/ VULC - COLOCADA (x3500 u. · Granel): $218.246,17
+- i001228 · HEX. P. MECHA 14 X 1 C/ VULC - COLOCADA (x2200 u. · Granel): $125.802,47
+- i001229 · HEX. P. MECHA 14 X 1-1/2 C/ VULC - COLOCADA (x1600 u. · Granel): $121.659,56
+- N001079 · HEX. P. MECHA 14 X 2 C/ VULC - COLOCADA (x1000 u. · Granel): $67.841,23
+- i001230 · HEX. P. MECHA 14 X 2 C/ VULC - COLOCADA (x1200 u. · Granel): $81.409,45
+- i001231 · HEX. P. MECHA 14 X 2-1/2 C/ VULC - COLOCADA (x800 u. · Granel): $63.664,37
+- i001232 · HEX. P. MECHA 14 X 3 C/ VULC - COLOCADA (x800 u. · Granel): $91.895,06
+- i001233 · HEX. P. MECHA 14 X 4 C/ VULC - COLOCADA (x600 u. · Granel): $89.380,15
+- i001234 · HEX. P. MECHA 14 X 5 C/ VULC - COLOCADA (x450 u. · Granel): $76.848,33
+- i001235 · HEX. P. MECHA 14 X 6 C/ VULC - COLOCADA (x450 u. · Granel): $130.437,03
+- N001096 · HEX. P. MECHA NEGRO 14 X 2 EPDM - COLOCADA (x1000 u. · Granel): $105.015,93 [SIN STOCK]
+- N001097 · HEX. P. MECHA NEGRO 14 X 2-1/2 EPDM - COLOCADA (x1000 u. · Granel): $137.572,04
+- N001099 · HEX. P. MECHA NEGRO 14 X 2 C/ VULC - COLOCADA (x1000 u. · Granel): $124.758,73
+- i001256 · HEX. P. MECHA NEGRO 14 X 2 C/ VULC - COLOCADA (x1200 u. · Granel): $149.710,48
+- N001100 · HEX. P. MECHA NEGRO 14 X 2-1/2 C/ VULC - COLOCADA (x1000 u. · Granel): $151.329,05
+- i001257 · HEX. P. MECHA NEGRO 14 X 2-1/2 C/ VULC - COLOCADA (x800 u. · Granel): $121.063,26
 
 ### FIX (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-fix
-- i001092 · FIX - 2.5 x 10 AMARILLO (x65000 u. · Granel): $254.079,71
-- i001093 · FIX - 2.5 x 12 AMARILLO (x55000 u. · Granel): $243.586,95
-- i001094 · FIX - 2.5 x 15 AMARILLO (x45000 u. · Granel): $226.749,94
-- i001095 · FIX - 2.5 x 20 AMARILLO (x35000 u. · Granel): $228.700,38
-- i001096 · FIX - 3 x 10 AMARILLO (x40000 u. · Granel): $205.465,90
-- i001097 · FIX - 3 x 12 AMARILLO (x38000 u. · Granel): $184.516,48
-- i001098 · FIX - 3 x 15 AMARILLO (x32000 u. · Granel): $176.713,44
-- i001099 · FIX - 3 x 20 AMARILLO (x22000 u. · Granel): $148.005,90
-- i001100 · FIX - 3 x 25 AMARILLO (x17000 u. · Granel): $137.013,48
-- i001101 · FIX - 3 x 30 AMARILLO (x15000 u. · Granel): $135.169,20
-- i001102 · FIX - 3 x 35 AMARILLO (x10000 u. · Granel): $99.316,19
-- i001103 · FIX - 3.5 x 12 AMARILLO (x22000 u. · Granel): $145.042,50
-- i001104 · FIX - 3.5 x 15 AMARILLO (x19000 u. · Granel): $101.569,39
-- i001105 · FIX - 3.5 x 20 AMARILLO (x13000 u. · Granel): $100.232,39
-- i001106 · FIX - 3.5 X 25 AMARILLO (x12000 u. · Granel): $107.259,14
-- i001107 · FIX - 3.5 x 30 AMARILLO (x10000 u. · Granel): $106.084,89
-- i001108 · FIX - 3.5 x 35 AMARILLO (x7000 u. · Granel): $82.791,94
-- i001109 · FIX - 3.5 x 40 AMARILLO (x6000 u. · Granel): $81.356,00
-- i001110 · FIX - 3.5 x 45 AMARILLO (x5000 u. · Granel): $72.340,73
-- i001111 · FIX - 3.5 x 50 AMARILLO (x5000 u. · Granel): $87.622,57
-- i001112 · FIX - 4 x 15 AMARILLO (x15000 u. · Granel): $127.392,19
-- i001113 · FIX - 4 x 20 AMARILLO (x12000 u. · Granel): $116.874,19
-- N001032 · FIX - 4 X 25 AMARILLO (x10000 u. · Granel): $105.344,71
-- i001114 · FIX - 4 X 25 AMARILLO (x10000 u. · Granel): $105.344,71
-- i001115 · FIX - 4 X 30 AMARILLO (x8000 u. · Granel): $102.010,28
-- i001116 · FIX - 4 X 35 AMARILLO (x7000 u. · Granel): $102.994,65
-- N001035 · FIX - 4 X 40 AMARILLO (x5000 u. · Granel): $78.772,14
-- i001117 · FIX - 4 X 40 AMARILLO (x5500 u. · Granel): $86.649,38
-- N001036 · FIX - 4 X 45 AMARILLO (x5000 u. · Granel): $91.751,61
-- N001037 · FIX - 4 X 50 AMARILLO (x3500 u. · Granel): $68.177,06
-- i001118 · FIX - 4 X 50 AMARILLO (x4000 u. · Granel): $77.916,69
-- i001119 · FIX - 4 x 60 AMARILLO (x2500 u. · Granel): $66.112,25
-- i001120 · FIX - 4 x 70 AMARILLO (x2200 u. · Granel): $66.284,51
-- i001121 · FIX - 4 x 80 AMARILLO (x1600 u. · Granel): $59.756,33
-- i001122 · FIX - 4.5 x 15 AMARILLO (x10000 u. · Granel): $94.652,38
-- i001123 · FIX - 4.5 x 20 AMARILLO (x12000 u. · Granel): $141.604,47
-- i001124 · FIX - 4.5 X 25 AMARILLO (x6000 u. · Granel): $87.041,09
-- i001125 · FIX - 4.5 X 30 AMARILLO (x5500 u. · Granel): $97.927,05
-- i001126 · FIX - 4.5 X 35 AMARILLO (x5000 u. · Granel): $93.349,42
-- i001127 · FIX - 4.5 X 40 AMARILLO (x4500 u. · Granel): $94.306,08
-- N001041 · FIX - 4.5 X 45 AMARILLO (x3500 u. · Granel): $80.868,12
-- i001128 · FIX - 4.5 X 45 AMARILLO (x4000 u. · Granel): $92.420,75
-- N001042 · FIX - 4.5 X 50 AMARILLO (x3000 u. · Granel): $80.608,89
-- i001129 · FIX - 4.5 X 50 AMARILLO (x3500 u. · Granel): $94.043,69
-- i001130 · FIX - 4.5 x 60 AMARILLO (x2100 u. · Granel): $64.924,65
-- i001131 · FIX - 4.5 x 70 AMARILLO (x1900 u. · Granel): $69.785,56
-- i001132 · FIX - 4.5 x 80 AMARILLO (x2000 u. · Granel): $91.172,01
-- i001133 · FIX - 5 X 20 AMARILLO (x7000 u. · Granel): $98.593,72
-- N001043 · FIX - 5 X 25 AMARILLO (x6000 u. · Granel): $104.010,29
-- i001134 · FIX - 5 X 25 AMARILLO (x6000 u. · Granel): $104.010,29
-- i001135 · FIX - 5 X 30 AMARILLO (x4500 u. · Granel): $91.039,92
-- N001045 · FIX - 5 X 35 AMARILLO (x5000 u. · Granel): $116.390,07
-- i001136 · FIX - 5 X 40 AMARILLO (x3500 u. · Granel): $89.462,59
-- i001137 · FIX - 5 x 45 AMARILLO (x3000 u. · Granel): $77.310,27
-- i001138 · FIX - 5 x 50 AMARILLO (x2500 u. · Granel): $69.729,06
-- N001046 · FIX - 5 x 55 AMARILLO (x2500 u. · Granel): $86.674,41
-- i001139 · FIX - 5 x 60 AMARILLO (x2000 u. · Granel): $74.227,84
-- N001048 · FIX - 5 x 65 AMARILLO (x2000 u. · Granel): $81.167,32
-- i001140 · FIX - 5 x 70 AMARILLO (x1500 u. · Granel): $66.443,61
-- i001141 · FIX - 5 x 80 AMARILLO (x1500 u. · Granel): $73.188,26
-- i001142 · FIX - 5 x 90 AMARILLO (x1000 u. · Granel): $51.424,06
-- i001143 · FIX - 5 x 100 AMARILLO (x1300 u. · Granel): $74.501,62
-- i001144 · FIX - 5 x 110 AMARILLO (x1000 u. · Granel): $69.203,98
-- i001145 · FIX - 5 x 120 AMARILLO (x1000 u. · Granel): $74.976,14
-- i001146 · FIX - 6 x 30 AMARILLO (x2500 u. · Granel): $87.106,79
-- i001147 · FIX - 6 x 40 PH2 (x2500 u. · Granel): $108.985,67
-- i001148 · FIX - 6 x 50 POZI DRIVE (x1800 u. · Granel): $89.846,09
-- i001149 · FIX - 6 x 60 AMARILLO (x1300 u. · Granel): $75.817,34
-- i001150 · FIX - 6 x 70 POZI DRIVE (x1000 u. · Granel): $66.644,66
-- i001151 · FIX - 6 x 80 AMARILLO (x900 u. · Granel): $67.571,64
-- i001152 · FIX - 6 x 90 AMARILLO (x800 u. · Granel): $64.002,52
-- i001153 · FIX - 6 x 100 AMARILLO (x700 u. · Granel): $61.674,22
-- i001154 · FIX - 6 x 110 AMARILLO (x650 u. · Granel): $62.932,46
-- i001155 · FIX - 6 x 120 AMARILLO (x600 u. · Granel): $62.903,18
-- i001156 · FIX - 6 x 130 AMARILLO (x500 u. · Granel): $57.636,31
+- i001092 · FIX - 2.5 x 10 AMARILLO (x65000 u. · Granel): $274.406,14
+- i001093 · FIX - 2.5 x 12 AMARILLO (x55000 u. · Granel): $263.073,96
+- i001094 · FIX - 2.5 x 15 AMARILLO (x45000 u. · Granel): $244.890,03
+- i001095 · FIX - 2.5 x 20 AMARILLO (x35000 u. · Granel): $246.996,48
+- i001096 · FIX - 3 x 10 AMARILLO (x40000 u. · Granel): $221.903,20
+- i001097 · FIX - 3 x 12 AMARILLO (x38000 u. · Granel): $199.277,90
+- i001098 · FIX - 3 x 15 AMARILLO (x32000 u. · Granel): $190.850,54
+- i001099 · FIX - 3 x 20 AMARILLO (x22000 u. · Granel): $159.846,39
+- i001100 · FIX - 3 x 25 AMARILLO (x17000 u. · Granel): $147.974,58
+- i001101 · FIX - 3 x 30 AMARILLO (x15000 u. · Granel): $145.982,74
+- i001102 · FIX - 3 x 35 AMARILLO (x10000 u. · Granel): $107.261,52
+- i001103 · FIX - 3.5 x 12 AMARILLO (x22000 u. · Granel): $147.639,97
+- i001104 · FIX - 3.5 x 15 AMARILLO (x19000 u. · Granel): $87.756,03
+- i001105 · FIX - 3.5 x 20 AMARILLO (x13000 u. · Granel): $102.027,52
+- i001106 · FIX - 3.5 X 25 AMARILLO (x12000 u. · Granel): $109.282,90
+- i001107 · FIX - 3.5 x 30 AMARILLO (x10000 u. · Granel): $108.086,63
+- i001108 · FIX - 3.5 x 35 AMARILLO (x7000 u. · Granel): $81.286,78
+- i001109 · FIX - 3.5 x 40 AMARILLO (x6000 u. · Granel): $82.891,10
+- i001110 · FIX - 3.5 x 45 AMARILLO (x5000 u. · Granel): $71.025,57 [SIN STOCK]
+- i001111 · FIX - 3.5 x 50 AMARILLO (x5000 u. · Granel): $89.275,91
+- i001112 · FIX - 4 x 15 AMARILLO (x15000 u. · Granel): $125.076,06
+- i001113 · FIX - 4 x 20 AMARILLO (x12000 u. · Granel): $114.749,37
+- N001032 · FIX - 4 X 25 AMARILLO (x10000 u. · Granel): $103.429,44
+- i001114 · FIX - 4 X 25 AMARILLO (x10000 u. · Granel): $103.429,44
+- i001115 · FIX - 4 X 30 AMARILLO (x8000 u. · Granel): $100.155,63
+- i001116 · FIX - 4 X 35 AMARILLO (x7000 u. · Granel): $101.122,06
+- N001035 · FIX - 4 X 40 AMARILLO (x5000 u. · Granel): $77.339,98
+- i001117 · FIX - 4 X 40 AMARILLO (x5500 u. · Granel): $85.074,02
+- N001036 · FIX - 4 X 45 AMARILLO (x5000 u. · Granel): $90.083,52
+- N001037 · FIX - 4 X 50 AMARILLO (x3500 u. · Granel): $66.937,55
+- i001118 · FIX - 4 X 50 AMARILLO (x4000 u. · Granel): $76.500,10 [SIN STOCK]
+- i001119 · FIX - 4 x 60 AMARILLO (x2500 u. · Granel): $64.910,31
+- i001120 · FIX - 4 x 70 AMARILLO (x2200 u. · Granel): $65.079,39
+- i001121 · FIX - 4 x 80 AMARILLO (x1600 u. · Granel): $58.669,86
+- i001122 · FIX - 4.5 x 15 AMARILLO (x10000 u. · Granel): $92.931,47
+- i001123 · FIX - 4.5 x 20 AMARILLO (x12000 u. · Granel): $139.029,91
+- i001124 · FIX - 4.5 X 25 AMARILLO (x6000 u. · Granel): $85.458,60
+- i001125 · FIX - 4.5 X 30 AMARILLO (x5500 u. · Granel): $96.146,71
+- i001126 · FIX - 4.5 X 35 AMARILLO (x5000 u. · Granel): $91.652,33
+- i001127 · FIX - 4.5 X 40 AMARILLO (x4500 u. · Granel): $92.591,52
+- N001041 · FIX - 4.5 X 45 AMARILLO (x3500 u. · Granel): $79.397,92
+- i001128 · FIX - 4.5 X 45 AMARILLO (x4000 u. · Granel): $90.740,48
+- N001042 · FIX - 4.5 X 50 AMARILLO (x3000 u. · Granel): $79.143,35
+- i001129 · FIX - 4.5 X 50 AMARILLO (x3500 u. · Granel): $92.333,91
+- i001130 · FIX - 4.5 x 60 AMARILLO (x2100 u. · Granel): $63.744,31
+- i001131 · FIX - 4.5 x 70 AMARILLO (x1900 u. · Granel): $68.516,73
+- i001132 · FIX - 4.5 x 80 AMARILLO (x2000 u. · Granel): $98.465,83
+- i001133 · FIX - 5 X 20 AMARILLO (x7000 u. · Granel): $106.481,26
+- N001043 · FIX - 5 X 25 AMARILLO (x6000 u. · Granel): $112.331,15
+- i001134 · FIX - 5 X 25 AMARILLO (x6000 u. · Granel): $112.331,15
+- i001135 · FIX - 5 X 30 AMARILLO (x4500 u. · Granel): $98.323,14
+- N001045 · FIX - 5 X 35 AMARILLO (x5000 u. · Granel): $125.701,27
+- i001136 · FIX - 5 X 40 AMARILLO (x3500 u. · Granel): $96.619,61
+- i001137 · FIX - 5 x 45 AMARILLO (x3000 u. · Granel): $70.970,88
+- i001138 · FIX - 5 x 50 AMARILLO (x2500 u. · Granel): $60.246,00
+- N001046 · FIX - 5 x 55 AMARILLO (x2500 u. · Granel): $93.608,44
+- i001139 · FIX - 5 x 60 AMARILLO (x2000 u. · Granel): $80.166,14
+- N001048 · FIX - 5 x 65 AMARILLO (x2000 u. · Granel): $87.660,80
+- i001140 · FIX - 5 x 70 AMARILLO (x1500 u. · Granel): $71.759,11
+- i001141 · FIX - 5 x 80 AMARILLO (x1500 u. · Granel): $79.043,41
+- i001142 · FIX - 5 x 90 AMARILLO (x1000 u. · Granel): $55.538,00
+- i001143 · FIX - 5 x 100 AMARILLO (x1300 u. · Granel): $80.461,78
+- i001144 · FIX - 5 x 110 AMARILLO (x1000 u. · Granel): $74.740,32
+- i001145 · FIX - 5 x 120 AMARILLO (x1000 u. · Granel): $80.974,27
+- i001146 · FIX - 6 x 30 AMARILLO (x2500 u. · Granel): $94.075,36
+- i001147 · FIX - 6 x 40 PH2 (x2500 u. · Granel): $117.704,60
+- i001148 · FIX - 6 x 50 POZI DRIVE (x1800 u. · Granel): $97.033,84
+- i001149 · FIX - 6 x 60 AMARILLO (x1300 u. · Granel): $81.882,77
+- i001150 · FIX - 6 x 70 POZI DRIVE (x1000 u. · Granel): $71.976,28
+- i001151 · FIX - 6 x 80 AMARILLO (x900 u. · Granel): $72.977,38
+- i001152 · FIX - 6 x 90 AMARILLO (x800 u. · Granel): $69.122,78
+- i001153 · FIX - 6 x 100 AMARILLO (x700 u. · Granel): $66.608,18
+- i001154 · FIX - 6 x 110 AMARILLO (x650 u. · Granel): $67.967,15
+- i001155 · FIX - 6 x 120 AMARILLO (x600 u. · Granel): $67.935,51
+- i001156 · FIX - 6 x 130 AMARILLO (x500 u. · Granel): $62.247,26
 
 ### Deck T25 (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-deck-t25
-- i001000 · DECK - 4.5 x 40 T25 (x5000 u. · Granel): $180.701,58
-- i001001 · DECK - 4.5 x 50 T25 (x3800 u. · Granel): $170.388,10
+- i001000 · DECK - 4.5 x 40 T25 (x5000 u. · Granel): $195.157,72
+- i001001 · DECK - 4.5 x 50 T25 (x3800 u. · Granel): $184.019,24
 
 ### Hormigón T30 (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-hormigon-t30
-- i001286 · HORMIGON TORX - 7.5 x 82 T30 (x1200 u. · Granel): $178.565,33
-- i001287 · HORMIGON TORX - 7.5 x 92 T30 (x1200 u. · Granel): $199.837,30
-- i001288 · HORMIGON TORX - 7.5 x 102 T30 (x1000 u. · Granel): $186.921,15
-- i001289 · HORMIGON TORX - 7.5 x 112 T30 (x800 u. · Granel): $150.146,21
+- i001286 · HORMIGON TORX - 7.5 x 82 T30 (x1200 u. · Granel): $192.850,65
+- i001287 · HORMIGON TORX - 7.5 x 92 T30 (x1200 u. · Granel): $215.824,29
+- i001288 · HORMIGON TORX - 7.5 x 102 T30 (x1000 u. · Granel): $201.874,94
+- i001289 · HORMIGON TORX - 7.5 x 112 T30 (x800 u. · Granel): $162.157,96
 
 ### Drywall madera (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-drywall-madera
-- i001010 · DRYWALL R. ANCHA MADERA - 6 x 1 (LIVIANO) NEGRO (x12000 u. · Granel): $103.818,04
-- i001011 · DRYWALL R. ANCHA MADERA - 6 x 1-1/4 (LIVIANO) NEGRO (x9000 u. · Granel): $96.180,24
-- i001012 · DRYWALL R. ANCHA MADERA - 6 x 1-1/2 (LIVIANO) NEGRO (x6000 u. · Granel): $74.017,99
-- i001571 · DRYWALL R. ANCHA MADERA - 6 x 1-5/8 (LIVIANO) NEGRO (x5000 u. · Granel): $74.204,30
-- i001013 · DRYWALL R. ANCHA MADERA - 6 x 2 (LIVIANO) NEGRO (x4000 u. · Granel): $63.609,62
-- i001014 · DRYWALL R. ANCHA MADERA - 6 x 5/8 (PESADO) NEGRO (x15000 u. · Granel): $110.704,68
-- i001015 · DRYWALL R. ANCHA MADERA - 6 x 3/4 (PESADO) NEGRO (x12000 u. · Granel): $100.409,99
-- i001016 · DRYWALL R. ANCHA MADERA - 6 x 1 (PESADO) NEGRO (x10000 u. · Granel): $95.166,48
-- i001017 · DRYWALL R. ANCHA MADERA - 6 x 1-1/4 (PESADO) NEGRO (x9000 u. · Granel): $105.798,16
-- i001018 · DRYWALL R. ANCHA MADERA - 6 x 1-1/2 (PESADO) NEGRO (x6000 u. · Granel): $81.419,72
-- N001000 · DRYWALL R. ANCHA MADERA - 6 x 1-5/8 (PESADO) NEGRO (x5000 u. · Granel): $82.493,53
-- i001019 · DRYWALL R. ANCHA MADERA - 6 x 1-5/8 (PESADO) NEGRO (x4000 u. · Granel): $65.994,81
-- i001020 · DRYWALL R. ANCHA MADERA - 6 x 1-3/4 (PESADO) NEGRO (x3500 u. · Granel): $59.108,37
-- i001021 · DRYWALL R. ANCHA MADERA - 6 x 2 (PESADO) NEGRO (x2800 u. · Granel): $48.979,41
-- i001022 · DRYWALL R. ANCHA MADERA - 6 x 2-1/4 (PESADO) NEGRO (x2400 u. · Granel): $56.416,26
-- i001023 · DRYWALL R. ANCHA MADERA - 6 x 2-1/2 (PESADO) NEGRO (x2600 u. · Granel): $69.237,62
-- i001024 · DRYWALL R. ANCHA MADERA - 6 x 3 (PESADO) NEGRO (x1800 u. · Granel): $57.061,46
-- i001025 · DRYWALL R. ANCHA MADERA - 8 x 5/8 NEGRO (x10000 u. · Granel): $98.739,56
-- i001026 · DRYWALL R. ANCHA MADERA - 8 x 3/4 NEGRO (x12000 u. · Granel): $132.163,16
-- i001027 · DRYWALL R. ANCHA MADERA - 8 x 1 NEGRO (x7000 u. · Granel): $92.802,57
-- i001028 · DRYWALL R. ANCHA MADERA - 8 x 1-1/4 NEGRO (x5000 u. · Granel): $83.768,40
-- i001029 · DRYWALL R. ANCHA MADERA - 8 x 1-1/2 NEGRO (x5000 u. · Granel): $96.879,66
-- N001003 · DRYWALL R. ANCHA MADERA - 8 x 1-5/8 NEGRO (x5000 u. · Granel): $103.707,13
-- i001030 · DRYWALL R. ANCHA MADERA - 8 x 1-5/8 NEGRO (x4000 u. · Granel): $82.965,88
-- N001004 · DRYWALL R. ANCHA MADERA - 8 x 1-3/4 NEGRO (x3500 u. · Granel): $75.564,94
-- i001031 · DRYWALL R. ANCHA MADERA - 8 x 1-3/4 NEGRO (x3600 u. · Granel): $77.724,05
-- i001032 · DRYWALL R. ANCHA MADERA - 8 x 2 NEGRO (x3000 u. · Granel): $71.413,55
-- i001033 · DRYWALL R. ANCHA MADERA - 8 x 2-1/4 NEGRO (x2200 u. · Granel): $64.645,93
-- i001034 · DRYWALL R. ANCHA MADERA - 8 x 2-1/2 NEGRO (x2000 u. · Granel): $61.861,62
-- i001035 · DRYWALL R. ANCHA MADERA - 8 x 3 NEGRO (x1800 u. · Granel): $62.927,32
-- N001005 · DRYWALL R. ANCHA MADERA - 10 x 3/4 NEGRO (x7000 u. · Granel): $101.364,09
-- i001036 · DRYWALL R. ANCHA MADERA - 10 x 3/4 NEGRO (x10000 u. · Granel): $144.805,73
-- i001037 · DRYWALL R. ANCHA MADERA - 10 x 1 NEGRO (x6000 u. · Granel): $110.404,49 [SIN STOCK]
-- N001006 · DRYWALL R. ANCHA MADERA - 10 x 1-1/4 NEGRO (x5000 u. · Granel): $112.133,99
-- i001038 · DRYWALL R. ANCHA MADERA - 10 x 1-1/4 NEGRO (x5000 u. · Granel): $112.133,99
-- N001007 · DRYWALL R. ANCHA MADERA - 10 x 1-1/2 NEGRO (x5000 u. · Granel): $117.232,46
-- N001008 · DRYWALL R. ANCHA MADERA - 10 x 1-5/8 NEGRO (x4000 u. · Granel): $102.981,39
-- N001009 · DRYWALL R. ANCHA MADERA - 10 x 1-3/4 NEGRO (x3000 u. · Granel): $84.914,14
-- i001039 · DRYWALL R. ANCHA MADERA - 10 x 1-3/4 NEGRO (x3000 u. · Granel): $84.914,14
-- i001040 · DRYWALL R. ANCHA MADERA - 10 x 2 NEGRO (x2800 u. · Granel): $88.194,95
-- N001010 · DRYWALL R. ANCHA MADERA - 10 x 2-1/4 NEGRO (x2500 u. · Granel): $89.884,77
-- N001011 · DRYWALL R. ANCHA MADERA - 10 x 2-3/8 NEGRO (x2000 u. · Granel): $76.381,89
-- N001012 · DRYWALL R. ANCHA MADERA - 10 x 2-1/2 NEGRO (x2000 u. · Granel): $82.770,77
-- N001013 · DRYWALL R. ANCHA MADERA - 10 x 2-3/4 NEGRO (x1500 u. · Granel): $67.754,68
-- i001041 · DRYWALL R. ANCHA MADERA - 10 x 3 NEGRO (x1500 u. · Granel): $65.946,62
-- i001042 · DRYWALL R. ANCHA MADERA - 10 x 3-3/4 NEGRO (x1400 u. · Granel): $78.803,50
+- i001010 · DRYWALL R. ANCHA MADERA - 6 x 1 (LIVIANO) NEGRO (x12000 u. · Granel): $112.123,52
+- i001011 · DRYWALL R. ANCHA MADERA - 6 x 1-1/4 (LIVIANO) NEGRO (x9000 u. · Granel): $103.874,68
+- i001012 · DRYWALL R. ANCHA MADERA - 6 x 1-1/2 (LIVIANO) NEGRO (x6000 u. · Granel): $79.939,43
+- i001571 · DRYWALL R. ANCHA MADERA - 6 x 1-5/8 (LIVIANO) NEGRO (x5000 u. · Granel): $73.729,26
+- i001013 · DRYWALL R. ANCHA MADERA - 6 x 2 (LIVIANO) NEGRO (x4000 u. · Granel): $54.958,77
+- i001014 · DRYWALL R. ANCHA MADERA - 6 x 5/8 (PESADO) NEGRO (x15000 u. · Granel): $108.698,22
+- i001015 · DRYWALL R. ANCHA MADERA - 6 x 3/4 (PESADO) NEGRO (x12000 u. · Granel): $98.586,30
+- i001016 · DRYWALL R. ANCHA MADERA - 6 x 1 (PESADO) NEGRO (x10000 u. · Granel): $102.256,84
+- i001017 · DRYWALL R. ANCHA MADERA - 6 x 1-1/4 (PESADO) NEGRO (x9000 u. · Granel): $113.997,29
+- i001018 · DRYWALL R. ANCHA MADERA - 6 x 1-1/2 (PESADO) NEGRO (x6000 u. · Granel): $87.732,87
+- N001000 · DRYWALL R. ANCHA MADERA - 6 x 1-5/8 (PESADO) NEGRO (x5000 u. · Granel): $82.493,53 [SIN STOCK]
+- i001019 · DRYWALL R. ANCHA MADERA - 6 x 1-5/8 (PESADO) NEGRO (x4000 u. · Granel): $64.784,28
+- i001020 · DRYWALL R. ANCHA MADERA - 6 x 1-3/4 (PESADO) NEGRO (x3500 u. · Granel): $58.022,32
+- i001021 · DRYWALL R. ANCHA MADERA - 6 x 2 (PESADO) NEGRO (x2800 u. · Granel): $42.318,21
+- i001022 · DRYWALL R. ANCHA MADERA - 6 x 2-1/4 (PESADO) NEGRO (x2400 u. · Granel): $55.379,81
+- i001023 · DRYWALL R. ANCHA MADERA - 6 x 2-1/2 (PESADO) NEGRO (x2600 u. · Granel): $67.963,27
+- i001024 · DRYWALL R. ANCHA MADERA - 6 x 3 (PESADO) NEGRO (x1800 u. · Granel): $56.010,27
+- i001025 · DRYWALL R. ANCHA MADERA - 8 x 5/8 NEGRO (x10000 u. · Granel): $96.939,66
+- i001026 · DRYWALL R. ANCHA MADERA - 8 x 3/4 NEGRO (x12000 u. · Granel): $129.748,01
+- i001027 · DRYWALL R. ANCHA MADERA - 8 x 1 NEGRO (x7000 u. · Granel): $91.104,21
+- i001028 · DRYWALL R. ANCHA MADERA - 8 x 1-1/4 NEGRO (x5000 u. · Granel): $82.234,03
+- i001029 · DRYWALL R. ANCHA MADERA - 8 x 1-1/2 NEGRO (x5000 u. · Granel): $95.098,57
+- N001003 · DRYWALL R. ANCHA MADERA - 8 x 1-5/8 NEGRO (x5000 u. · Granel): $101.798,51
+- i001030 · DRYWALL R. ANCHA MADERA - 8 x 1-5/8 NEGRO (x4000 u. · Granel): $81.438,99
+- N001004 · DRYWALL R. ANCHA MADERA - 8 x 1-3/4 NEGRO (x3500 u. · Granel): $74.174,81
+- i001031 · DRYWALL R. ANCHA MADERA - 8 x 1-3/4 NEGRO (x3600 u. · Granel): $76.293,83
+- i001032 · DRYWALL R. ANCHA MADERA - 8 x 2 NEGRO (x3000 u. · Granel): $64.116,42
+- i001033 · DRYWALL R. ANCHA MADERA - 8 x 2-1/4 NEGRO (x2200 u. · Granel): $63.453,91
+- i001034 · DRYWALL R. ANCHA MADERA - 8 x 2-1/2 NEGRO (x2000 u. · Granel): $60.723,71
+- i001035 · DRYWALL R. ANCHA MADERA - 8 x 3 NEGRO (x1800 u. · Granel): $61.769,86
+- N001005 · DRYWALL R. ANCHA MADERA - 10 x 3/4 NEGRO (x7000 u. · Granel): $109.473,25
+- i001036 · DRYWALL R. ANCHA MADERA - 10 x 3/4 NEGRO (x10000 u. · Granel): $156.390,20
+- i001037 · DRYWALL R. ANCHA MADERA - 10 x 1 NEGRO (x6000 u. · Granel): $119.236,95
+- N001006 · DRYWALL R. ANCHA MADERA - 10 x 1-1/4 NEGRO (x5000 u. · Granel): $121.104,75
+- i001038 · DRYWALL R. ANCHA MADERA - 10 x 1-1/4 NEGRO (x5000 u. · Granel): $121.104,75
+- N001007 · DRYWALL R. ANCHA MADERA - 10 x 1-1/2 NEGRO (x5000 u. · Granel): $126.611,13
+- N001008 · DRYWALL R. ANCHA MADERA - 10 x 1-5/8 NEGRO (x4000 u. · Granel): $111.219,95
+- N001009 · DRYWALL R. ANCHA MADERA - 10 x 1-3/4 NEGRO (x3000 u. · Granel): $91.707,33
+- i001039 · DRYWALL R. ANCHA MADERA - 10 x 1-3/4 NEGRO (x3000 u. · Granel): $91.707,33
+- i001040 · DRYWALL R. ANCHA MADERA - 10 x 2 NEGRO (x2800 u. · Granel): $95.250,58
+- N001010 · DRYWALL R. ANCHA MADERA - 10 x 2-1/4 NEGRO (x2500 u. · Granel): $97.075,64
+- N001011 · DRYWALL R. ANCHA MADERA - 10 x 2-3/8 NEGRO (x2000 u. · Granel): $82.492,48
+- N001012 · DRYWALL R. ANCHA MADERA - 10 x 2-1/2 NEGRO (x2000 u. · Granel): $89.392,51
+- N001013 · DRYWALL R. ANCHA MADERA - 10 x 2-3/4 NEGRO (x1500 u. · Granel): $73.175,07
+- i001041 · DRYWALL R. ANCHA MADERA - 10 x 3 NEGRO (x1500 u. · Granel): $71.222,41
+- i001042 · DRYWALL R. ANCHA MADERA - 10 x 3-3/4 NEGRO (x1400 u. · Granel): $85.107,86
 
 ### Tanque aguja (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-tanque-aguja
-- i001389 · TANQUE AGUJA - 8 X 1/2 (T1) C/ FLANG. (x10000 u. · Granel): $90.785,05
-- i001390 · TANQUE AGUJA - 8 X 9/16 C/ FLANG. (x10000 u. · Granel): $97.335,88 [SIN STOCK]
-- i001391 · TANQUE AGUJA - 8 X 3/4 C/ FLANG. (x8000 u. · Granel): $116.447,55
-- i001392 · TANQUE AGUJA - 8 X 1 C/ FLANG. (x5000 u. · Granel): $89.977,98
+- i001389 · TANQUE AGUJA - 8 X 1/2 (T1) C/ FLANG. (x10000 u. · Granel): $75.428,50
+- i001390 · TANQUE AGUJA - 8 X 9/16 C/ FLANG. (x10000 u. · Granel): $80.864,59
+- i001391 · TANQUE AGUJA - 8 X 3/4 C/ FLANG. (x8000 u. · Granel): $96.741,24
+- i001392 · TANQUE AGUJA - 8 X 1 C/ FLANG. (x5000 u. · Granel): $74.751,73
 
 ### Tanque mecha (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-tanque-mecha
-- i001397 · TANQUE MECHA - 8 X 1/2 (T1) C/ FLANG. (x10000 u. · Granel): $103.066,48
-- i001398 · TANQUE MECHA - 8 x 9/16 C/ FLANG. (x10000 u. · Granel): $115.298,45
-- i001399 · TANQUE MECHA - 8 x 3/4 C/ FLANG. (x8000 u. · Granel): $162.354,72
-- i001400 · TANQUE MECHA - 8 x 1 C/ FLANG. (x5000 u. · Granel): $117.060,60
-- i001401 · TANQUE MECHA - 8 x 1-1/4 C/ FLANG. (x5000 u. · Granel): $128.103,58
-- i001402 · TANQUE MECHA - 8 x 1-1/2 C/ FLANG. (x4000 u. · Granel): $119.549,08
+- i001397 · TANQUE MECHA - 8 X 1/2 (T1) C/ FLANG. (x10000 u. · Granel): $82.453,82
+- i001398 · TANQUE MECHA - 8 x 9/16 C/ FLANG. (x10000 u. · Granel): $92.238,78
+- i001399 · TANQUE MECHA - 8 x 3/4 C/ FLANG. (x8000 u. · Granel): $129.883,78
+- i001400 · TANQUE MECHA - 8 x 1 C/ FLANG. (x5000 u. · Granel): $93.648,46
+- i001401 · TANQUE MECHA - 8 x 1-1/4 C/ FLANG. (x5000 u. · Granel): $102.482,81
+- i001402 · TANQUE MECHA - 8 x 1-1/2 C/ FLANG. (x4000 u. · Granel): $95.639,25
 
 ### Drywall metal punta aguja (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-drywall-metal-punta-aguja
-- i001072 · DRYWALL R. FINA AGUJA - 6 x 5/8 P/ DURLOCK (x15000 u. · Granel): $109.605,74
-- i001073 · DRYWALL R. FINA AGUJA - 6 x 3/4 P/ DURLOCK (x16000 u. · Granel): $133.920,56
-- i001074 · DRYWALL R. FINA AGUJA - 6 x 1 (T2) P/ DURLOCK (x12000 u. · Granel): $103.428,61
-- i001075 · DRYWALL R. FINA AGUJA - 6 x 1-1/4 P/ DURLOCK (x9000 u. · Granel): $100.042,43
-- i001076 · DRYWALL R. FINA AGUJA - 6 x 1-1/2 (T3) P/ DURLOCK (x6000 u. · Granel): $88.699,26
-- i001077 · DRYWALL R. FINA AGUJA - 6 x 1-5/8 P/ DURLOCK (x5000 u. · Granel): $75.582,36
-- i001573 · DRYWALL R. FINA AGUJA - 6 x 1-3/4 P/ DURLOCK (x4000 u. · Granel): $63.113,40
-- i001079 · DRYWALL R. FINA AGUJA - 6 x 2 (T4) P/ DURLOCK (x4000 u. · Granel): $73.102,18
-- i001080 · DRYWALL R. FINA AGUJA - 6 x 2-1/4 (T4) P/ DURLOCK (x3600 u. · Granel): $74.030,75
-- i001081 · DRYWALL R. FINA AGUJA - 6 x 2-1/2 P/ DURLOCK (x2700 u. · Granel): $63.498,41
+- i001072 · DRYWALL R. FINA AGUJA - 6 x 5/8 P/ DURLOCK (x15000 u. · Granel): $118.374,23
+- i001073 · DRYWALL R. FINA AGUJA - 6 x 3/4 P/ DURLOCK (x16000 u. · Granel): $144.634,25
+- i001074 · DRYWALL R. FINA AGUJA - 6 x 1 (T2) P/ DURLOCK (x12000 u. · Granel): $82.742,96
+- i001075 · DRYWALL R. FINA AGUJA - 6 x 1-1/4 P/ DURLOCK (x9000 u. · Granel): $108.045,87
+- i001076 · DRYWALL R. FINA AGUJA - 6 x 1-1/2 (T3) P/ DURLOCK (x6000 u. · Granel): $76.636,19
+- i001077 · DRYWALL R. FINA AGUJA - 6 x 1-5/8 P/ DURLOCK (x5000 u. · Granel): $63.670,66
+- i001573 · DRYWALL R. FINA AGUJA - 6 x 1-3/4 P/ DURLOCK (x4000 u. · Granel): $68.162,53
+- i001079 · DRYWALL R. FINA AGUJA - 6 x 2 (T4) P/ DURLOCK (x4000 u. · Granel): $78.950,38
+- i001080 · DRYWALL R. FINA AGUJA - 6 x 2-1/4 (T4) P/ DURLOCK (x3600 u. · Granel): $79.953,26
+- i001081 · DRYWALL R. FINA AGUJA - 6 x 2-1/2 P/ DURLOCK (x2700 u. · Granel): $68.578,33
 
 ### Drywall metal punta mecha (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-drywall-metal-punta-mecha
-- i001004 · DRYWALL MECHA R. FINA - 6 x 1-1/8 (T2) C/ TROMPETA (x10000 u. · Granel): $137.566,66
-- i001005 · DRYWALL MECHA R. FINA - 6 x 1-5/8 (T3) C/ TROMPETA (x5000 u. · Granel): $92.315,67 [SIN STOCK]
-- i001006 · DRYWALL MECHA R. FINA - 6 x 2 C/ TROMPETA (x4000 u. · Granel): $87.151,61
+- i001004 · DRYWALL MECHA R. FINA - 6 x 1-1/8 (T2) C/ TROMPETA (x10000 u. · Granel): $148.572,03
+- i001005 · DRYWALL MECHA R. FINA - 6 x 1-5/8 (T3) C/ TROMPETA (x5000 u. · Granel): $99.700,97
+- i001006 · DRYWALL MECHA R. FINA - 6 x 2 C/ TROMPETA (x4000 u. · Granel): $94.123,76
 
 ### Ensamblador (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-ensamblador
-- N001028 · ENSAMBLADOR - 7 x 40 P/ MUEBLE (x2000 u. · Granel): $64.271,14
+- N001028 · ENSAMBLADOR - 7 x 40 P/ MUEBLE (x2000 u. · Granel): $69.412,86 [SIN STOCK]
 - N001029 · ENSAMBLADOR - 7 x 50 P/ MUEBLE (x1500 u. · Granel): $61.206,42 [SIN STOCK]
 
 ### Pan framing (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-pan-framing
-- i001308 · PAN FRAMING AGUJA - 6 x 7/16 (x20000 u. · Granel): $191.929,29
-- i001309 · PAN FRAMING MECHA - 7 x 7/16 (x16500 u. · Granel): $197.926,64
+- i001308 · PAN FRAMING AGUJA - 6 x 7/16 (x20000 u. · Granel): $207.283,69
+- i001309 · PAN FRAMING MECHA - 7 x 7/16 (x16500 u. · Granel): $213.760,80
 
 ### Tipo KREG (oculto) (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-tipo-kreg-oculto
-- i001470 · TIPO KRG OCULTO - 8 x 1-1/4 P/ MADERA (x7500 u. · Granel): $202.147,59
-- i001471 · TIPO KRG OCULTO - 8 x 1-1/2 P/ MADERA (x6000 u. · Granel): $197.826,01
-- i001472 · TIPO KRG OCULTO - 8 x 2 P/ MADERA (x4000 u. · Granel): $166.908,41
+- i001470 · TIPO KRG OCULTO - 8 x 1-1/4 P/ MADERA (x7500 u. · Granel): $218.319,40
+- i001471 · TIPO KRG OCULTO - 8 x 1-1/2 P/ MADERA (x6000 u. · Granel): $213.652,16
+- i001472 · TIPO KRG OCULTO - 8 x 2 P/ MADERA (x4000 u. · Granel): $180.261,11
 
 ### Punta mecha con alas (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-punta-mecha-con-alas
-- i001294 · MECHA C/ALAS - 8 x 1-1/4 C/ FRESADA (x6500 u. · Granel): $169.146,38
-- i001295 · MECHA C/ALAS - 8 x 1-1/2 C/ FRESADA (x5000 u. · Granel): $173.454,00
-- i001296 · MECHA C/ALAS - 8 x 1-5/8 C/ FRESADA (x5000 u. · Granel): $195.205,25
-- i001297 · MECHA C/ALAS - 10 x 1-1/2 C/ FRESADA (x3700 u. · Granel): $183.312,55
-- i001298 · MECHA C/ALAS - 10 x 1-5/8 C/ FRESADA (x3400 u. · Granel): $195.121,84
-- i001299 · MECHA C/ALAS - 10 x 2 C/ FRESADA (x2500 u. · Granel): $149.382,87
-- i001300 · MECHA C/ALAS - 12 x 2-1/2 C/ FRESADA (x2000 u. · Granel): $194.396,10
+- i001294 · MECHA C/ALAS - 8 x 1-1/4 C/ FRESADA (x6500 u. · Granel): $182.678,18
+- i001295 · MECHA C/ALAS - 8 x 1-1/2 C/ FRESADA (x5000 u. · Granel): $187.330,34
+- i001296 · MECHA C/ALAS - 8 x 1-5/8 C/ FRESADA (x5000 u. · Granel): $210.821,70
+- i001297 · MECHA C/ALAS - 10 x 1-1/2 C/ FRESADA (x3700 u. · Granel): $197.977,59
+- i001298 · MECHA C/ALAS - 10 x 1-5/8 C/ FRESADA (x3400 u. · Granel): $210.731,61
+- i001299 · MECHA C/ALAS - 10 x 2 C/ FRESADA (x2500 u. · Granel): $161.333,59
+- i001300 · MECHA C/ALAS - 12 x 2-1/2 C/ FRESADA (x2000 u. · Granel): $209.947,89
 
 ### Tirafondos (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tirafondos
-- i001476 · TIRAFONDO - 3/16 X 1 (x5600 u. · Granel): $156.630,75
-- i001477 · TIRAFONDO - 3/16 X 1-1/4 (x5000 u. · Granel): $152.615,89
-- i001478 · TIRAFONDO - 3/16 X 1-1/2 (x3600 u. · Granel): $133.287,33
-- i001479 · TIRAFONDO - 3/16 X 1-3/4 (x3100 u. · Granel): $152.615,89
-- i001480 · TIRAFONDO - 3/16 X 2 (x2500 u. · Granel): $114.741,50
-- i001481 · TIRAFONDO - 3/16 X 2-1/4 (x2200 u. · Granel): $114.146,07
-- i001482 · TIRAFONDO - 3/16 X 2-1/2 (x2000 u. · Granel): $108.653,03
-- i001483 · TIRAFONDO - 3/16 X 2-3/4 (x1600 u. · Granel): $97.514,86
-- i001484 · TIRAFONDO - 3/16 X 3 (x1300 u. · Granel): $84.708,05
-- i001485 · TIRAFONDO - 1/4 x 1 (x3000 u. · Granel): $114.819,77
-- i001486 · TIRAFONDO - 1/4 x 1-1/4 (x2700 u. · Granel): $128.640,63
-- i001487 · TIRAFONDO - 1/4 x 1-1/2 (x2500 u. · Granel): $127.490,44
-- i001488 · TIRAFONDO - 1/4 x 1-3/4 (x2000 u. · Granel): $123.687,41
-- i001489 · TIRAFONDO - 1/4 x 2 (x1600 u. · Granel): $102.158,89
-- i001490 · TIRAFONDO - 1/4 x 2-1/4 (x1500 u. · Granel): $112.967,08
-- i001491 · TIRAFONDO - 1/4 x 2-1/2 (x1300 u. · Granel): $101.742,64
-- i001492 · TIRAFONDO - 1/4 x 2-3/4 (x1200 u. · Granel): $107.498,38
-- i001493 · TIRAFONDO - 1/4 x 3 (x900 u. · Granel): $81.981,81
-- i001494 · TIRAFONDO - 1/4 x 3-1/2 (x800 u. · Granel): $83.384,11
-- i001495 · TIRAFONDO - 1/4 x 4 (x700 u. · Granel): $84.981,62
-- i001496 · TIRAFONDO - 1/4 x 5 (x500 u. · Granel): $77.565,05
-- i001497 · TIRAFONDO - 5/16 x 1-1/2 (x1500 u. · Granel): $137.600,89
-- i001498 · TIRAFONDO - 5/16 x 1-3/4 (x1300 u. · Granel): $132.278,42
-- i001499 · TIRAFONDO - 5/16 x 2 (x1200 u. · Granel): $130.009,00
-- i001500 · TIRAFONDO - 5/16 x 2-1/4 (x1000 u. · Granel): $123.485,67
-- i001501 · TIRAFONDO - 5/16 x 2-1/2 (x1000 u. · Granel): $127.568,21
-- i001502 · TIRAFONDO - 5/16 x 2-3/4 (x850 u. · Granel): $132.391,91
-- i001503 · TIRAFONDO - 5/16 x 3 (x750 u. · Granel): $111.228,78
-- i001504 · TIRAFONDO - 5/16 x 3-1/2 (x650 u. · Granel): $110.739,61
-- i001505 · TIRAFONDO - 5/16 x 4 (x500 u. · Granel): $96.151,15
-- i001506 · TIRAFONDO - 5/16 x 5 (x500 u. · Granel): $123.557,50
+- i001476 · TIRAFONDO - 3/16 X 1 (x5600 u. · Granel): $165.844,32
+- i001477 · TIRAFONDO - 3/16 X 1-1/4 (x5000 u. · Granel): $161.593,30
+- i001478 · TIRAFONDO - 3/16 X 1-1/2 (x3600 u. · Granel): $141.127,76
+- i001479 · TIRAFONDO - 3/16 X 1-3/4 (x3100 u. · Granel): $161.593,30
+- i001480 · TIRAFONDO - 3/16 X 2 (x2500 u. · Granel): $121.491,00
+- i001481 · TIRAFONDO - 3/16 X 2-1/4 (x2200 u. · Granel): $120.860,55
+- i001482 · TIRAFONDO - 3/16 X 2-1/2 (x2000 u. · Granel): $115.044,38
+- i001483 · TIRAFONDO - 3/16 X 2-3/4 (x1600 u. · Granel): $103.251,03
+- i001484 · TIRAFONDO - 3/16 X 3 (x1300 u. · Granel): $89.690,87
+- i001485 · TIRAFONDO - 1/4 x 1 (x3000 u. · Granel): $121.573,87
+- i001486 · TIRAFONDO - 1/4 x 1-1/4 (x2700 u. · Granel): $136.207,73
+- i001487 · TIRAFONDO - 1/4 x 1-1/2 (x2500 u. · Granel): $134.989,87
+- i001488 · TIRAFONDO - 1/4 x 1-3/4 (x2000 u. · Granel): $130.963,15
+- i001489 · TIRAFONDO - 1/4 x 2 (x1600 u. · Granel): $108.168,23
+- i001490 · TIRAFONDO - 1/4 x 2-1/4 (x1500 u. · Granel): $119.612,20
+- i001491 · TIRAFONDO - 1/4 x 2-1/2 (x1300 u. · Granel): $107.727,50
+- i001492 · TIRAFONDO - 1/4 x 2-3/4 (x1200 u. · Granel): $113.821,81
+- i001493 · TIRAFONDO - 1/4 x 3 (x900 u. · Granel): $86.804,27
+- i001494 · TIRAFONDO - 1/4 x 3-1/2 (x800 u. · Granel): $88.289,05
+- i001495 · TIRAFONDO - 1/4 x 4 (x700 u. · Granel): $89.980,54
+- i001496 · TIRAFONDO - 1/4 x 5 (x500 u. · Granel): $82.127,70
+- i001497 · TIRAFONDO - 5/16 x 1-1/2 (x1500 u. · Granel): $145.695,06
+- i001498 · TIRAFONDO - 5/16 x 1-3/4 (x1300 u. · Granel): $140.059,51
+- i001499 · TIRAFONDO - 5/16 x 2 (x1200 u. · Granel): $137.656,59
+- i001500 · TIRAFONDO - 5/16 x 2-1/4 (x1000 u. · Granel): $130.749,54
+- i001501 · TIRAFONDO - 5/16 x 2-1/2 (x1000 u. · Granel): $135.072,22
+- i001502 · TIRAFONDO - 5/16 x 2-3/4 (x850 u. · Granel): $140.179,67
+- i001503 · TIRAFONDO - 5/16 x 3 (x750 u. · Granel): $117.771,64
+- i001504 · TIRAFONDO - 5/16 x 3-1/2 (x650 u. · Granel): $117.253,70
+- i001505 · TIRAFONDO - 5/16 x 4 (x500 u. · Granel): $101.807,10
+- i001506 · TIRAFONDO - 5/16 x 5 (x500 u. · Granel): $130.825,59
 
 ### Tuercas hexagonales (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tuercas-hexagonales
-- i001538 · TUERCA HEX - 1/8 ZINCADA (x20000 u. · Granel): $210.045,41
-- i001539 · TUERCA HEX - 5/32 ZINCADA (x20000 u. · Granel): $221.490,59
-- i001540 · TUERCA HEX - 3/16 ZINCADA (x18000 u. · Granel): $174.176,28
-- i001541 · TUERCA HEX - 1/4 ZINCADA (x8000 u. · Granel): $144.222,17
-- i001542 · TUERCA HEX - 5/16 ZINCADA (x5000 u. · Granel): $129.191,34
-- i001543 · TUERCA HEX - 3/8 ZINCADA (x3500 u. · Granel): $134.083,12
-- i001544 · TUERCA HEX - 7/16 ZINCADA (x2000 u. · Granel): $132.008,02
-- i001545 · TUERCA HEX - 1/2 - (12) ZINCADA (x1500 u. · Granel): $140.320,41
-- i001546 · TUERCA HEX - 9/16 ZINCADA (x1000 u. · Granel): $138.322,08
-- i001547 · TUERCA HEX - 5/8 ZINCADA (x800 u. · Granel): $137.853,99
-- i001548 · TUERCA HEX - 3/4 ZINCADA (x500 u. · Granel): $144.884,98
-- i001549 · TUERCA HEX - 7/8 ZINCADA (x300 u. · Granel): $143.336,94
-- i001550 · TUERCA HEX - 1 ZINCADA (x200 u. · Granel): $141.074,84
+- i001538 · TUERCA HEX - 1/8 ZINCADA (x20000 u. · Granel): $222.401,03
+- i001539 · TUERCA HEX - 5/32 ZINCADA (x20000 u. · Granel): $234.519,45
+- i001540 · TUERCA HEX - 3/16 ZINCADA (x18000 u. · Granel): $184.421,94
+- i001541 · TUERCA HEX - 1/4 ZINCADA (x8000 u. · Granel): $152.705,83
+- i001542 · TUERCA HEX - 5/16 ZINCADA (x5000 u. · Granel): $136.790,83
+- i001543 · TUERCA HEX - 3/8 ZINCADA (x3500 u. · Granel): $141.970,36
+- i001544 · TUERCA HEX - 7/16 ZINCADA (x2000 u. · Granel): $139.773,19
+- i001545 · TUERCA HEX - 1/2 - (12) ZINCADA (x1500 u. · Granel): $148.574,55
+- i001546 · TUERCA HEX - 9/16 ZINCADA (x1000 u. · Granel): $146.458,67
+- i001547 · TUERCA HEX - 5/8 ZINCADA (x800 u. · Granel): $145.963,04
+- i001548 · TUERCA HEX - 3/4 ZINCADA (x500 u. · Granel): $153.407,63
+- i001549 · TUERCA HEX - 7/8 ZINCADA (x300 u. · Granel): $151.768,52
+- i001550 · TUERCA HEX - 1 ZINCADA (x200 u. · Granel): $149.373,36
 
 ### Parker aguja (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-parker-aguja
-- i001310 · PARKER AGUJA - 4 x 1/4 CAB. FIJ. COMB. (x50000 u. · Granel): $304.414,03
-- i001311 · PARKER AGUJA - 4 x 5/16 CAB. FIJ. COMB. (x40000 u. · Granel): $269.192,37
-- i001312 · PARKER AGUJA - 4 x 3/8 CAB. FIJ. COMB. (x45000 u. · Granel): $311.479,55
-- i001313 · PARKER AGUJA - 4 x 1/2 CAB. FIJ. COMB. (x40000 u. · Granel): $311.298,69
-- i001314 · PARKER AGUJA - 4 x 5/8 CAB. FIJ. COMB. (x30000 u. · Granel): $261.795,19
-- i001315 · PARKER AGUJA - 4 x 3/4 CAB. FIJ. COMB. (x25000 u. · Granel): $239.728,42
-- i001316 · PARKER AGUJA - 4 x 7/8 CAB. FIJ. COMB. (x20000 u. · Granel): $207.368,55
-- i001317 · PARKER AGUJA - 4 x 1 CAB. FIJ. COMB. (x18000 u. · Granel): $213.853,38
-- i001318 · PARKER AGUJA - 6 x 5/16 CAB. FIJ. COMB. (x25000 u. · Granel): $193.598,04
-- i001319 · PARKER AGUJA - 6 x 3/8 CAB. FIJ. COMB. (x26000 u. · Granel): $236.263,87
-- i001320 · PARKER AGUJA - 6 x 1/2 CAB. FIJ. COMB. (x23000 u. · Granel): $242.888,81
-- i001321 · PARKER AGUJA - 6 x 5/8 CAB. FIJ. COMB. (x19000 u. · Granel): $228.157,78
-- i001322 · PARKER AGUJA - 6 x 3/4 CAB. FIJ. COMB. (x16000 u. · Granel): $209.906,10
-- i001323 · PARKER AGUJA - 6 x 7/8 CAB. FIJ. COMB. (x14000 u. · Granel): $207.086,46
-- i001324 · PARKER AGUJA - 6 x 1 CAB. FIJ. COMB. (x12000 u. · Granel): $183.413,28
-- i001325 · PARKER AGUJA - 6 x 1-1/4 CAB. FIJ. COMB. (x8000 u. · Granel): $144.731,13
-- i001326 · PARKER AGUJA - 6 x 1-1/2 CAB. FIJ. COMB. (x6800 u. · Granel): $140.038,52
-- i001327 · PARKER AGUJA - 6 x 2 CAB. FIJ. COMB. (x4000 u. · Granel): $104.868,70
-- i001328 · PARKER AGUJA - 6 x 2-1/2 CAB. FIJ. COMB. (x3000 u. · Granel): $94.504,16
-- i001329 · PARKER AGUJA - 7 x 3/8 CAB. FIJ. COMB. (x22000 u. · Granel): $234.077,07
-- i001330 · PARKER AGUJA - 7 x 1/2 CAB. FIJ. COMB. (x16000 u. · Granel): $196.013,40
-- i001331 · PARKER AGUJA - 7 x 5/8 CAB. FIJ. COMB. (x14000 u. · Granel): $190.942,84
-- i001332 · PARKER AGUJA - 7 x 3/4 CAB. FIJ. COMB. (x13000 u. · Granel): $197.539,08
-- i001333 · PARKER AGUJA - 7 x 7/8 CAB. FIJ. COMB. (x11000 u. · Granel): $176.234,46
-- i001334 · PARKER AGUJA - 7 x 1 CAB. FIJ. COMB. (x10000 u. · Granel): $173.259,19
-- i001335 · PARKER AGUJA - 7 x 1-1/4 CAB. FIJ. COMB. (x7000 u. · Granel): $140.279,25
-- i001336 · PARKER AGUJA - 7 x 1-1/2 CAB. FIJ. COMB. (x5500 u. · Granel): $125.956,25
-- i001337 · PARKER AGUJA - 7 x 1-3/4 CAB. FIJ. COMB. (x5000 u. · Granel): $131.448,11
-- i001338 · PARKER AGUJA - 7 x 2 CAB. FIJ. COMB. (x4000 u. · Granel): $116.626,24
-- i001339 · PARKER AGUJA - 7 x 2-1/2 CAB. FIJ. COMB. (x3200 u. · Granel): $111.606,44
-- i001340 · PARKER AGUJA - 7 x 3 CAB. FIJ. COMB. (x2800 u. · Granel): $115.328,42
-- i001341 · PARKER AGUJA - 8 x 3/8 CAB. FIJ. COMB. (x18000 u. · Granel): $219.537,38
-- i001342 · PARKER AGUJA - 8 x 1/2 CAB. FIJ. COMB. (x15000 u. · Granel): $211.733,26
-- i001343 · PARKER AGUJA - 8 x 5/8 CAB. FIJ. COMB. (x13000 u. · Granel): $203.334,89
-- i001344 · PARKER AGUJA - 8 x 3/4 CAB. FIJ. COMB. (x11000 u. · Granel): $188.237,77
-- i001345 · PARKER AGUJA - 8 x 7/8 CAB. FIJ. COMB. (x10000 u. · Granel): $191.168,13
-- i001346 · PARKER AGUJA - 8 x 1 CAB. FIJ. COMB. (x8000 u. · Granel): $163.821,33
-- i001347 · PARKER AGUJA - 8 x 1-1/4 CAB. FIJ. COMB. (x6000 u. · Granel): $144.848,77
-- i001348 · PARKER AGUJA - 8 x 1-1/2 CAB. FIJ. COMB. (x5000 u. · Granel): $137.523,22
-- i001349 · PARKER AGUJA - 8 x 1-3/4 CAB. FIJ. COMB. (x4500 u. · Granel): $141.531,15
-- i001350 · PARKER AGUJA - 8 x 2 CAB. FIJ. COMB. (x4000 u. · Granel): $138.273,60
-- i001351 · PARKER AGUJA - 8 x 2-1/2 CAB. FIJ. COMB. (x2000 u. · Granel): $82.969,74
-- i001352 · PARKER AGUJA - 8 x 3 CAB. FIJ. COMB. (x2000 u. · Granel): $97.601,04
-- i001353 · PARKER AGUJA - 10 x 3/8 CAB. FIJ. COMB. (x13000 u. · Granel): $221.453,09
-- i001354 · PARKER AGUJA - 10 x 1/2 CAB. FIJ. COMB. (x11000 u. · Granel): $221.968,98
-- i001355 · PARKER AGUJA - 10 x 5/8 CAB. FIJ. COMB. (x11000 u. · Granel): $244.551,33
-- i001356 · PARKER AGUJA - 10 x 3/4 CAB. FIJ. COMB. (x8000 u. · Granel): $200.573,23
-- i001357 · PARKER AGUJA - 10 x 7/8 CAB. FIJ. COMB. (x7000 u. · Granel): $193.019,13
-- i001358 · PARKER AGUJA - 10 x 1 CAB. FIJ. COMB. (x7000 u. · Granel): $207.783,31
-- i001359 · PARKER AGUJA - 10 x 1-1/4 CAB. FIJ. COMB. (x5000 u. · Granel): $176.630,62
-- i001360 · PARKER AGUJA - 10 x 1-1/2 CAB. FIJ. COMB. (x4000 u. · Granel): $161.100,14
-- i001361 · PARKER AGUJA - 10 x 1-3/4 CAB. FIJ. COMB. (x3500 u. · Granel): $160.021,08
-- i001362 · PARKER AGUJA - 10 x 2 CAB. FIJ. COMB. (x3000 u. · Granel): $150.687,12
-- i001363 · PARKER AGUJA - 10 x 2-1/2 CAB. FIJ. COMB. (x2000 u. · Granel): $119.672,46
-- i001364 · PARKER AGUJA - 10 x 3 CAB. FIJ. COMB. (x1000 u. · Granel): $69.243,46
-- i001365 · PARKER AGUJA - 12 x 3/4 CAB. FIJ. COMB. (x5500 u. · Granel): $178.088,53
-- i001366 · PARKER AGUJA - 12 x 1 CAB. FIJ. COMB. (x4000 u. · Granel): $153.858,40
-- i001367 · PARKER AGUJA - 12 x 1-1/4 CAB. FIJ. COMB. (x3500 u. · Granel): $158.345,60
-- i001368 · PARKER AGUJA - 12 x 1-1/2 CAB. FIJ. COMB. (x3000 u. · Granel): $154.316,50 [SIN STOCK]
-- i001369 · PARKER AGUJA - 12 x 2 CAB. FIJ. COMB. (x2000 u. · Granel): $128.004,14
-- i001370 · PARKER AGUJA - 12 x 2-1/2 CAB. FIJ. COMB. (x1500 u. · Granel): $114.537,09
-- i001371 · PARKER AGUJA - 12 x 3 CAB. FIJ. COMB. (x1500 u. · Granel): $133.466,12
-- i001372 · PARKER AGUJA - 14 x 1 CAB. FIJ. COMB. (x3000 u. · Granel): $161.324,05
-- i001373 · PARKER AGUJA - 14 x 1-1/4 CAB. FIJ. COMB. (x2500 u. · Granel): $157.480,56
-- i001374 · PARKER AGUJA - 14 x 1-1/2 CAB. FIJ. COMB. (x2000 u. · Granel): $142.597,45
-- i001375 · PARKER AGUJA - 14 x 2 CAB. FIJ. COMB. (x1500 u. · Granel): $132.163,75 [SIN STOCK]
-- i001376 · PARKER AGUJA - 14 x 2-1/2 CAB. FIJ. COMB. (x1000 u. · Granel): $104.706,74
-- i001377 · PARKER AGUJA - 14 x 3 CAB. FIJ. COMB. (x500 u. · Granel): $60.856,57
+- i001310 · PARKER AGUJA - 4 x 1/4 CAB. FIJ. COMB. (x50000 u. · Granel): $322.320,73
+- i001311 · PARKER AGUJA - 4 x 5/16 CAB. FIJ. COMB. (x40000 u. · Granel): $285.027,21
+- i001312 · PARKER AGUJA - 4 x 3/8 CAB. FIJ. COMB. (x45000 u. · Granel): $329.801,88
+- i001313 · PARKER AGUJA - 4 x 1/2 CAB. FIJ. COMB. (x40000 u. · Granel): $329.610,38
+- i001314 · PARKER AGUJA - 4 x 5/8 CAB. FIJ. COMB. (x30000 u. · Granel): $277.194,90
+- i001315 · PARKER AGUJA - 4 x 3/4 CAB. FIJ. COMB. (x25000 u. · Granel): $253.830,09
+- i001316 · PARKER AGUJA - 4 x 7/8 CAB. FIJ. COMB. (x20000 u. · Granel): $219.566,69
+- i001317 · PARKER AGUJA - 4 x 1 CAB. FIJ. COMB. (x18000 u. · Granel): $226.432,99
+- i001318 · PARKER AGUJA - 6 x 5/16 CAB. FIJ. COMB. (x25000 u. · Granel): $204.986,16
+- i001319 · PARKER AGUJA - 6 x 3/8 CAB. FIJ. COMB. (x26000 u. · Granel): $250.161,75
+- i001320 · PARKER AGUJA - 6 x 1/2 CAB. FIJ. COMB. (x23000 u. · Granel): $257.176,39
+- i001321 · PARKER AGUJA - 6 x 5/8 CAB. FIJ. COMB. (x19000 u. · Granel): $241.578,83
+- i001322 · PARKER AGUJA - 6 x 3/4 CAB. FIJ. COMB. (x16000 u. · Granel): $222.253,52
+- i001323 · PARKER AGUJA - 6 x 7/8 CAB. FIJ. COMB. (x14000 u. · Granel): $219.268,02
+- i001324 · PARKER AGUJA - 6 x 1 CAB. FIJ. COMB. (x12000 u. · Granel): $194.202,29
+- i001325 · PARKER AGUJA - 6 x 1-1/4 CAB. FIJ. COMB. (x8000 u. · Granel): $153.244,72
+- i001326 · PARKER AGUJA - 6 x 1-1/2 CAB. FIJ. COMB. (x6800 u. · Granel): $148.276,08
+- i001327 · PARKER AGUJA - 6 x 2 CAB. FIJ. COMB. (x4000 u. · Granel): $111.037,45
+- i001328 · PARKER AGUJA - 6 x 2-1/2 CAB. FIJ. COMB. (x3000 u. · Granel): $100.063,23
+- i001329 · PARKER AGUJA - 7 x 3/8 CAB. FIJ. COMB. (x22000 u. · Granel): $247.846,30
+- i001330 · PARKER AGUJA - 7 x 1/2 CAB. FIJ. COMB. (x16000 u. · Granel): $207.543,60
+- i001331 · PARKER AGUJA - 7 x 5/8 CAB. FIJ. COMB. (x14000 u. · Granel): $202.174,77
+- i001332 · PARKER AGUJA - 7 x 3/4 CAB. FIJ. COMB. (x13000 u. · Granel): $209.159,03
+- i001333 · PARKER AGUJA - 7 x 7/8 CAB. FIJ. COMB. (x11000 u. · Granel): $186.601,19
+- i001334 · PARKER AGUJA - 7 x 1 CAB. FIJ. COMB. (x10000 u. · Granel): $183.450,90
+- i001335 · PARKER AGUJA - 7 x 1-1/4 CAB. FIJ. COMB. (x7000 u. · Granel): $148.530,97
+- i001336 · PARKER AGUJA - 7 x 1-1/2 CAB. FIJ. COMB. (x5500 u. · Granel): $133.365,44
+- i001337 · PARKER AGUJA - 7 x 1-3/4 CAB. FIJ. COMB. (x5000 u. · Granel): $139.180,35
+- i001338 · PARKER AGUJA - 7 x 2 CAB. FIJ. COMB. (x4000 u. · Granel): $123.486,61
+- i001339 · PARKER AGUJA - 7 x 2-1/2 CAB. FIJ. COMB. (x3200 u. · Granel): $118.171,52
+- i001340 · PARKER AGUJA - 7 x 3 CAB. FIJ. COMB. (x2800 u. · Granel): $122.112,45
+- i001341 · PARKER AGUJA - 8 x 3/8 CAB. FIJ. COMB. (x18000 u. · Granel): $232.451,35
+- i001342 · PARKER AGUJA - 8 x 1/2 CAB. FIJ. COMB. (x15000 u. · Granel): $224.188,16
+- i001343 · PARKER AGUJA - 8 x 5/8 CAB. FIJ. COMB. (x13000 u. · Granel): $215.295,77
+- i001344 · PARKER AGUJA - 8 x 3/4 CAB. FIJ. COMB. (x11000 u. · Granel): $199.310,58
+- i001345 · PARKER AGUJA - 8 x 7/8 CAB. FIJ. COMB. (x10000 u. · Granel): $202.413,31
+- i001346 · PARKER AGUJA - 8 x 1 CAB. FIJ. COMB. (x8000 u. · Granel): $173.457,88
+- i001347 · PARKER AGUJA - 8 x 1-1/4 CAB. FIJ. COMB. (x6000 u. · Granel): $153.369,28
+- i001348 · PARKER AGUJA - 8 x 1-1/2 CAB. FIJ. COMB. (x5000 u. · Granel): $145.612,83
+- i001349 · PARKER AGUJA - 8 x 1-3/4 CAB. FIJ. COMB. (x4500 u. · Granel): $149.856,52
+- i001350 · PARKER AGUJA - 8 x 2 CAB. FIJ. COMB. (x4000 u. · Granel): $146.407,34
+- i001351 · PARKER AGUJA - 8 x 2-1/2 CAB. FIJ. COMB. (x2000 u. · Granel): $87.850,31
+- i001352 · PARKER AGUJA - 8 x 3 CAB. FIJ. COMB. (x2000 u. · Granel): $103.342,28
+- i001353 · PARKER AGUJA - 10 x 3/8 CAB. FIJ. COMB. (x13000 u. · Granel): $234.479,75
+- i001354 · PARKER AGUJA - 10 x 1/2 CAB. FIJ. COMB. (x11000 u. · Granel): $235.025,97
+- i001355 · PARKER AGUJA - 10 x 5/8 CAB. FIJ. COMB. (x11000 u. · Granel): $258.936,70
+- i001356 · PARKER AGUJA - 10 x 3/4 CAB. FIJ. COMB. (x8000 u. · Granel): $212.371,65
+- i001357 · PARKER AGUJA - 10 x 7/8 CAB. FIJ. COMB. (x7000 u. · Granel): $204.373,20
+- i001358 · PARKER AGUJA - 10 x 1 CAB. FIJ. COMB. (x7000 u. · Granel): $220.005,86
+- i001359 · PARKER AGUJA - 10 x 1-1/4 CAB. FIJ. COMB. (x5000 u. · Granel): $187.020,66
+- i001360 · PARKER AGUJA - 10 x 1-1/2 CAB. FIJ. COMB. (x4000 u. · Granel): $170.576,62
+- i001361 · PARKER AGUJA - 10 x 1-3/4 CAB. FIJ. COMB. (x3500 u. · Granel): $169.434,09
+- i001362 · PARKER AGUJA - 10 x 2 CAB. FIJ. COMB. (x3000 u. · Granel): $159.551,07
+- i001363 · PARKER AGUJA - 10 x 2-1/2 CAB. FIJ. COMB. (x2000 u. · Granel): $126.712,02
+- i001364 · PARKER AGUJA - 10 x 3 CAB. FIJ. COMB. (x1000 u. · Granel): $73.316,60
+- i001365 · PARKER AGUJA - 12 x 3/4 CAB. FIJ. COMB. (x5500 u. · Granel): $188.564,33
+- i001366 · PARKER AGUJA - 12 x 1 CAB. FIJ. COMB. (x4000 u. · Granel): $162.908,89
+- i001367 · PARKER AGUJA - 12 x 1-1/4 CAB. FIJ. COMB. (x3500 u. · Granel): $167.660,05
+- i001368 · PARKER AGUJA - 12 x 1-1/2 CAB. FIJ. COMB. (x3000 u. · Granel): $163.393,94
+- i001369 · PARKER AGUJA - 12 x 2 CAB. FIJ. COMB. (x2000 u. · Granel): $135.533,80
+- i001370 · PARKER AGUJA - 12 x 2-1/2 CAB. FIJ. COMB. (x1500 u. · Granel): $121.274,56
+- i001371 · PARKER AGUJA - 12 x 3 CAB. FIJ. COMB. (x1500 u. · Granel): $141.317,07
+- i001372 · PARKER AGUJA - 14 x 1 CAB. FIJ. COMB. (x3000 u. · Granel): $170.813,70
+- i001373 · PARKER AGUJA - 14 x 1-1/4 CAB. FIJ. COMB. (x2500 u. · Granel): $166.744,12
+- i001374 · PARKER AGUJA - 14 x 1-1/2 CAB. FIJ. COMB. (x2000 u. · Granel): $150.985,53
+- i001375 · PARKER AGUJA - 14 x 2 CAB. FIJ. COMB. (x1500 u. · Granel): $139.938,09
+- i001376 · PARKER AGUJA - 14 x 2-1/2 CAB. FIJ. COMB. (x1000 u. · Granel): $110.865,96
+- i001377 · PARKER AGUJA - 14 x 3 CAB. FIJ. COMB. (x500 u. · Granel): $64.436,36
 
 ### Parker mecha (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-parker-mecha
-- i001378 · PARKER MECHA - 6 x 3/8 CAB. FIJ. PHILLIPS (x26000 u. · Granel): $210.201,84
-- i001379 · PARKER MECHA - 6 x 1/2 CAB. FIJ. PHILLIPS (x23000 u. · Granel): $218.617,52
-- i001380 · PARKER MECHA - 6 x 5/8 CAB. FIJ. PHILLIPS (x19000 u. · Granel): $203.165,90
-- i001381 · PARKER MECHA - 6 x 3/4 CAB. FIJ. PHILLIPS (x16000 u. · Granel): $188.859,13
-- i001382 · PARKER MECHA - 6 x 1 CAB. FIJ. PHILLIPS (x12000 u. · Granel): $164.264,49
-- i001383 · PARKER MECHA - 8 x 3/4 CAB. FIJ. PHILLIPS (x11000 u. · Granel): $220.877,85
-- i001384 · PARKER MECHA - 8 x 1 CAB. FIJ. PHILLIPS (x8000 u. · Granel): $196.886,76
-- i001385 · PARKER MECHA - 8 x 1-1/4 CAB. FIJ. PHILLIPS (x6000 u. · Granel): $173.623,98
-- i001386 · PARKER MECHA - 8 x 1-1/2 CAB. FIJ. PHILLIPS (x5000 u. · Granel): $170.512,76
-- i001387 · PARKER MECHA - 10 x 1-1/2 CAB. FIJ. PHILLIPS (x4000 u. · Granel): $193.188,52
-- i001388 · PARKER MECHA - 10 x 2 CAB. FIJ. PHILLIPS (x3000 u. · Granel): $182.657,06
+- i001378 · PARKER MECHA - 6 x 3/8 CAB. FIJ. PHILLIPS (x26000 u. · Granel): $222.566,65
+- i001379 · PARKER MECHA - 6 x 1/2 CAB. FIJ. PHILLIPS (x23000 u. · Granel): $231.477,38
+- i001380 · PARKER MECHA - 6 x 5/8 CAB. FIJ. PHILLIPS (x19000 u. · Granel): $215.116,83
+- i001381 · PARKER MECHA - 6 x 3/4 CAB. FIJ. PHILLIPS (x16000 u. · Granel): $199.968,49
+- i001382 · PARKER MECHA - 6 x 1 CAB. FIJ. PHILLIPS (x12000 u. · Granel): $173.927,11
+- i001383 · PARKER MECHA - 8 x 3/4 CAB. FIJ. PHILLIPS (x11000 u. · Granel): $233.870,66
+- i001384 · PARKER MECHA - 8 x 1 CAB. FIJ. PHILLIPS (x8000 u. · Granel): $208.468,33
+- i001385 · PARKER MECHA - 8 x 1-1/4 CAB. FIJ. PHILLIPS (x6000 u. · Granel): $183.837,16
+- i001386 · PARKER MECHA - 8 x 1-1/2 CAB. FIJ. PHILLIPS (x5000 u. · Granel): $180.542,92
+- i001387 · PARKER MECHA - 10 x 1-1/2 CAB. FIJ. PHILLIPS (x4000 u. · Granel): $204.552,55
+- i001388 · PARKER MECHA - 10 x 2 CAB. FIJ. PHILLIPS (x3000 u. · Granel): $193.401,60
 
 ### Tanque p/tuerca (Tornillos Autoperforantes)
 URL: https://www.casasilviaweb.com.ar/precios-tanque-p-tuerca
-- i001409 · TANQUE p/TUERCA - 1/8 x 5/16 CAB. COMB. ZINC (x35000 u. · Granel): $341.453,35
-- i001410 · TANQUE p/TUERCA - 1/8 x 3/8 CAB. COMB. ZINC (x26000 u. · Granel): $277.208,42
-- i001411 · TANQUE p/TUERCA - 1/8 x 1/2 CAB. COMB. ZINC (x24000 u. · Granel): $266.252,61
-- i001412 · TANQUE p/TUERCA - 1/8 x 5/8 CAB. COMB. ZINC (x22000 u. · Granel): $256.093,18
-- i001413 · TANQUE p/TUERCA - 1/8 x 3/4 CAB. COMB. ZINC (x18000 u. · Granel): $245.326,34
-- i001414 · TANQUE p/TUERCA - 1/8 x 7/8 CAB. COMB. ZINC (x15000 u. · Granel): $217.177,43
-- i001415 · TANQUE p/TUERCA - 1/8 x 1 CAB. COMB. ZINC (x12000 u. · Granel): $184.259,52
-- i001416 · TANQUE p/TUERCA - 1/8 x 1-1/4 CAB. COMB. ZINC (x10000 u. · Granel): $177.754,80
-- i001417 · TANQUE p/TUERCA - 1/8 x 1-1/2 CAB. COMB. ZINC (x8000 u. · Granel): $159.949,94
-- i001418 · TANQUE p/TUERCA - 1/8 x 1-3/4 CAB. COMB. ZINC (x6500 u. · Granel): $151.117,02
-- i001419 · TANQUE p/TUERCA - 1/8 x 2 CAB. COMB. ZINC (x5500 u. · Granel): $139.654,63
-- i001420 · TANQUE p/TUERCA - 5/32 x 3/8 CAB. COMB. ZINC (x15000 u. · Granel): $235.489,56
-- i001421 · TANQUE p/TUERCA - 5/32 x 1/2 CAB. COMB. ZINC (x12000 u. · Granel): $210.802,32
-- i001422 · TANQUE p/TUERCA - 5/32 x 5/8 CAB. COMB. ZINC (x10000 u. · Granel): $196.369,10
-- i001423 · TANQUE p/TUERCA - 5/32 x 3/4 CAB. COMB. ZINC (x8500 u. · Granel): $182.505,68
-- i001424 · TANQUE p/TUERCA - 5/32 x 7/8 CAB. COMB. ZINC (x7000 u. · Granel): $163.985,08
-- i001425 · TANQUE p/TUERCA - 5/32 x 1 CAB. COMB. ZINC (x6000 u. · Granel): $152.290,57
-- i001426 · TANQUE p/TUERCA - 5/32 x 1-1/4 CAB. COMB. ZINC (x5000 u. · Granel): $149.121,47
-- i001427 · TANQUE p/TUERCA - 5/32 x 1-1/2 CAB. COMB. ZINC (x4000 u. · Granel): $132.836,06
-- i001428 · TANQUE p/TUERCA - 5/32 x 1-3/4 CAB. COMB. ZINC (x3000 u. · Granel): $111.721,60
-- i001429 · TANQUE p/TUERCA - 5/32 x 2 CAB. COMB. ZINC (x2500 u. · Granel): $103.180,16
-- i001430 · TANQUE p/TUERCA - 5/32 x 2-1/2 CAB. COMB. ZINC (x2000 u. · Granel): $100.084,67
-- i001431 · TANQUE p/TUERCA - 5/32 x 3 CAB. COMB. ZINC (x1600 u. · Granel): $95.562,05
-- i001432 · TANQUE p/TUERCA - 3/16 x 3/8 CAB. COMB. ZINC (x10000 u. · Granel): $213.812,22
-- i001433 · TANQUE p/TUERCA - 3/16 x 1/2 CAB. COMB. ZINC (x8000 u. · Granel): $192.250,85
-- i001434 · TANQUE p/TUERCA - 3/16 x 5/8 CAB. COMB. ZINC (x7000 u. · Granel): $173.741,23
-- i001435 · TANQUE p/TUERCA - 3/16 x 3/4 CAB. COMB. ZINC (x6000 u. · Granel): $175.502,00
-- i001436 · TANQUE p/TUERCA - 3/16 x 7/8 CAB. COMB. ZINC (x5000 u. · Granel): $157.700,11
-- i001437 · TANQUE p/TUERCA - 3/16 x 1 CAB. COMB. ZINC (x4400 u. · Granel): $149.497,74
-- i001438 · TANQUE p/TUERCA - 3/16 x 1-1/4 CAB. COMB. ZINC (x3500 u. · Granel): $139.025,65
-- i001439 · TANQUE p/TUERCA - 3/16 x 1-1/2 CAB. COMB. ZINC (x3000 u. · Granel): $138.276,67
-- i001440 · TANQUE p/TUERCA - 3/16 x 1-3/4 CAB. COMB. ZINC (x2500 u. · Granel): $127.756,39
-- i001441 · TANQUE p/TUERCA - 3/16 x 2 CAB. COMB. ZINC (x2200 u. · Granel): $121.887,17
-- i001442 · TANQUE p/TUERCA - 3/16 x 2-1/4 CAB. COMB. ZINC (x2000 u. · Granel): $120.284,02
-- i001443 · TANQUE p/TUERCA - 3/16 x 2-1/2 CAB. COMB. ZINC (x1800 u. · Granel): $113.363,74
-- i001444 · TANQUE p/TUERCA - 3/16 x 2-3/4 CAB. COMB. ZINC (x1600 u. · Granel): $111.952,53
-- i001445 · TANQUE p/TUERCA - 3/16 x 3 CAB. COMB. ZINC (x1200 u. · Granel): $92.269,76
-- i001446 · TANQUE p/TUERCA - 1/4 x 3/8 CAB. COMB. ZINC (x5500 u. · Granel): $189.633,44
-- i001447 · TANQUE p/TUERCA - 1/4 x 1/2 CAB. COMB. ZINC (x4500 u. · Granel): $187.561,01
-- i001448 · TANQUE p/TUERCA - 1/4 x 5/8 CAB. COMB. ZINC (x4000 u. · Granel): $186.218,87
-- i001449 · TANQUE p/TUERCA - 1/4 x 3/4 CAB. COMB. ZINC (x3500 u. · Granel): $181.272,97
-- i001450 · TANQUE p/TUERCA - 1/4 x 7/8 CAB. COMB. ZINC (x3300 u. · Granel): $185.062,53
-- i001451 · TANQUE p/TUERCA - 1/4 x 1 CAB. COMB. ZINC (x2800 u. · Granel): $176.135,62
-- i001452 · TANQUE p/TUERCA - 1/4 x 1-1/4 CAB. COMB. ZINC (x2400 u. · Granel): $177.209,73
-- i001453 · TANQUE p/TUERCA - 1/4 x 1-1/2 CAB. COMB. ZINC (x2000 u. · Granel): $169.404,91
-- i001454 · TANQUE p/TUERCA - 1/4 x 1-3/4 CAB. COMB. ZINC (x1800 u. · Granel): $173.388,40
-- i001455 · TANQUE p/TUERCA - 1/4 x 2 CAB. COMB. ZINC (x1600 u. · Granel): $169.387,89
-- i001456 · TANQUE p/TUERCA - 1/4 x 2-1/4 CAB. COMB. ZINC (x1500 u. · Granel): $155.801,12
-- i001457 · TANQUE p/TUERCA - 1/4 x 2-1/2 CAB. COMB. ZINC (x1200 u. · Granel): $151.640,52
-- i001458 · TANQUE p/TUERCA - 1/4 x 2-3/4 CAB. COMB. ZINC (x1100 u. · Granel): $151.457,78
-- i001459 · TANQUE p/TUERCA - 1/4 x 3 CAB. COMB. ZINC (x1000 u. · Granel): $148.043,00
-- i001460 · TANQUE p/TUERCA - 1/4 x 3-1/2 CAB. COMB. ZINC (x800 u. · Granel): $135.049,39
-- i001461 · TANQUE p/TUERCA - 1/4 x 4 CAB. COMB. ZINC (x500 u. · Granel): $96.712,35
-- i001462 · TANQUE p/TUERCA - 5/16 x 3/4 CAB. COMB. ZINC (x2300 u. · Granel): $181.666,16
-- i001463 · TANQUE p/TUERCA - 5/16 x 1 CAB. COMB. ZINC (x1800 u. · Granel): $196.191,60
-- i001464 · TANQUE p/TUERCA - 5/16 x 1-1/2 CAB. COMB. ZINC (x1200 u. · Granel): $159.277,14
-- i001465 · TANQUE p/TUERCA - 5/16 x 2 CAB. COMB. ZINC (x900 u. · Granel): $141.371,26
-- i001466 · TANQUE p/TUERCA - 5/16 x 2-1/2 CAB. COMB. ZINC (x800 u. · Granel): $152.896,88
-- i001467 · TANQUE p/TUERCA - 5/16 x 3 CAB. COMB. ZINC (x650 u. · Granel): $145.740,63
-- i001468 · TANQUE p/TUERCA - 5/16 x 3-1/2 CAB. COMB. ZINC (x550 u. · Granel): $144.283,71
-- i001469 · TANQUE p/TUERCA - 5/16 x 4 CAB. COMB. ZINC (x500 u. · Granel): $148.628,05
+- i001409 · TANQUE p/TUERCA - 1/8 x 5/16 CAB. COMB. ZINC (x35000 u. · Granel): $361.538,84
+- i001410 · TANQUE p/TUERCA - 1/8 x 3/8 CAB. COMB. ZINC (x26000 u. · Granel): $293.514,80
+- i001411 · TANQUE p/TUERCA - 1/8 x 1/2 CAB. COMB. ZINC (x24000 u. · Granel): $281.914,53
+- i001412 · TANQUE p/TUERCA - 1/8 x 5/8 CAB. COMB. ZINC (x22000 u. · Granel): $271.157,48
+- i001413 · TANQUE p/TUERCA - 1/8 x 3/4 CAB. COMB. ZINC (x18000 u. · Granel): $259.757,30
+- i001414 · TANQUE p/TUERCA - 1/8 x 7/8 CAB. COMB. ZINC (x15000 u. · Granel): $229.952,57
+- i001415 · TANQUE p/TUERCA - 1/8 x 1 CAB. COMB. ZINC (x12000 u. · Granel): $195.098,32
+- i001416 · TANQUE p/TUERCA - 1/8 x 1-1/4 CAB. COMB. ZINC (x10000 u. · Granel): $188.210,96
+- i001417 · TANQUE p/TUERCA - 1/8 x 1-1/2 CAB. COMB. ZINC (x8000 u. · Granel): $169.358,76
+- i001418 · TANQUE p/TUERCA - 1/8 x 1-3/4 CAB. COMB. ZINC (x6500 u. · Granel): $160.006,26
+- i001419 · TANQUE p/TUERCA - 1/8 x 2 CAB. COMB. ZINC (x5500 u. · Granel): $147.869,60
+- i001420 · TANQUE p/TUERCA - 5/32 x 3/8 CAB. COMB. ZINC (x15000 u. · Granel): $249.341,88
+- i001421 · TANQUE p/TUERCA - 5/32 x 1/2 CAB. COMB. ZINC (x12000 u. · Granel): $223.202,45
+- i001422 · TANQUE p/TUERCA - 5/32 x 5/8 CAB. COMB. ZINC (x10000 u. · Granel): $207.920,22
+- i001423 · TANQUE p/TUERCA - 5/32 x 3/4 CAB. COMB. ZINC (x8500 u. · Granel): $193.241,31
+- i001424 · TANQUE p/TUERCA - 5/32 x 7/8 CAB. COMB. ZINC (x7000 u. · Granel): $173.631,26
+- i001425 · TANQUE p/TUERCA - 5/32 x 1 CAB. COMB. ZINC (x6000 u. · Granel): $161.248,84
+- i001426 · TANQUE p/TUERCA - 5/32 x 1-1/4 CAB. COMB. ZINC (x5000 u. · Granel): $157.893,32
+- i001427 · TANQUE p/TUERCA - 5/32 x 1-1/2 CAB. COMB. ZINC (x4000 u. · Granel): $140.649,95
+- i001428 · TANQUE p/TUERCA - 5/32 x 1-3/4 CAB. COMB. ZINC (x3000 u. · Granel): $118.293,46
+- i001429 · TANQUE p/TUERCA - 5/32 x 2 CAB. COMB. ZINC (x2500 u. · Granel): $109.249,59
+- i001430 · TANQUE p/TUERCA - 5/32 x 2-1/2 CAB. COMB. ZINC (x2000 u. · Granel): $105.972,01
+- i001431 · TANQUE p/TUERCA - 5/32 x 3 CAB. COMB. ZINC (x1600 u. · Granel): $101.183,35
+- i001432 · TANQUE p/TUERCA - 3/16 x 3/8 CAB. COMB. ZINC (x10000 u. · Granel): $226.389,41
+- i001433 · TANQUE p/TUERCA - 3/16 x 1/2 CAB. COMB. ZINC (x8000 u. · Granel): $203.559,72
+- i001434 · TANQUE p/TUERCA - 3/16 x 5/8 CAB. COMB. ZINC (x7000 u. · Granel): $183.961,30
+- i001435 · TANQUE p/TUERCA - 3/16 x 3/4 CAB. COMB. ZINC (x6000 u. · Granel): $185.825,64
+- i001436 · TANQUE p/TUERCA - 3/16 x 7/8 CAB. COMB. ZINC (x5000 u. · Granel): $166.976,59
+- i001437 · TANQUE p/TUERCA - 3/16 x 1 CAB. COMB. ZINC (x4400 u. · Granel): $158.291,73
+- i001438 · TANQUE p/TUERCA - 3/16 x 1-1/4 CAB. COMB. ZINC (x3500 u. · Granel): $147.203,63
+- i001439 · TANQUE p/TUERCA - 3/16 x 1-1/2 CAB. COMB. ZINC (x3000 u. · Granel): $146.410,59
+- i001440 · TANQUE p/TUERCA - 3/16 x 1-3/4 CAB. COMB. ZINC (x2500 u. · Granel): $135.271,47
+- i001441 · TANQUE p/TUERCA - 3/16 x 2 CAB. COMB. ZINC (x2200 u. · Granel): $129.057,00
+- i001442 · TANQUE p/TUERCA - 3/16 x 2-1/4 CAB. COMB. ZINC (x2000 u. · Granel): $127.359,55
+- i001443 · TANQUE p/TUERCA - 3/16 x 2-1/2 CAB. COMB. ZINC (x1800 u. · Granel): $120.032,19
+- i001444 · TANQUE p/TUERCA - 3/16 x 2-3/4 CAB. COMB. ZINC (x1600 u. · Granel): $118.537,98
+- i001445 · TANQUE p/TUERCA - 3/16 x 3 CAB. COMB. ZINC (x1200 u. · Granel): $97.697,40
+- i001446 · TANQUE p/TUERCA - 1/4 x 3/8 CAB. COMB. ZINC (x5500 u. · Granel): $200.788,35
+- i001447 · TANQUE p/TUERCA - 1/4 x 1/2 CAB. COMB. ZINC (x4500 u. · Granel): $198.594,01
+- i001448 · TANQUE p/TUERCA - 1/4 x 5/8 CAB. COMB. ZINC (x4000 u. · Granel): $197.172,92
+- i001449 · TANQUE p/TUERCA - 1/4 x 3/4 CAB. COMB. ZINC (x3500 u. · Granel): $191.936,08
+- i001450 · TANQUE p/TUERCA - 1/4 x 7/8 CAB. COMB. ZINC (x3300 u. · Granel): $195.948,57
+- i001451 · TANQUE p/TUERCA - 1/4 x 1 CAB. COMB. ZINC (x2800 u. · Granel): $186.496,54
+- i001452 · TANQUE p/TUERCA - 1/4 x 1-1/4 CAB. COMB. ZINC (x2400 u. · Granel): $187.633,83
+- i001453 · TANQUE p/TUERCA - 1/4 x 1-1/2 CAB. COMB. ZINC (x2000 u. · Granel): $179.369,91
+- i001454 · TANQUE p/TUERCA - 1/4 x 1-3/4 CAB. COMB. ZINC (x1800 u. · Granel): $183.587,72
+- i001455 · TANQUE p/TUERCA - 1/4 x 2 CAB. COMB. ZINC (x1600 u. · Granel): $179.351,89
+- i001456 · TANQUE p/TUERCA - 1/4 x 2-1/4 CAB. COMB. ZINC (x1500 u. · Granel): $164.965,89
+- i001457 · TANQUE p/TUERCA - 1/4 x 2-1/2 CAB. COMB. ZINC (x1200 u. · Granel): $160.560,55
+- i001458 · TANQUE p/TUERCA - 1/4 x 2-3/4 CAB. COMB. ZINC (x1100 u. · Granel): $160.367,06
+- i001459 · TANQUE p/TUERCA - 1/4 x 3 CAB. COMB. ZINC (x1000 u. · Granel): $156.751,41
+- i001460 · TANQUE p/TUERCA - 1/4 x 3-1/2 CAB. COMB. ZINC (x800 u. · Granel): $142.993,47
+- i001461 · TANQUE p/TUERCA - 1/4 x 4 CAB. COMB. ZINC (x500 u. · Granel): $102.401,31
+- i001462 · TANQUE p/TUERCA - 5/16 x 3/4 CAB. COMB. ZINC (x2300 u. · Granel): $192.352,41
+- i001463 · TANQUE p/TUERCA - 5/16 x 1 CAB. COMB. ZINC (x1800 u. · Granel): $207.732,28
+- i001464 · TANQUE p/TUERCA - 5/16 x 1-1/2 CAB. COMB. ZINC (x1200 u. · Granel): $168.646,38
+- i001465 · TANQUE p/TUERCA - 5/16 x 2 CAB. COMB. ZINC (x900 u. · Granel): $149.687,22
+- i001466 · TANQUE p/TUERCA - 5/16 x 2-1/2 CAB. COMB. ZINC (x800 u. · Granel): $161.890,82
+- i001467 · TANQUE p/TUERCA - 5/16 x 3 CAB. COMB. ZINC (x650 u. · Granel): $154.313,61
+- i001468 · TANQUE p/TUERCA - 5/16 x 3-1/2 CAB. COMB. ZINC (x550 u. · Granel): $152.770,99
+- i001469 · TANQUE p/TUERCA - 5/16 x 4 CAB. COMB. ZINC (x500 u. · Granel): $157.370,87
 
 ### Arandelas planas (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-arandelas-planas
-- R000001 · ARANDELA PLANA ZINCADA - 1/8 10 - 3,5 (2200u) (x1 u. · Estuche): $12.353,07
-- R000002 · ARANDELA PLANA ZINCADA - 5/32 12 - 4,25 (2800u) (x2 u. · Estuche): $19.505,11
-- R000003 · ARANDELA PLANA ZINCADA - 3/16 14 - 5,2 (2200u) (x2 u. · Estuche): $16.902,03
-- R000004 · ARANDELA PLANA ZINCADA - 1/4 18 - 7,2 (940u) (x2 u. · Estuche): $14.298,96
-- R000005 · ARANDELA PLANA ZINCADA - 5/16 22 - 8,5 (560u) (x2 u. · Estuche): $13.513,42
-- R000006 · ARANDELA PLANA ZINCADA - 3/8 24,5 - 10,2 (320u) (x2 u. · Estuche): $12.994,84
-- R000007 · ARANDELA PLANA ZINCADA - 7/16 28 - 11,7 (240u) (x2 u. · Estuche): $10.841,04
-- R000008 · ARANDELA PLANA ZINCADA - 1/2 32 - 13,7 (190u) (x2 u. · Estuche): $10.841,04
-- R000009 · ARANDELA PLANA ZINCADA - 9/16 36 - 15,1 (120u) (x2 u. · Estuche): $10.841,04
-- R000010 · ARANDELA PLANA ZINCADA - 5/8 40 - 17 (100u) (x2 u. · Estuche): $10.841,04
-- R000011 · ARANDELA PLANA ZINCADA - 3/4 46 - 21 (80u) (x2 u. · Estuche): $10.841,04
-- R000012 · ARANDELA PLANA ZINCADA - 7/8 52 - 23,5 (50u) (x2 u. · Estuche): $10.841,04
-- R000013 · ARANDELA PLANA ZINCADA - 1 58 - 27 (40u) (x2 u. · Estuche): $10.841,04
-- R000014 · ARANDELA PLANA ZINCADA - 1-1/4 70 - 34 (28u) (x2 u. · Estuche): $15.248,80
-- R000015 · ARANDELA PLANA ZINCADA - 1-1/2 85 - 40 (20u) (x2 u. · Estuche): $15.248,80
-- R000016 · ARANDELA PLANA ZINCADA - 1-3/4 100 - 46 (14u) (x2 u. · Estuche): $13.862,54
-- R000017 · ARANDELA PLANA ZINCADA - 2 110 - 52 (12u) (x2 u. · Estuche): $13.862,54
+- R000001 · ARANDELA PLANA ZINCADA - 1/8 10 - 3,5 (2200u) (x1 u. · Estuche): $13.864,60
+- R000002 · ARANDELA PLANA ZINCADA - 5/32 12 - 4,25 (2800u) (x2 u. · Estuche): $21.891,65
+- R000003 · ARANDELA PLANA ZINCADA - 3/16 14 - 5,2 (2200u) (x2 u. · Estuche): $18.970,06
+- R000004 · ARANDELA PLANA ZINCADA - 1/4 18 - 7,2 (940u) (x2 u. · Estuche): $16.048,56
+- R000005 · ARANDELA PLANA ZINCADA - 5/16 22 - 8,5 (560u) (x2 u. · Estuche): $15.166,89
+- R000006 · ARANDELA PLANA ZINCADA - 3/8 24,5 - 10,2 (320u) (x2 u. · Estuche): $14.584,83
+- R000007 · ARANDELA PLANA ZINCADA - 7/16 28 - 11,7 (240u) (x2 u. · Estuche): $11.823,21
+- R000008 · ARANDELA PLANA ZINCADA - 1/2 32 - 13,7 (190u) (x2 u. · Estuche): $11.823,21
+- R000009 · ARANDELA PLANA ZINCADA - 9/16 36 - 15,1 (120u) (x2 u. · Estuche): $11.823,21
+- R000010 · ARANDELA PLANA ZINCADA - 5/8 40 - 17 (100u) (x2 u. · Estuche): $11.823,21
+- R000011 · ARANDELA PLANA ZINCADA - 3/4 46 - 21 (80u) (x2 u. · Estuche): $11.823,21
+- R000012 · ARANDELA PLANA ZINCADA - 7/8 52 - 23,5 (50u) (x2 u. · Estuche): $11.823,21
+- R000013 · ARANDELA PLANA ZINCADA - 1 58 - 27 (40u) (x2 u. · Estuche): $11.823,21
+- R000014 · ARANDELA PLANA ZINCADA - 1-1/4 70 - 34 (28u) (x2 u. · Estuche): $17.114,62
+- R000015 · ARANDELA PLANA ZINCADA - 1-1/2 85 - 40 (20u) (x2 u. · Estuche): $17.114,62
+- R000016 · ARANDELA PLANA ZINCADA - 1-3/4 100 - 46 (14u) (x2 u. · Estuche): $15.558,70
+- R000017 · ARANDELA PLANA ZINCADA - 2 110 - 52 (12u) (x2 u. · Estuche): $15.558,70
 
 ### Arandelas chapista (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-arandelas-chapista
-- R000018 · ARANDELA CHAPISTA ZINCADA - 1/8 16 - 3,5 (x1 u. · Estuche): $9.755,12
-- R000019 · ARANDELA CHAPISTA ZINCADA - 5/32 18 - 4,25 (x2 u. · Estuche): $16.902,03
-- R000020 · ARANDELA CHAPISTA ZINCADA - 3/16 20 - 5,2 (700u) (x2 u. · Estuche): $16.135,02
-- R000021 · ARANDELA CHAPISTA ZINCADA - 1/4 36 - 7,2 (260u) (x2 u. · Estuche): $11.472,59
-- R000022 · ARANDELA CHAPISTA ZINCADA - 5/16 39 - 8,5 (140u) (x2 u. · Estuche): $11.472,59
-- R000023 · ARANDELA CHAPISTA ZINCADA - 3/8 39 - 10 (120u) (x2 u. · Estuche): $11.472,59
-- R000024 · ARANDELA CHAPISTA ZINCADA - 7/16 50 - 12 (90u) (x2 u. · Estuche): $11.472,59
-- R000025 · ARANDELA CHAPISTA ZINCADA - 1/2 45 - 13,5 (80u) (x2 u. · Estuche): $11.472,59
-- R000026 · ARANDELA CHAPISTA ZINCADA - 9/16 55 - 16 (36u) (x2 u. · Estuche): $11.472,59
-- R000027 · ARANDELA CHAPISTA ZINCADA - 5/8 60 - 17 (34u) (x2 u. · Estuche): $11.472,59
-- R000028 · ARANDELA CHAPISTA ZINCADA - 3/4 60 - 20,5 (32u) (x2 u. · Estuche): $11.472,59
-- R000029 · ARANDELA CHAPISTA ZINCADA - 7/8 (x2 u. · Estuche): $10.525,26
-- R000030 · ARANDELA CHAPISTA ZINCADA - 1 (x2 u. · Estuche): $10.525,26
+- R000018 · ARANDELA CHAPISTA ZINCADA - 1/8 16 - 3,5 (x1 u. · Estuche): $10.948,76
+- R000019 · ARANDELA CHAPISTA ZINCADA - 5/32 18 - 4,25 (x2 u. · Estuche): $18.970,06
+- R000020 · ARANDELA CHAPISTA ZINCADA - 3/16 20 - 5,2 (700u) (x2 u. · Estuche): $17.084,14
+- R000021 · ARANDELA CHAPISTA ZINCADA - 1/4 36 - 7,2 (260u) (x2 u. · Estuche): $12.147,44
+- R000022 · ARANDELA CHAPISTA ZINCADA - 5/16 39 - 8,5 (140u) (x2 u. · Estuche): $12.147,44
+- R000023 · ARANDELA CHAPISTA ZINCADA - 3/8 39 - 10 (120u) (x2 u. · Estuche): $12.147,44
+- R000024 · ARANDELA CHAPISTA ZINCADA - 7/16 50 - 12 (90u) (x2 u. · Estuche): $12.147,44
+- R000025 · ARANDELA CHAPISTA ZINCADA - 1/2 45 - 13,5 (80u) (x2 u. · Estuche): $12.147,44
+- R000026 · ARANDELA CHAPISTA ZINCADA - 9/16 55 - 16 (36u) (x2 u. · Estuche): $12.147,44
+- R000027 · ARANDELA CHAPISTA ZINCADA - 5/8 60 - 17 (34u) (x2 u. · Estuche): $12.147,44
+- R000028 · ARANDELA CHAPISTA ZINCADA - 3/4 60 - 20,5 (32u) (x2 u. · Estuche): $12.147,44
+- R000029 · ARANDELA CHAPISTA ZINCADA - 7/8 (x2 u. · Estuche): $11.813,15
+- R000030 · ARANDELA CHAPISTA ZINCADA - 1 (x2 u. · Estuche): $11.813,15
 
 ### Tarugos comunes sin tope (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tarugos-comunes-sin-tope
-- N001155 · TACO COMUN S/TOPE N°5 (x1000 u. · Sobre): $6.816,29
-- N001156 · TACO COMUN S/TOPE N°6 (x1000 u. · Sobre): $9.126,38
-- N001157 · TACO COMUN S/TOPE N°8 (x1000 u. · Sobre): $19.438,88
-- N001158 · TACO COMUN S/TOPE N°10 (x500 u. · Sobre): $18.630,03
-- N001159 · TACO COMUN S/TOPE N°12 (x250 u. · Sobre): $19.460,35
+- N001155 · TACO COMUN S/TOPE N°5 (x1000 u. · Sobre): $7.217,25
+- N001156 · TACO COMUN S/TOPE N°6 (x1000 u. · Sobre): $9.663,23
+- N001157 · TACO COMUN S/TOPE N°8 (x1000 u. · Sobre): $20.582,34
+- N001158 · TACO COMUN S/TOPE N°10 (x500 u. · Sobre): $19.725,91
+- N001159 · TACO COMUN S/TOPE N°12 (x250 u. · Sobre): $20.605,07
 
 ### Tarugos comunes con tope (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tarugos-comunes-con-tope
-- N001160 · TACO COMUN C/TOPE N°5 (x1000 u. · Sobre): $7.366,90
-- N001161 · TACO COMUN C/TOPE N°6 (x1000 u. · Sobre): $9.869,34
-- N001162 · TACO COMUN C/TOPE N°8 (x1000 u. · Sobre): $20.768,16
-- N001163 · TACO COMUN C/TOPE N°10 (x500 u. · Sobre): $19.934,97
-- N001164 · TACO COMUN C/TOPE N°12 (x250 u. · Sobre): $21.758,27
+- N001160 · TACO COMUN C/TOPE N°5 (x1000 u. · Sobre): $7.800,25
+- N001161 · TACO COMUN C/TOPE N°6 (x1000 u. · Sobre): $10.449,88
+- N001162 · TACO COMUN C/TOPE N°8 (x1000 u. · Sobre): $21.989,82
+- N001163 · TACO COMUN C/TOPE N°10 (x500 u. · Sobre): $21.107,62
+- N001164 · TACO COMUN C/TOPE N°12 (x250 u. · Sobre): $23.038,17
 
 ### Tarugos universales sin tope (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tarugos-universales-sin-tope
-- N001165 · TACO UNIVERSAL S/TOPE N°6 (x1000 u. · Sobre): $15.506,34
-- N001166 · TACO UNIVERSAL S/TOPE N°8 (x500 u. · Sobre): $14.094,64
-- N001167 · TACO UNIVERSAL S/TOPE N°10 (x250 u. · Sobre): $13.438,26
+- N001165 · TACO UNIVERSAL S/TOPE N°6 (x1000 u. · Sobre): $16.418,48
+- N001166 · TACO UNIVERSAL S/TOPE N°8 (x500 u. · Sobre): $14.923,74
+- N001167 · TACO UNIVERSAL S/TOPE N°10 (x250 u. · Sobre): $14.228,75
 
 ### Tarugos universales con tope (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tarugos-universales-con-tope
-- N001168 · TACO UNIVERSAL C/TOPE N°6 (x1000 u. · Sobre): $16.762,80
-- N001169 · TACO UNIVERSAL C/TOPE N°8 (x500 u. · Sobre): $16.100,88
-- N001170 · TACO UNIVERSAL C/TOPE N°10 (x250 u. · Sobre): $15.085,25
+- N001168 · TACO UNIVERSAL C/TOPE N°6 (x1000 u. · Sobre): $17.748,85
+- N001169 · TACO UNIVERSAL C/TOPE N°8 (x500 u. · Sobre): $17.047,99
+- N001170 · TACO UNIVERSAL C/TOPE N°10 (x250 u. · Sobre): $15.972,61
 
 ### Tarugos FX (hueco) (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tarugos-fx-hueco
-- N001171 · TACO FX N°6 (x1000 u. · Sobre): $19.055,78
-- N001172 · TACO FX N°8 (x500 u. · Sobre): $16.639,32
-- N001173 · TACO FX N°10 (x250 u. · Sobre): $15.696,70
+- N001171 · TACO FX N°6 (x1000 u. · Sobre): $20.176,70
+- N001172 · TACO FX N°8 (x500 u. · Sobre): $17.618,11
+- N001173 · TACO FX N°10 (x250 u. · Sobre): $16.620,04
 
 ### Tarugos yeso/durlock (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tarugos-yeso-durlock
-- N001174 · TACO YESO N°6 (x1000 u. · Sobre): $90.036,55
-- N001175 · TACO YESO N°8 (x500 u. · Sobre): $60.908,31
+- N001174 · TACO YESO N°6 (x1000 u. · Sobre): $95.332,82
+- N001175 · TACO YESO N°8 (x500 u. · Sobre): $64.491,15
 
 ### Tarugos mariposa (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-tarugos-mariposa
-- N001176 · TACO MARIPOSA N°10 (x500 u. · Sobre): $34.883,08
+- N001176 · TACO MARIPOSA N°10 (x500 u. · Sobre): $36.935,03
 
 ### Clavos punta París (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-punta-paris
-- CLA01 · PUNTA PARIS 1" (25,4 mm) x kg: $4.981,85
-- CLA02 · PUNTA PARIS 1 1/2" (38.1mm) x kg: $4.835,32
-- CLA03 · PUNTA PARIS 2" (50.8mm) x kg: $4.444,59
-- CLA04 · PUNTA PARIS 2 1/2" (63,5mm) x kg: $4.298,07
-- CLA05 · PUNTA PARIS 3" (76,2mm) x kg: $4.298,07
-- CLA06 · PUNTA PARIS 3 1/2" (88,9mm) x kg: $4.298,07
-- CLA07 · PUNTA PARIS 4" (101,6mm) x kg: $4.298,07
-- CLA08 · PUNTA PARIS 5" (127,0mm) x kg: $4.298,07
-- CLA09 · PUNTA PARIS 6" (152,4mm) x kg: $4.298,07
-- CLA10 · PUNTA PARIS 7" (177,8mm) x kg: $4.298,07
-- CLA11 · PUNTA PARIS 8" (203,2mm) x kg: $4.298,07
+- CLA01 · PUNTA PARIS 1" (25,4 mm) x kg: $5.487,25
+- CLA02 · PUNTA PARIS 1 1/2" (38.1mm) x kg: $5.325,86
+- CLA03 · PUNTA PARIS 2" (50.8mm) x kg: $4.895,49
+- CLA04 · PUNTA PARIS 2 1/2" (63,5mm) x kg: $4.734,10
+- CLA05 · PUNTA PARIS 3" (76,2mm) x kg: $4.734,10
+- CLA06 · PUNTA PARIS 3 1/2" (88,9mm) x kg: $4.734,10
+- CLA07 · PUNTA PARIS 4" (101,6mm) x kg: $4.734,10
+- CLA08 · PUNTA PARIS 5" (127,0mm) x kg: $4.734,10
+- CLA09 · PUNTA PARIS 6" (152,4mm) x kg: $4.734,10
+- CLA10 · PUNTA PARIS 7" (177,8mm) x kg: $4.734,10
+- CLA11 · PUNTA PARIS 8" (203,2mm) x kg: $4.734,10
 
 ### Clavos espiralados (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-espiralados
-- CLA12 · ESPIRALADOS 1" (en sobres de 1kG): $7.179,72
-- CLA13 · ESPIRALADOS 1 1/2" (en sobres de 1kg): $6.642,46
-- CLA14 · ESPIRALADOS 2 " (en sobres de 1kg): $6.544,78
-- CLA15 · ESPIRALADOS 2 1/2" (en sobres de 1kg): $5.958,68
-- CLA16 · ESPIRALADOS 3" (en sobres de 1kg): $5.763,31
-- CLA17 · ESPIRALADOS 3 1/2" (en sobres de 1kg): $5.763,31
-- CLA18 · ESPIRALADOS 4" (en sobres de 1kg): $5.763,31
-- CLA19 · ESPIRALADOS 5" (en sobres de 1kg): $5.763,31
-- CLA20 · ESPIRALADOS 6" (en sobres de 1kg): $5.763,31
-- CLA21 · ESPIRALADOS 7" (en sobres de 1kg): $5.763,31
+- CLA12 · ESPIRALADOS 1" (en sobres de 1kG): $7.908,10
+- CLA13 · ESPIRALADOS 1 1/2" (en sobres de 1kg): $7.316,34
+- CLA14 · ESPIRALADOS 2 " (en sobres de 1kg): $7.208,74
+- CLA15 · ESPIRALADOS 2 1/2" (en sobres de 1kg): $6.563,19
+- CLA16 · ESPIRALADOS 3" (en sobres de 1kg): $6.348,00
+- CLA17 · ESPIRALADOS 3 1/2" (en sobres de 1kg): $6.348,00
+- CLA18 · ESPIRALADOS 4" (en sobres de 1kg): $6.348,00
+- CLA19 · ESPIRALADOS 5" (en sobres de 1kg): $6.348,00
+- CLA20 · ESPIRALADOS 6" (en sobres de 1kg): $6.348,00
+- CLA21 · ESPIRALADOS 7" (en sobres de 1kg): $6.348,00
 
 ### Clavos cabeza de plomo (nacionales) (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-cabeza-de-plomo-nacionales
-- PLO01 · CABEZA DE PLOMO 2 1/2" L. x100 unidades: $4.960,61
-- PLO02 · CABEZA DE PLOMO 2 1/2" REF. x100 unidades: $5.374,00
-- PLO03 · CABEZA DE PLOMO 3" L. x100 unidades: $5.167,31
-- PLO04 · CABEZA DE PLOMO 3" REF. x100 unidades: $5.735,71
-- PLO05 · CABEZA DE PLOMO 4" REF. x100 unidades: $7.285,90
+- PLO01 · CABEZA DE PLOMO 2 1/2" L. x100 unidades: $5.232,43
+- PLO02 · CABEZA DE PLOMO 2 1/2" REF. x100 unidades: $5.668,46
+- PLO03 · CABEZA DE PLOMO 3" L. x100 unidades: $5.450,45
+- PLO04 · CABEZA DE PLOMO 3" REF. x100 unidades: $6.049,99
+- PLO05 · CABEZA DE PLOMO 4" REF. x100 unidades: $7.685,13
 
 ### Clavos cabeza de plomo (importados) (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-cabeza-de-plomo-importados
-- R000031 · CLAVO CABEZA DE PLOMO - 2-1/2 Vastago liviano 3,4mm (x100 u. · Sobre): $6.091,54
-- R000032 · CLAVO CABEZA DE PLOMO - 3 Vastago liviano 3,4mm (x100 u. · Sobre): $6.345,23
-- R000033 · CLAVO CABEZA DE PLOMO - 4 Vastago reforzado 3,8mm (x100 u. · Sobre): $8.946,70
+- R000031 · CLAVO CABEZA DE PLOMO - 2-1/2 Vastago liviano 3,4mm (x100 u. · Sobre): $6.804,70
+- R000032 · CLAVO CABEZA DE PLOMO - 3 Vastago liviano 3,4mm (x100 u. · Sobre): $7.088,08
+- R000033 · CLAVO CABEZA DE PLOMO - 4 Vastago reforzado 3,8mm (x100 u. · Sobre): $9.994,07
 
 ### Clavos cajonero espiralado (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-cajonero-espiralado
-- CAJ01 · CAJONERO ESPIRALADO 2,20X40MM: $6.056,36
-- CAJ02 · CAJONERO ESPIRALADO 2,51X50MM: $5.763,31
-- CAJ03 · CAJONERO ESPIRALADO 2,87X63MM: $5.763,31
-- CAJ04 · CAJONERO ESPIRALADO 3,33 x 75MM: $5.665,63
+- CAJ01 · CAJONERO ESPIRALADO 2,20X40MM: $6.670,78
+- CAJ02 · CAJONERO ESPIRALADO 2,51X50MM: $6.348,00
+- CAJ03 · CAJONERO ESPIRALADO 2,87X63MM: $6.348,00
+- CAJ04 · CAJONERO ESPIRALADO 3,33 x 75MM: $6.240,41
 
 ### Alambre galvanizado (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-alambre-galvanizado
@@ -729,9 +729,9 @@ URL: https://www.casasilviaweb.com.ar/precios-alambre-galvanizado
 
 ### Alambre negro recocido (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-alambre-negro-recocido
-- ALA05 · ALAMBRE NEGRO REC N 14 x kg: $4.034,75
-- ALA06 · ALAMBRE NEGRO REC N 16 x kg: $3.389,19
-- ALA07 · ALAMBRE NEGRO REC N 17 xkg: $4.841,69
+- ALA05 · ALAMBRE NEGRO REC N 14 x kg: $4.459,46
+- ALA06 · ALAMBRE NEGRO REC N 16 x kg: $3.745,94
+- ALA07 · ALAMBRE NEGRO REC N 17 xkg: $5.351,35
 
 ### Alambre para soldar (MIG) (Soldadura)
 URL: https://www.casasilviaweb.com.ar/precios-alambre-para-soldar-mig
@@ -740,61 +740,61 @@ URL: https://www.casasilviaweb.com.ar/precios-alambre-para-soldar-mig
 
 ### Clavos cabeza chata/perdida (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-cabeza-chata-perdida
-- CAB01 · CABEZA PERDIDA 8 x 16 x kg: $7.912,35
-- CAB02 · CABEZA CHATA 8 x 16 x kg: $7.912,35
-- CAB03 · CABEZA PERDIDA 8 x 20 x kg: $7.912,35
-- CAB04 · CABEZA CHATA 8 x 20 x kg: $7.912,35
-- CAB05 · CABEZA PERDIDA 8 X 25 x kg: $7.912,35
-- CAB06 · CABEZA CHATA 8 X 25 x kg: $7.912,35
-- CAB07 · CABEZA PERDIDA 9 X 20 x kg: $7.619,30
-- CAB08 · CABEZA CHATA 9 X 20 x kg: $7.619,30
-- CAB09 · CABEZA PERDIDA 9 X 25 x kg: $7.619,30
-- CAB10 · CABEZA CHATA 9 X 25 x kg: $7.619,30
-- CAB11 · CABEZA PERDIDA 9 X 30 x kg: $7.619,30
-- CAB12 · CABEZA CHATA 9 X 30 x kg: $7.619,30
-- CAB13 · CABEZA PERDIDA 10 X 25 x kg: $7.326,25
-- CAB14 · CABEZA CHATA 10 X 25 x kg: $7.326,25
-- CAB15 · CABEZA PERDIDA 10 X 30 x kg: $7.326,25
-- CAB16 · CABEZA CHATA 10 x 30 x kg: $7.326,25
-- CAB17 · CABEZA PERDIDA 12 x 30 x kg: $7.033,20
-- CAB18 · CABEZA CHATA 12 x 30 x kg: $7.033,20
-- CAB19 · CABEZA CHATA 12 X 35 x kg: $7.033,20
-- CAB20 · CABEZA PERDIDA 12 X 35 x kg: $7.033,20
-- CAB21 · CABEZA PERDIDA 12 x 40 x kg: $7.033,20
-- CAB22 · CABEZA CHATA 12 x 40 x kg: $7.033,20
-- CAB23 · CABEZA PERDIDA 12 x 50 x kg: $7.033,20
-- CAB24 · CABEZA CHATA 12 x 50 x kg: $7.033,20
-- CAB25 · CABEZA PERDIDA 13 x 45 x kg: $7.033,20
-- CAB26 · CABEZA CHATA 13 x 45 x kg: $7.033,20
-- CAB27 · CABEZA PERDIDA 14 x 40 x kg: $6.544,78
-- CAB28 · CABEZA CHATA 14 x 40 x kg: $6.544,78
-- CAB29 · CABEZA PERDIDA 14 x 50 x kg: $6.544,78
-- CAB30 · CABEZA CHATA 14 x 50 x kg: $6.251,73
-- CAB31 · CABEZA PERDIDA 16 x 63 x kg: $6.251,73
-- CAB32 · CABEZA CHATA 16 x 63 x kg: $5.372,58
-- CAB33 · CABEZA CHATA 17 x 77 x kg: $5.372,58
-- CAB34 · CABEZA PERDIDA 18 x 90 x kg: $5.372,58
-- CAB35 · CABEZA CHATA 18 x 90 x kg: $5.372,58
-- CAB36 · CABEZA PERDIDA 18 x 100 x kg: $5.372,58
-- CAB37 · CABEZA CHATA 18 x 100 x kg: $5.372,58
-- CAB38 · CABEZA PERDIDA 18 x 164 x kg: $5.372,58
-- CAB39 · CABEZA CHATA 18 x 164 x kg: $5.372,58
+- CAB01 · CABEZA PERDIDA 8 x 16 x kg: $8.715,05
+- CAB02 · CABEZA CHATA 8 x 16 x kg: $8.715,05
+- CAB03 · CABEZA PERDIDA 8 x 20 x kg: $8.715,05
+- CAB04 · CABEZA CHATA 8 x 20 x kg: $8.715,05
+- CAB05 · CABEZA PERDIDA 8 X 25 x kg: $8.715,05
+- CAB06 · CABEZA CHATA 8 X 25 x kg: $8.715,05
+- CAB07 · CABEZA PERDIDA 9 X 20 x kg: $8.392,27
+- CAB08 · CABEZA CHATA 9 X 20 x kg: $8.392,27
+- CAB09 · CABEZA PERDIDA 9 X 25 x kg: $8.392,27
+- CAB10 · CABEZA CHATA 9 X 25 x kg: $8.392,27
+- CAB11 · CABEZA PERDIDA 9 X 30 x kg: $8.392,27
+- CAB12 · CABEZA CHATA 9 X 30 x kg: $8.392,27
+- CAB13 · CABEZA PERDIDA 10 X 25 x kg: $8.069,49
+- CAB14 · CABEZA CHATA 10 X 25 x kg: $8.069,49
+- CAB15 · CABEZA PERDIDA 10 X 30 x kg: $8.069,49
+- CAB16 · CABEZA CHATA 10 x 30 x kg: $8.069,49
+- CAB17 · CABEZA PERDIDA 12 x 30 x kg: $7.746,71
+- CAB18 · CABEZA CHATA 12 x 30 x kg: $7.746,71
+- CAB19 · CABEZA CHATA 12 X 35 x kg: $7.746,71
+- CAB20 · CABEZA PERDIDA 12 X 35 x kg: $7.746,71
+- CAB21 · CABEZA PERDIDA 12 x 40 x kg: $7.746,71
+- CAB22 · CABEZA CHATA 12 x 40 x kg: $7.746,71
+- CAB23 · CABEZA PERDIDA 12 x 50 x kg: $7.746,71
+- CAB24 · CABEZA CHATA 12 x 50 x kg: $7.746,71
+- CAB25 · CABEZA PERDIDA 13 x 45 x kg: $7.746,71
+- CAB26 · CABEZA CHATA 13 x 45 x kg: $7.746,71
+- CAB27 · CABEZA PERDIDA 14 x 40 x kg: $7.208,74
+- CAB28 · CABEZA CHATA 14 x 40 x kg: $7.208,74
+- CAB29 · CABEZA PERDIDA 14 x 50 x kg: $7.208,74
+- CAB30 · CABEZA CHATA 14 x 50 x kg: $6.885,96
+- CAB31 · CABEZA PERDIDA 16 x 63 x kg: $6.885,96
+- CAB32 · CABEZA CHATA 16 x 63 x kg: $5.917,63
+- CAB33 · CABEZA CHATA 17 x 77 x kg: $5.917,63
+- CAB34 · CABEZA PERDIDA 18 x 90 x kg: $5.917,63
+- CAB35 · CABEZA CHATA 18 x 90 x kg: $5.917,63
+- CAB36 · CABEZA PERDIDA 18 x 100 x kg: $5.917,63
+- CAB37 · CABEZA CHATA 18 x 100 x kg: $5.917,63
+- CAB38 · CABEZA PERDIDA 18 x 164 x kg: $5.917,63
+- CAB39 · CABEZA CHATA 18 x 164 x kg: $5.917,63
 
 ### Concertina (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-concertina
-- CON01 · CONCERTINA 30cm SIMPLE 9-10mts: $35.947,45
-- CON02 · CONCERTINA 30cm CRUZADA 7 mts: $50.795,32
-- CON03 · CONCERTINA 45cm CRUZADA 9-10 mts: $44.934,32
-- CON03 · CONCERTINA 45cm SIMPLE 7-8 mts: $66.424,64
+- CON01 · CONCERTINA 30cm SIMPLE 9-10mts: $38.031,36
+- CON02 · CONCERTINA 30cm CRUZADA 7 mts: $53.739,97
+- CON03 · CONCERTINA 45cm CRUZADA 9-10 mts: $47.539,21
+- CON03 · CONCERTINA 45cm SIMPLE 7-8 mts: $70.275,35
 
 ### Alambre de púas (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-alambre-de-puas
-- PUAS01 · ALAMBRE DE PÚAS 2mm x25mt: $7.517,37
-- PUAS02 · ALAMBRE DE PÚAS 2mm x50mt: $14.199,47
-- PUAS03 · ALAMBRE DE PÚAS 2mm x100mt: $27.981,31
-- PUAS04 · ALAMBRE DE PÚAS 2mm x200mt: $55.127,36
-- PUAS05 · ALAMBRE DE PÚAS 2mm x400mt: $108.584,19
-- PUAS06 · ALAMBRE DE PÚAS 2mm x500mt: $125.289,45
+- PUAS01 · ALAMBRE DE PÚAS 2mm x25mt: $7.772,19
+- PUAS02 · ALAMBRE DE PÚAS 2mm x50mt: $14.680,81
+- PUAS03 · ALAMBRE DE PÚAS 2mm x100mt: $28.929,83
+- PUAS04 · ALAMBRE DE PÚAS 2mm x200mt: $56.996,08
+- PUAS05 · ALAMBRE DE PÚAS 2mm x400mt: $112.265,01
+- PUAS06 · ALAMBRE DE PÚAS 2mm x500mt: $129.536,55
 
 ### Electrodos (Soldadura)
 URL: https://www.casasilviaweb.com.ar/precios-electrodos
@@ -802,29 +802,29 @@ URL: https://www.casasilviaweb.com.ar/precios-electrodos
 
 ### Ganchos J (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-ganchos-j
-- GANJ1 · GANCHOS J -BASTÓN 50 mm x 100 unidades -(10 bolsas): $233.477,24
-- GANJ2 · GANCHOS J -BASTÓN 70 mm x 100 unidades (8 bolsas): $215.186,40
-- GANJ3 · GANCHOS J -BASTÓN 100 mm x 100 unidades (6 bolsas): $197.971,49
+- GANJ1 · GANCHOS J -BASTÓN 50 mm x 100 unidades -(10 bolsas): $193.101,48
+- GANJ2 · GANCHOS J -BASTÓN 70 mm x 100 unidades (8 bolsas): $223.822,17
+- GANJ3 · GANCHOS J -BASTÓN 100 mm x 100 unidades (6 bolsas): $307.206,90
 
 ### Clavos paragua (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-paragua
-- PAR01 · CLAVOS PARAGUA 2 1/2" x 100 unidades - 20 bolsas: $200.463,12
-- PAR02 · CLAVOS PARAGUA 3" x 100 unidades -16 bolsas: $184.154,26
-- PAR03 · CLAVOS PARAGUA 4" x 100 unidades -12 bolsas: $169.884,00
+- PAR01 · CLAVOS PARAGUA 2 1/2" x 100 unidades - 20 bolsas: $217.168,38
+- PAR02 · CLAVOS PARAGUA 3" x 100 unidades -16 bolsas: $199.500,44
+- PAR03 · CLAVOS PARAGUA 4" x 100 unidades -12 bolsas: $184.041,00
 
 ### Grampas Omega (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-grampas-omega
-- OME01 · GRAMPA OMEGA 1/2" (100U): $16.654,29
-- OME02 · GRAMPA OMEGA 3/4" (100U): $20.793,80
-- OME03 · GRAMPA OMEGA 1" (100U): $23.970,63
-- OME04 · GRAMPA OMEGA 1- 1/4" (50U): $16.172,96
-- OME05 · GRAMPA OMEGA 1-1/2" (50U): $18.772,18
-- OME06 · GRAMPA OMEGA 2" (50U): $19.831,13
-- OME07 · GRAMPA OMEGA 3" (50U): $21.371,41
-- OME08 · GRAMPA OMEGA 4" (50U): $36.485,42
-- OME09 · GRAMPA MEDIA OMEGA 1/2" (100U): $15.691,62
-- OME10 · GRAMPA MEDIA OMEGA 3/4" (100U): $18.772,18
-- OME11 · GRAMPA MEDIA OMEGA 1" (100U): $21.852,75
+- OME01 · GRAMPA OMEGA 1/2" (100U): $17.144,13
+- OME02 · GRAMPA OMEGA 3/4" (100U): $21.405,38
+- OME03 · GRAMPA OMEGA 1" (100U): $24.675,65
+- OME04 · GRAMPA OMEGA 1- 1/4" (50U): $16.648,63
+- OME05 · GRAMPA OMEGA 1-1/2" (50U): $19.324,31
+- OME06 · GRAMPA OMEGA 2" (50U): $20.414,39
+- OME07 · GRAMPA OMEGA 3" (50U): $21.999,98
+- OME08 · GRAMPA OMEGA 4" (50U): $37.558,52
+- OME09 · GRAMPA MEDIA OMEGA 1/2" (100U): $16.153,14
+- OME10 · GRAMPA MEDIA OMEGA 3/4" (100U): $19.324,31
+- OME11 · GRAMPA MEDIA OMEGA 1" (100U): $22.495,47
 
 ### Hierro dulce (Hierros y Mallas)
 URL: https://www.casasilviaweb.com.ar/precios-hierro-dulce
@@ -833,41 +833,41 @@ URL: https://www.casasilviaweb.com.ar/precios-hierro-dulce
 
 ### Torniquetes (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-torniquetes
-- TOR01 · TORNIQUETE SIMPLE N5: $2.138,27
-- TOR02 · TORNIQUETE SIMPLE N6: $3.341,05
-- TOR03 · TORNIQUETE SIMPLE N7: $3.758,68
-- TOR04 · TORNIQUETE DOBLE: $9.187,89
+- TOR01 · TORNIQUETE SIMPLE N5: $2.391,97
+- TOR02 · TORNIQUETE SIMPLE N6: $3.737,45
+- TOR03 · TORNIQUETE SIMPLE N7: $4.204,63
+- TOR04 · TORNIQUETE DOBLE: $10.277,98
 
 ### Clavos electrosoldados (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-electrosoldados
-- ELE01 · CLAVOS ELEC ESPIRALADOS 22X40X9000: $53.015,13
-- ELE02 · CLAVOS ELEC ESPIRALADOS 22X50X9000: $63.021,30
-- ELE03 · CLAVOS ELEC ESPIRALADOS 25X50X9000: $74.870,71
-- ELE04 · CLAVOS ELEC ESPIRALADOS 25X63X5000: $55.736,11
-- ELE05 · CLAVOS ELEC ESPIRALADOS 28X75X4500: $74.695,16
+- ELE01 · CLAVOS ELEC ESPIRALADOS 22X40X9000: $56.435,46
+- ELE02 · CLAVOS ELEC ESPIRALADOS 22X50X9000: $67.087,19
+- ELE03 · CLAVOS ELEC ESPIRALADOS 25X50X9000: $79.701,08
+- ELE04 · CLAVOS ELEC ESPIRALADOS 25X63X5000: $59.331,99
+- ELE05 · CLAVOS ELEC ESPIRALADOS 28X75X4500: $79.514,21
 
 ### Grampas (Tirafondos y Fijaciones)
 URL: https://www.casasilviaweb.com.ar/precios-grampas
-- GRA01 · GRAMPAS 80/08X10000: $6.144,14
-- GRA02 · GRAMPAS 80/11X10000: $6.802,44
-- GRA03 · GRAMPAS 80/14X8000: $6.486,45
-- GRA04 · GRAMPAS 80/16X6000: $5.485,84
-- GRA05 · GRAMPAS 90/15X7200: $11.586,09
-- GRA06 · GRAMPAS 90/20X5000: $8.461,36
-- GRA07 · GRAMPAS 90/25X4400: $8.180,48
-- GRA08 · GRAMPAS 90/30X3600: $8.672,01
-- GRA09 · GRAMPAS 90/35X3400: $9.927,17
-- GRA10 · GRAMPAS 90/40X3000: $9.260,09
+- GRA01 · GRAMPAS 80/08X10000: $6.540,53
+- GRA02 · GRAMPAS 80/11X10000: $7.241,31
+- GRA03 · GRAMPAS 80/14X8000: $6.904,94
+- GRA04 · GRAMPAS 80/16X6000: $5.839,76
+- GRA05 · GRAMPAS 90/15X7200: $12.333,58
+- GRA06 · GRAMPAS 90/20X5000: $9.007,25
+- GRA07 · GRAMPAS 90/25X4400: $8.708,25
+- GRA08 · GRAMPAS 90/30X3600: $9.231,50
+- GRA09 · GRAMPAS 90/35X3400: $10.567,63
+- GRA10 · GRAMPAS 90/40X3000: $9.857,52
 
 ### Clavos tipín (F) (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-clavos-tipin-f
-- CLF01 · CLAVOS F15 X 5000 (20 EST X CAJA): $3.721,59
-- CLF02 · CLAVOS F20 X 5000 (20 EST X CAJA): $4.415,00
-- CLF03 · CLAVOS F25 X 5000 (20 EST X CAJA): $5.082,08
-- CLF04 · CLAVOS F30 X 5000 (20 EST X CAJA): $6.073,92
-- CLF05 · CLAVOS F35 X 5000 (20 EST X CAJA): $7.934,72
-- CLF06 · CLAVOS F40 X 5000 (20 EST X CAJA): $8.803,67
-- CLF07 · CLAVOS F50 X 5000 (20 EST X CAJA): $10.366,04
+- CLF01 · CLAVOS F15 X 5000 (20 EST X CAJA): $3.961,69
+- CLF02 · CLAVOS F20 X 5000 (20 EST X CAJA): $4.699,84
+- CLF03 · CLAVOS F25 X 5000 (20 EST X CAJA): $5.409,96
+- CLF04 · CLAVOS F30 X 5000 (20 EST X CAJA): $6.465,79
+- CLF05 · CLAVOS F35 X 5000 (20 EST X CAJA): $8.446,63
+- CLF06 · CLAVOS F40 X 5000 (20 EST X CAJA): $9.371,65
+- CLF07 · CLAVOS F50 X 5000 (20 EST X CAJA): $11.034,82
 
 ### Alambre tejido (Clavos y Alambres)
 URL: https://www.casasilviaweb.com.ar/precios-alambre-tejido
